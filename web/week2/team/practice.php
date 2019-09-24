@@ -10,10 +10,10 @@
     <?php
         for ($i = 0; $i < 10; $i++) {
             if ($i%2===0) {
-                echo "<div id=$i style="color:blue">I am Blue and div $i</div>";
+                echo "<div id=$i style='color:blue'>I am Blue and div $i</div>";
 
             } else 
-                echo "<div id=$i style="color:red">I am Red and div $i</div>";
+                echo "<div id=$i style='color:red'>I am Red and div $i</div>";
         };
     ?>
 </body>
