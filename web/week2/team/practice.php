@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 1; $i < 11; $i++) {
             if ($i%2===0) {
                 echo "<div id=$i style='color:blue'>I am Blue and div $i</div>";
 
