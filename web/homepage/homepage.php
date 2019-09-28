@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="shark.png" type="image/gif">
-    <title>Welcome</title>
+    <title>Epic Sharks</title>
 </head>
 <body>
     <header>
