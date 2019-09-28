@@ -1,0 +1,23 @@
+#a {
+    background-color: red;
+}
+
+#a:hover {
+    font-weight: bold;
+}
+
+#b {
+    background-color: deeppink;
+}
+
+#b:hover {
+    font-weight: bold;
+}
+
+#c {
+    background-color: chocolate;
+}
+
+#c:hover {
+    font-weight: bold;
+}
