@@ -21,7 +21,7 @@ header {
 }
 
 #me {
-    margin:0;
+    margin: 15px;
     float: left;
     display: flex;
     max-width: 90%;
@@ -82,14 +82,14 @@ header {
 
 .intro {
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
     background-color: beige;
-    
+    flex: flex-wrap;
 }
 
 .purpose {
     font-size: 100%;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
 footer {
