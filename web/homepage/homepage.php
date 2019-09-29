@@ -35,7 +35,9 @@
     </div>
     <div>
         <footer>
-            <p>This page was designed by Keaton Sant<br>
+            <p>
+                This page was designed by Keaton Sant<br>
+                The Shark Icon was designed by Keaton Sant
             </p>
             <p><b>&copy; 2019 Keaton Sant<b></p>
         </footer>
