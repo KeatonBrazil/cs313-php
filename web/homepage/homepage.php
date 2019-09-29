@@ -12,7 +12,9 @@
     <header>
         <div>
             <div>
-                <img id="shark" src="shark.png" alt="Image of a cartoon shark">
+                <a href="shark.png">
+                    <img id="shark" src="shark.png" alt="Image of a cartoon shark">
+                </a>
             </div>
             <div>
                 <h1>Welcome</h1>
