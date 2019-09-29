@@ -19,7 +19,8 @@
     </div>
     <div class = "container2">
         <div class = "item_left">
-            <button onclick="changePic()"><img id="us" class = "pic" src="us.jpg" alt="A photo pf me and my wife"></button>
+            <img id="us" class = "pic" src="us.jpg" alt="A photo of me and my wife">
+            <button onclick="changePic()"></button>
         </div>
         <div class = "item_right">
             <div>
