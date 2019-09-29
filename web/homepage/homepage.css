@@ -8,7 +8,7 @@ header {
     background-color: #0099ff;
     flex-wrap:wrap;
     margin:0;
-    padding: 15px, 15px, 15px, 0px;
+    padding: 15px;
     font-size: 200%;
     text-align: none;
 }
@@ -26,9 +26,11 @@ header {
 
 .itemL {
     flex: 30%;
+    padding: 0;
 }
 
 .itemR {
+    padding: 0;
     flex: 70%;
 }
 
