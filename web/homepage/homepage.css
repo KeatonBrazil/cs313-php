@@ -10,10 +10,13 @@ header {
     margin:0;
     padding: 15px;
     font-size: 200%;
-    text-align: none;
+    text-align: center;
 }
 
 #shark {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: auto;
     height: auto;
 }
@@ -26,11 +29,9 @@ header {
 
 .itemL {
     flex: 30%;
-    padding: 15px, 0px, 15px, 15px;
 }
 
 .itemR {
-    padding: 15px, 15px, 15px, 0px;
     flex: 70%;
 }
 
