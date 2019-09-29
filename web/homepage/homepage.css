@@ -39,7 +39,7 @@ header {
     color: black;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
+/*@media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
     header {
         font-size: 80%;
     }
@@ -49,4 +49,4 @@ header {
     header {
         font-size: 100%;
     }
-}
+}*/ 
