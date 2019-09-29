@@ -1,7 +1,12 @@
 <?php
     session_start();
+    if (isset($_SESSION['login'])) {
+        $_SESSION['login'] = $_SESSION['login'];
+    } else {
+        $_SESSION['login'] = $_GET["fname"];
+    }
+    
 
-    $_SESSION['login'] = $_GET["fname"];
 ?>
 
 <!DOCTYPE html>
