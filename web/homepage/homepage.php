@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+    $_SESSION['login'] = $_GET["fname"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +23,7 @@
                 </a>
             </div>
             <div class = "itemR">
-                <h1>Welcome</h1>
+                <h1>Welcome <?php echo $_SESSION['login']; ?></h1>
             </div>
         </div>
     </header>
@@ -41,6 +47,10 @@
                  myself and to show the projects I will be working 
                  on over a period of 13 weeks!
                 </p>
+                <form action="homepage.php" method="get">
+                    <input type="text" placeholder="First Name" name="fname">
+                    <input type="submit" value="Log In">
+                </form>
             </div>
         </div>
     </div>
