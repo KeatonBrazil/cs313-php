@@ -21,7 +21,8 @@ header {
 }
 
 #me {
-    margin:15px;
+    padding: 10px;
+    margin: 15px;
     float: left;
     display: flex;
     max-width: 90%;
@@ -82,7 +83,7 @@ header {
 
 .intro {
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
     background-color: beige;
     flex: flex-wrap;
 }
