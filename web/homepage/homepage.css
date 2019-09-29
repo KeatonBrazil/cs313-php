@@ -6,6 +6,11 @@ body {
 
 header {
     background-color: #0099ff;
+    flex-wrap:wrap;
+    margin:0;
+    padding: 15px;
+    font-size: 200%;
+    text-align: center;
 }
 
 .navbar {
