@@ -16,5 +16,8 @@
         <a class="link" href="aboutme.php">About Me</a>  
         <a class="link" href="homepage.php">Welcome</a>              
     </div>
+    <div>
+        <h1>Coming Soon...</h1>
+    </div>
 </body>
 </html>
