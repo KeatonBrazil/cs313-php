@@ -30,7 +30,7 @@
             <img id="me" src="me.jpg" alt="A professional photograph of Keaton Sant">
         </div>
         <div class = "item_right">
-
+            <p>space</p>
         </div>
     </div>
     <div></div>
