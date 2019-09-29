@@ -26,11 +26,11 @@ header {
 
 .itemL {
     flex: 30%;
-    padding: 0;
+    padding: 15px, 0px, 15px, 15px;
 }
 
 .itemR {
-    padding: 0;
+    padding: 15px, 15px, 15px, 0px;
     flex: 70%;
 }
 
