@@ -11,12 +11,10 @@
 <body>
     <header>
         <div class="container">
-            <div class = "itemL">
+            <div>
                 <a href="shark.png">
                     <img id="shark" src="shark.png" alt="Image of a cartoon shark">
                 </a>
-            </div>
-            <div class="itemR">
                 <h1>Welcome</h1>
             </div>
         </div>
