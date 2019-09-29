@@ -21,7 +21,6 @@ header {
 }
 
 #me {
-    padding: 10px;
     margin: 15px;
     float: left;
     display: flex;
@@ -85,12 +84,11 @@ header {
     padding: 10px;
     margin: 20px;
     background-color: beige;
-    flex: flex-wrap;
+    text-align: center;
 }
 
 .purpose {
     font-size: 100%;
-    flex-wrap: wrap;
 }
 
 footer {
