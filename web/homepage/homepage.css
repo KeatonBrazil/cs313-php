@@ -33,7 +33,7 @@ header {
 .container {
     display: flex;
     flex: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .itemL {
@@ -132,6 +132,12 @@ footer {
         text-align: center;
     }
     
+    .container {
+        display: block;
+        flex: 100%;
+        flex-wrap: wrap;
+    }
+
     .itemL {
         flex: none;
     }
