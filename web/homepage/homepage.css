@@ -30,6 +30,16 @@ header {
     box-shadow: 0 4px 8px 0 rgb(32, 32, 32);
 }
 
+.pic {
+    margin: 15px;
+    float: left;
+    display: flex;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgb(32, 32, 32);
+}
+
 .container {
     display: flex;
     flex: 100%;

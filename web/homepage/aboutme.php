@@ -19,7 +19,7 @@
     </div>
     <div class = "container2">
         <div class = "item_left">
-            <img id="us" src="us.jpg" alt="A professional photograph of Keaton Sant">
+            <img id="us" class = "pic" src="us.jpg" alt="A professional photograph of Keaton Sant">
         </div>
         <div class = "item_right">
             <div>
