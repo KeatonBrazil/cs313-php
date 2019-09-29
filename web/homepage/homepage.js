@@ -1,9 +1,12 @@
-function changePic () {    
-    if (document.getElementById("us").src = "us.jpg") {
-    document.getElementById("us").src = "her.JPG";
-    console.log(document.getElementById("us").src);
-    } 
-    else {
-        document.getElementById("us").src = "us.jpg";
-    } console.log(document.getElementById("us").src);
+var image = "first"; 
+
+function changePic () {  
+    var pic = document.getElementById("us");  
+    if (image == "first") {
+        pic.src = "her.JPG";
+        image = "second";
+    } else if (image == "second") {
+        pic.src = "us.jpg";
+        image = "first";
+    }
 }
