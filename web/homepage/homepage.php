@@ -14,6 +14,10 @@
             <h1>Welcome</h1>
         </div>
     </header>
+    <div class="navbar sticky">
+        <a class="link" href="assignments.php">Assignments</a>
+        <a class="link" href="aboutme.php">About Me</a>
+    </div>
 </body>
 </html>
 

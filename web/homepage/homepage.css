@@ -2,3 +2,26 @@ body {
     background-color: #b3ffe6;
 }
 
+header {
+    background-color: #0099ff;
+}
+
+.navbar {
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(27, 27, 27);
+    box-shadow: 0 4px 8px 0 black;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    margin:0;
+    padding: 10px;
+}
