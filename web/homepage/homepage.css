@@ -24,6 +24,7 @@ header {
     margin:15px;
     float: left;
     display: flex;
+    max-width: 100%;
     width: auto;
     height: auto;
     box-shadow: 0 4px 8px 0 rgb(32, 32, 32);
@@ -36,13 +37,21 @@ header {
 }
 
 .itemL {
-    flex: 20%;
+    flex: 30%;
     text-align: center;
 }
 
 .itemR {
-    flex: 80%;
+    flex: 70%;
     text-align: none; 
+}
+
+.item_left {
+    flex: 30%;
+}
+
+.item_right {
+    flex: 70%;
 }
 
 .navbar {
