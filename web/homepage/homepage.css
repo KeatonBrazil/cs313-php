@@ -43,7 +43,7 @@ header {
 @media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
     
     header {
-        font-size: 80%;
+        font-size: 90%;
     }
    
 }
@@ -52,7 +52,7 @@ header {
 @media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) {
 
     header {
-        font-size: 80%;
+        font-size: 90%;
     }
     
 }
