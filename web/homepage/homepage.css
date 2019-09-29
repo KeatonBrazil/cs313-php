@@ -23,7 +23,8 @@ header {
 #me {
     margin:15px;
     float: left;
-    width: 90%;
+    display: flex;
+    width: 50%;
     height: auto;
     box-shadow: 0 4px 8px 0 rgb(32, 32, 32);
 }
@@ -117,7 +118,7 @@ header {
         font-size: 150%;
         text-align: none;
     }
-    
+
     #me {
         width: 95%;
     }
