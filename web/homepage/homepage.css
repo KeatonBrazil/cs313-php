@@ -13,6 +13,11 @@ header {
     text-align: center;
 }
 
+#shark {
+    width: 100%;
+    height: auto;
+}
+
 .container {
     display: flex;
     flex: 100%;
@@ -58,6 +63,12 @@ header {
     
     header {
         font-size: 90%;
+    }
+
+    .container {
+        display: block;
+        flex: 100%;
+        flex-wrap: wrap;
     }
 
     .itemL {
