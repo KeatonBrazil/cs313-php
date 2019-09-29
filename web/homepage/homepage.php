@@ -30,12 +30,12 @@
             <img id="me" src="me.jpg" alt="A professional photograph of Keaton Sant">
         </div>
         <div class = "item_right intro">
-            <div>
+            <div class = "purpose">
                  <h2>Purpose</h2>
             </div>
             <hr>
             <div>
-                <p class = "purpose">
+                <p>
                  Welcome to my home page! My name is Keaton Sant
                  and the purpose of this website is to introduce 
                  myself and to show the projects I will be working 
