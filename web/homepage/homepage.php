@@ -29,6 +29,7 @@
         <div class = "item_left">
             <img id="me" src="me.jpg" alt="A professional photograph of Keaton Sant">
         </div>
+        <hr>
         <div class = "item_right intro">
             <div class = "purpose">
                  <h2>Purpose</h2>
