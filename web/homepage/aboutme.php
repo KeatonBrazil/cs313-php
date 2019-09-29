@@ -33,12 +33,11 @@
                     since we started dating we knew we were meant to be together.
                     We are so excited for the arrival of our new baby girl in a 
                     few short months! (Click on photo)
-                </p class = "intro">
+                </p>
+                <p class = "intro">
                     I have been studying at Brigham Young University of Idaho to 
                     earn my Bachelor's Degree of Science in Data Science. I am 
                     currently looking for internshios as a data scientist.
-                <p>
-
                 </p>
             </div>
         </div>
