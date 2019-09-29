@@ -10,7 +10,6 @@ header {
     margin:0;
     padding: 15px;
     font-size: 200%;
-    text-align: center;
 }
 
 #shark {
@@ -29,10 +28,12 @@ header {
 
 .itemL {
     flex: 20%;
+    text-align: center;
 }
 
 .itemR {
     flex: 80%;
+    text-align: none; 
 }
 
 .navbar {
