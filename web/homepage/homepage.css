@@ -84,12 +84,11 @@ header {
     padding: 10px;
     margin: 20px;
     background-color: beige;
-    flex: flex-wrap;
 }
 
 .purpose {
     font-size: 100%;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
 footer {
