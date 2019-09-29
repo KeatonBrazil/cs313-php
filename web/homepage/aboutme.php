@@ -9,7 +9,7 @@
     <title>Epic Sharks | About Me</title>
 </head>
 <body>
-    <header>
+    <header class = "header">
         <h1>About Me</h1>
     </header>
     <div class="navbar sticky">

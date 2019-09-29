@@ -9,7 +9,7 @@
     <title>Epic Sharks | Assignments</title>
 </head>
 <body>
-    <header>
+    <header class = "header">
         <h1>Assignments</h1>
     </header>
     <div class="navbar sticky">

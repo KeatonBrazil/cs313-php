@@ -46,6 +46,10 @@ header {
     text-align: none; 
 }
 
+.header {
+    text-align: center;
+}
+
 .container2 {
     display: flex;
     flex: 100%;
