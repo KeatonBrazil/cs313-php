@@ -4,6 +4,6 @@ function changePic () {
     console.log(document.getElementById("us").src);
     } 
     else {
-        document.getElementById("us").src = "us.jpg"
+        document.getElementById("us").src = "us.jpg";
     } console.log(document.getElementById("us").src);
 }
