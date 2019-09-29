@@ -10,7 +10,7 @@ header {
     margin:0;
     padding: 15px;
     font-size: 200%;
-    text-align: center;
+    text-align: left;
 }
 
 #shark {
@@ -63,6 +63,7 @@ header {
     
     header {
         font-size: 90%;
+        text-align: center;
     }
 
     .container {
@@ -86,6 +87,7 @@ header {
 
     header {
         font-size: 90%;
+        text-align: center;
     }
     
     .itemL {
