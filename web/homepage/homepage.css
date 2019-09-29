@@ -47,6 +47,7 @@ header {
 }
 
 .container2 {
+    flex: 100%;
 }
 
 .item_left {
