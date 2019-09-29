@@ -13,6 +13,20 @@ header {
     text-align: center;
 }
 
+.container {
+    display: flex;
+    flex: 100%;
+    flex-wrap: wrap;
+}
+
+.itemL {
+    flex: 30%;
+}
+
+.itemR {
+    flex: 70%;
+}
+
 .navbar {
     margin: 0;
     padding: 10px;
