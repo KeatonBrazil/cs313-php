@@ -28,11 +28,11 @@ header {
 }
 
 .itemL {
-    flex: 30%;
+    flex: 20%;
 }
 
 .itemR {
-    flex: 70%;
+    flex: 80%;
 }
 
 .navbar {
