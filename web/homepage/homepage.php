@@ -11,7 +11,12 @@
 <body>
     <header>
         <div>
-            <h1>Welcome</h1>
+            <div>
+                <img id="shark" src="shark.png" alt="Image of a cartoon shark">
+            </div>
+            <div>
+                <h1>Welcome</h1>
+            </div>
         </div>
     </header>
     <div class="navbar sticky">
