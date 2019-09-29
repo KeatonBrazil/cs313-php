@@ -25,7 +25,7 @@
         <a class="link" href="aboutme.php">About Me</a>
         <a class="link" href="assignments.php">Assignments</a>        
     </div>
-    <div class = "container">
+    <div class = "container2">
         <div class = "item_left">
             <img id="me" src="me.jpg" alt="A professional photograph of Keaton Sant">
         </div>
