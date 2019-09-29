@@ -1,3 +1,3 @@
 function changePic () {    
-    console.log(document.getElementById("us").src.value);
+    document.getElementById("us").src = "ultrasound.jpg";
 }
