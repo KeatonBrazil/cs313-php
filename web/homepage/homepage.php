@@ -29,11 +29,22 @@
         <div class = "item_left">
             <img id="me" src="me.jpg" alt="A professional photograph of Keaton Sant">
         </div>
-        <div class = "item_right">
-            <p>space</p>
+        <div class = "item_right intro">
+            <div>
+                 <h2>Purpose</h2>
+            </div>
+            <hr>
+            <div>
+                <p class = "purpose">
+                 Welcome to my home page! My name is Keaton Sant
+                 and the purpose of this website is to introduce 
+                 myself and to show the projects I will be working 
+                 on over a period of 13 weeks!
+                </p>
+            </div>
         </div>
     </div>
-    <div></div>
+    
     <div>
         <footer>
             <p>

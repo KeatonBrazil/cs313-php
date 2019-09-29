@@ -80,6 +80,18 @@ header {
     color: black;
 }
 
+.intro {
+    padding: 10px;
+    margin: 10px;
+    background-color: beige;
+    flex: flex-wrap;
+}
+
+.purpose {
+    font-size: 100%;
+    flex-wrap: wrap;
+}
+
 footer {
     box-shadow: 0 4px 8px 0 black;
     background-color: #0099ff;
