@@ -20,6 +20,14 @@ header {
     height: auto;
 }
 
+#me {
+    margin:15px;
+    float: left;
+    width: 90%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgb(32, 32, 32);
+}
+
 .container {
     display: flex;
     flex: 100%;
@@ -110,5 +118,9 @@ header {
         text-align: none;
     }
     
+    #me {
+        width: 95%;
+    }
 
 }
+

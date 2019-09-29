@@ -25,6 +25,9 @@
         <a class="link" href="aboutme.php">About Me</a>
         <a class="link" href="assignments.php">Assignments</a>        
     </div>
+    <div>
+        <img id="me" src="me.jpg" alt="A professional photograph of Keaton Sant">
+    </div>
 </body>
 </html>
 
