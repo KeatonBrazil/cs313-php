@@ -82,7 +82,7 @@ header {
 
 .intro {
     padding: 10px;
-    margin: 10px;
+    margin: 0px;
     background-color: beige;
 }
 
@@ -98,7 +98,6 @@ footer {
     padding: 10px;
     text-align: center;
     margin-top: 10px;
-    
 }
 
 /*iphone 5 and 5s and iphone 6, 7, 8*/
