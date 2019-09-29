@@ -19,8 +19,12 @@ header {
     flex-wrap: wrap;
 }
 
-#shark {
-    float: left;
+.itemL {
+    flex: 30%;
+}
+
+.itemR {
+    flex: 70%;
 }
 
 .navbar {
@@ -55,10 +59,15 @@ header {
     header {
         font-size: 90%;
     }
-   
-    #shark {
-        float: none;
+
+    .itemL {
+        flex: none;
     }
+
+    .itemR {
+        flex: none;
+    }
+   
 }
 
 /*iphone X*/
@@ -68,8 +77,12 @@ header {
         font-size: 90%;
     }
     
-    #shark {
-        float: none;
+    .itemL {
+        flex: none;
+    }
+
+    .itemR {
+        flex: none;
     }
 }
 
