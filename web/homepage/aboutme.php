@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="shark.png" type="image/gif">
     <link rel="stylesheet" type="text/css" href="homepage.css">
+    <script type="text/javascript" src="homepage.js"></script>
     <title>Epic Sharks | About Me</title>
 </head>
 <body>
@@ -16,5 +17,18 @@
         <a class="link" href="homepage.php">Welcome</a>  
         <a class="link" href="assignments.php">Assignments</a>              
     </div>
+    <div class = "container2">
+        <div class = "item_left">
+            <img id="us" src="us.jpg" alt="A professional photograph of Keaton Sant">
+        </div>
+        <div class = "item_right">
+            <div>
+                <p id="pbaby">
+                    My wife and I car having a baby!
+                </p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
