@@ -80,6 +80,16 @@ header {
     color: black;
 }
 
+footer {
+    box-shadow: 0 4px 8px 0 black;
+    background-color: #0099ff;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
 /*iphone 5 and 5s and iphone 6, 7, 8*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
     
