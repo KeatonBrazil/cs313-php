@@ -4,12 +4,4 @@ function changePic () {
     picBaby = document.getElementById("us").src = "ultrasound.jpg";
     
     console.log(doc);
-
-    if (doc == "us.jpg") {
-        doc = "ultrasound.jpg"
-    } else {
-        doc = "us.jpg"
-    }
-
-
 }
