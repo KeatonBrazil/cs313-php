@@ -47,6 +47,7 @@ header {
 }
 
 .container2 {
+    display: flex;
     flex: 100%;
 }
 
