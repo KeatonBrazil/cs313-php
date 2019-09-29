@@ -24,7 +24,7 @@ header {
     margin:15px;
     float: left;
     display: flex;
-    width: 50%;
+    width: 20%;
     height: auto;
     box-shadow: 0 4px 8px 0 rgb(32, 32, 32);
 }
@@ -120,7 +120,7 @@ header {
     }
 
     #me {
-        width: 95%;
+        width: 20%;
     }
 
 }
