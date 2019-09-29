@@ -81,7 +81,12 @@ header {
 }
 
 footer {
-    
+    box-shadow: 0 4px 8px 0 black;
+    background-color: #0099ff;
+    margin-top: 10;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
     
 }
 
