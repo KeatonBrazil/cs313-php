@@ -11,6 +11,14 @@
         <input type="text" name="name" placeholder="Enter Name" id=""><br>
         <input type="text" name="email" placeholder="Enter Email" id=""><br>
         Major: <br>
+        <?php 
+        $array = array("Computer Science", "Web Design and Development", 
+        "Computer Information Technology", "Computer Engineering");
+        $count = count($array);
+        for ($x = 0; $x < $count; $x++) {
+            echo " <input type='radio' name='major' value='$array[$x]'> $array[$x] <br>";
+        }
+        ?>
         <input type="radio" name="major" id="" value="CS" checked>Computer Science<br>
         <input type="radio" name="major" id="" value="WD">Web Design and Development<br>
         <input type="radio" name="major" id="" value="CIT">Computer Information Technology<br>
