@@ -19,19 +19,15 @@
             echo " <input type='radio' name='major' value='$array[$x]'> $array[$x] <br>";
         }
         ?>
-        <input type="radio" name="major" id="" value="CS" checked>Computer Science<br>
-        <input type="radio" name="major" id="" value="WD">Web Design and Development<br>
-        <input type="radio" name="major" id="" value="CIT">Computer Information Technology<br>
-        <input type="radio" name="major" id="" value="CE">Computer Engineering<br>
         Comments: <br>
         <textarea name="comments" id="" cols="30" rows="10"></textarea><br>
-        <input type="checkbox" name="continent[]" id="" value="North America">North America<br>
-        <input type="checkbox" name="continent[]" id="" value="South America">South America<br>
-        <input type="checkbox" name="continent[]" id="" value="Europe">Europe<br>
-        <input type="checkbox" name="continent[]" id="" value="Asia">Asia<br>
-        <input type="checkbox" name="continent[]" id="" value="Australia">Australia<br>
-        <input type="checkbox" name="continent[]" id="" value="Africa">Africa<br>
-        <input type="checkbox" name="continent[]" id="" value="Antarctica">Antarctica<br>
+        <input type="checkbox" name="continent[]" id="" value="na">North America<br>
+        <input type="checkbox" name="continent[]" id="" value="sa">South America<br>
+        <input type="checkbox" name="continent[]" id="" value="eu">Europe<br>
+        <input type="checkbox" name="continent[]" id="" value="as">Asia<br>
+        <input type="checkbox" name="continent[]" id="" value="aus">Australia<br>
+        <input type="checkbox" name="continent[]" id="" value="af">Africa<br>
+        <input type="checkbox" name="continent[]" id="" value="an">Antarctica<br>
 
         <input type="submit" value="Submit">
         
