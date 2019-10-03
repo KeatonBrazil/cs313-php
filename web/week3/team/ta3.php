@@ -10,8 +10,8 @@
 
         if ($continent[$x] == "na") {
             echo "North America<br>"; }
-        // } if else ($continent[$x] == "sa") {
-        //     echo "South America<br>";
+             if else ($continent[$x] == "sa") {
+                 echo "South America<br>"; }
         // } if else ($continent[$x] == "eu") {
         //     echo "Europe<br>";
         // } if else ($continent[$x] == "as") {
