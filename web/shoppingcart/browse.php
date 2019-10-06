@@ -44,6 +44,7 @@
             echo "<div class='item2'>";
             echo "<img class='img' src='" . $gamePng[$x] . "' alt='Picture of the boardgame " . $gameName[$x] . "'></div>";
             echo "</form>";
+            echo "<br><br><br>";
         }
 
         echo "</div>";
