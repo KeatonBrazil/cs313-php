@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex: 100%;
+    flex-wrap: wrap;
+}
+
+.item1 {
+    flex: 50%;
+}
+
+.item2 {
+    flex: 50%;
+}
+
+.img {
+    max-width: 200;
+    width: 90%;
+    height:auto;
+    float:right;
+}
+
+.maindiv {
+    padding: 15px;
+    margin: 30px;
+}
