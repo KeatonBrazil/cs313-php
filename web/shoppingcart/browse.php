@@ -8,8 +8,6 @@
             die();
         }
     }
-    
-    session_destroy();
 ?>
 
 <!DOCTYPE html>
