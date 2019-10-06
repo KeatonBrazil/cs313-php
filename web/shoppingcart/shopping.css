@@ -14,7 +14,6 @@ Header {
 .container {
     display: flex;
     flex: 100%;
-    flex-wrap: wrap;
     background-color: antiquewhite;
 
 }
@@ -69,6 +68,10 @@ Header {
         margin: 10px;
     }
 
+    .container {
+        flex-wrap: wrap;
+    }
+
     .maindiv {
         padding: 0;
         margin: 0;
@@ -91,6 +94,10 @@ Header {
         
         padding: 15px;
         margin: 10px;
+    }
+
+    .container {
+        flex-wrap: wrap;
     }
 
     .maindiv {
