@@ -16,7 +16,7 @@ Header {
     flex: 100%;
     flex-wrap: wrap;
     background-color: antiquewhite;
-    margin: 10px;
+    margin: 15px;
 
 }
 
@@ -30,10 +30,14 @@ Header {
 .item1 {
     flex: 30%;
     text-align: left;
+    padding: 10px;
+    margin: 10px;
 }
 
 .item2 {
     flex: 70%;
+    padding: 10px;
+    margin: 10px;
 }
 
 .img {
