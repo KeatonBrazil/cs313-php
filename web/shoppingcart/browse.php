@@ -36,7 +36,6 @@
         echo "<div class='maindiv'>";
 
         for ($x=0; $x < $count; $x++) {
-            echo "<br><hr><br>";
             echo "<form name='form" . $x . "' action='' method='post'>";
             echo "<div class='container'>";
             echo "<div class='item1'>";
