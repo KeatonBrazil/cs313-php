@@ -1,3 +1,14 @@
+<?php
+    session_start();
+
+    $_SESSION['username'] = htmlspecialchars($_POST["user"]);
+
+    if (!isset($_SESSION['username'])) {
+        header("Location: login.php");
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +19,13 @@
     <title>Epic Sharks | Browse</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Epic Shark Games</h1>
+    </header>
+    <div>
+        
+    </div>
+
+
 </body>
 </html>
