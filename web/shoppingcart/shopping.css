@@ -7,14 +7,17 @@
 .item1 {
     flex: 30%;
     text-align: center;
+    padding: 10px;
+    margin: 10px;
 }
 
 .item2 {
     flex: 70%;
+    padding: 10px;
+    margin: 10px;
 }
 
 .img {
-    max-width: 100;
     width: 30%;
     height:auto;
     float:right;
