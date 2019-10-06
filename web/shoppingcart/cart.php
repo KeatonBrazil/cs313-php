@@ -34,20 +34,20 @@
             echo "</div>";
             echo "<div class='item2'>";
             if ($_SESSION['cart'][$i][0] == "Mysterium"){
-                echo "<img class='pokemon_cart' src='" . $gamePng[0] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
+                echo "<img src='" . $gamePng[0] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
             } elseif ($_SESSION['cart'][$i][0] == "Roll For The Galaxy") {
-                echo "<img class='pokemon_cart' src='" . $gamePng[1] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
+                echo "<img src='" . $gamePng[1] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
             } elseif ($_SESSION['cart'][$i][0] == "Scythe") {
-                echo "<img class='pokemon_cart' src='" . $gamePng[2] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
+                echo "<img src='" . $gamePng[2] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
             } elseif ($_SESSION['cart'][$i][0] == "Terraforming Mars") {
-                echo "<img class='pokemon_cart' src='" . $gamePng[3] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
+                echo "<img src='" . $gamePng[3] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
             };        
             echo "</div>";            
             echo "<input type='hidden' name='product_index' value='$i'>";
             echo "<input type='submit' value='Remove'>";            
             echo "</form>";
             echo "</div>";
-            echo 
+             
         }        
         var_dump();
     ?>
