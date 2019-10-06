@@ -2,6 +2,12 @@ body {
     background-color: maroon;
 }
 
+Header {
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+}
+
 .container {
     display: flex;
     flex: 100%;
