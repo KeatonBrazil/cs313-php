@@ -45,6 +45,7 @@
             echo "<input type='submit' value='Remove'>";            
             echo "</form>";
             echo "</div>";
+            echo $_SESSION['cart'][$i][2]
         }        
     ?>
     
