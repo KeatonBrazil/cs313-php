@@ -1,7 +1,6 @@
 <?php 
     session_start();
 
-    $cart = $_SESSION['cart'];
 ?>
 
 <!DOCTYPE html>
@@ -24,24 +23,6 @@
         </div>        
     </div>
     <?php 
-        $gamePng = array('mysterium.png', 'rollGalaxy.png', 'scythe.png', 'terraformingMars.png');
-        foreach ($cart as $i => $value) {
-            echo "<div>";
-            echo "<form class='cart_form' action='remove.php' method='post'>";
-            echo "<div class='container'>";
-            echo "<div class='item1'>";
-            echo "<h4>" . $cart[$i][0] . "</h4>";
-            echo "<p>Price: $" . $cart[$i][1] . "</p>";
-            echo "</div>";
-            echo "<div class='item2'>";      
-            echo "</div>";            
-            echo "<input type='hidden' name='product_index' value='$i'>";
-            echo "<input type='submit' value='Remove'>";            
-            echo "</form>";
-            echo "</div>";
-             
-        }        
-        var_dump();
     ?>
     
 </body>
