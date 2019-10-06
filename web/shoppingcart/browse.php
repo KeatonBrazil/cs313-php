@@ -8,6 +8,12 @@
             die();
         }
     }
+    
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
+
+
 ?>
 
 <!DOCTYPE html>
