@@ -15,6 +15,7 @@
     <title>Epic Sharks | Login</title>
 </head>
 <body>
+    <header>Epic Shark Games</header>
     <div class="logindiv">
         <form action="browse.php" method="post">
             <input type="text" placeholder="Enter Name" name="user"><br>
