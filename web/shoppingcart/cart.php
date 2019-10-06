@@ -1,6 +1,7 @@
 <?php 
     session_start();
 
+    $cart = $_SESSION['cart'];
 ?>
 
 <!DOCTYPE html>
@@ -24,24 +25,15 @@
     </div>
     <?php 
         $gamePng = array('mysterium.png', 'rollGalaxy.png', 'scythe.png', 'terraformingMars.png');
-        foreach ($_SESSION['cart'] as $i => $value) {
+        foreach ($cart as $i => $value) {
             echo "<div>";
             echo "<form class='cart_form' action='remove.php' method='post'>";
             echo "<div class='container'>";
             echo "<div class='item1'>";
-            echo "<h4>" . $_SESSION['cart'][$i][0] . "</h4>";
-            echo "<p>Price: $" . $_SESSION['cart'][$i][1] . "</p>";
+            echo "<h4>" . $cart[$i][0] . "</h4>";
+            echo "<p>Price: $" . $cart[$i][1] . "</p>";
             echo "</div>";
-            echo "<div class='item2'>";
-            if ($_SESSION['cart'][$i][0] == "Mysterium"){
-                echo "<img src='" . $gamePng[0] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
-            } elseif ($_SESSION['cart'][$i][0] == "Roll For The Galaxy") {
-                echo "<img src='" . $gamePng[1] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
-            } elseif ($_SESSION['cart'][$i][0] == "Scythe") {
-                echo "<img src='" . $gamePng[2] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
-            } elseif ($_SESSION['cart'][$i][0] == "Terraforming Mars") {
-                echo "<img src='" . $gamePng[3] . "' alt='" . $_SESSION['cart'][$i][0] . "'>";
-            };        
+            echo "<div class='item2'>";      
             echo "</div>";            
             echo "<input type='hidden' name='product_index' value='$i'>";
             echo "<input type='submit' value='Remove'>";            
