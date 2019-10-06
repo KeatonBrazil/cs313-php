@@ -16,7 +16,6 @@ Header {
     flex: 100%;
     flex-wrap: wrap;
     background-color: antiquewhite;
-    margin: 50px;
 
 }
 
@@ -41,9 +40,10 @@ Header {
 }
 
 .img {
-    width: 20%;
+    width: auto;
     height:auto;
     float:right;
+    display: flex;
 }
 
 .maindiv {
