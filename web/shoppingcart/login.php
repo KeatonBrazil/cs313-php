@@ -15,7 +15,7 @@
 <body>
     <header><h1>Epic Shark Games</h1></header>
     <div class="logindiv">
-        <form action="browse.php" method="post">
+        <form action="confirmLogin.php" method="post">
             <input type="text" placeholder="Enter Name" name="user"><br>
             <input type="submit" value="Login">
         </form>
