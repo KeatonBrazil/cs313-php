@@ -1,11 +1,14 @@
 body {
     background-color: maroon;
+    margin: 0;
+    padding: 0;
 }
 
 Header {
     background-color: black;
     color: antiquewhite;
     text-align: center;
+    padding: 15px;
 }
 
 .container {
@@ -19,6 +22,7 @@ Header {
     background-color: antiquewhite;
     padding: 50px;
     margin: 100px 300px 300px 300px;
+    text-align: center;
 }
 
 .item1 {
