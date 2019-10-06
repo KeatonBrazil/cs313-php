@@ -20,7 +20,11 @@
     <div id="navbar">
         <div>
             <a class="element" href="browse.php">browse</a>
-        </div>        
+        </div>   
+    <?php
+        $cart = $_SESSION['cart'];
+        var_dump($cart);
+    ?>     
     </div>
     <?php 
     ?>
