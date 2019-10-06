@@ -3,7 +3,7 @@
 
     if (!isset($_SESSION['username'])) {
         $_SESSION['username'] = htmlspecialchars($_POST["user"]);
-        if (!isset($_SESSION['username'])) {
+        if ($_SESSION['username'] == '') {
             header("Location: login.php");
             die();
         }
