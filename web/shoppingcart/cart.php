@@ -24,7 +24,7 @@
     </div>
     <?php
         $cart = $_SESSION['cart'];
-        echo $cart[0];
+        echo $cart[0][0];
     ?> 
     
 </body>
