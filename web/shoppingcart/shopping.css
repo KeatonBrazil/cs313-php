@@ -1,11 +1,18 @@
+body {
+    background-color: maroon;
+}
+
 .container {
     display: flex;
     flex: 100%;
     flex-wrap: wrap;
+    background-color: antiquewhite;
 }
 
-body {
-    background-color: maroon;
+.logindiv {
+    background-color: antiquewhite;
+    padding: 30px;
+    margin: 500px;
 }
 
 .item1 {
@@ -43,6 +50,12 @@ body {
         text-align: center;
     }
 
+    .logindiv {
+        
+        padding: 15px;
+        margin: 10px;
+    }
+
     .maindiv {
         padding: 0;
         margin: 0;
@@ -59,6 +72,12 @@ body {
 
     .item1 {
         text-align: center;
+    }
+
+    .logindiv {
+        
+        padding: 15px;
+        margin: 10px;
     }
 
     .maindiv {
