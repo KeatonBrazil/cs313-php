@@ -16,7 +16,7 @@ Header {
     flex: 100%;
     flex-wrap: wrap;
     background-color: antiquewhite;
-    margin: 15px;
+    margin: 50px;
 
 }
 
@@ -41,7 +41,7 @@ Header {
 }
 
 .img {
-    width: 5%;
+    width: 20%;
     height:auto;
     float:right;
 }
