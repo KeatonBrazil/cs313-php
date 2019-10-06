@@ -11,7 +11,28 @@ Header {
     padding: 15px;
 }
 
-.container {
+.container0 {
+    display: flex;
+    flex: 100%;
+    background-color: antiquewhite;
+
+}
+
+.container1 {
+    display: flex;
+    flex: 100%;
+    background-color: antiquewhite;
+
+}
+
+.container2 {
+    display: flex;
+    flex: 100%;
+    background-color: antiquewhite;
+
+}
+
+.container3 {
     display: flex;
     flex: 100%;
     background-color: antiquewhite;
@@ -68,7 +89,19 @@ Header {
         margin: 10px;
     }
 
-    .container {
+    .container0 {
+        flex-wrap: wrap;
+    }
+
+    .container1 {
+        flex-wrap: wrap;
+    }
+
+    .container2 {
+        flex-wrap: wrap;
+    }
+
+    .container3 {
         flex-wrap: wrap;
     }
 
@@ -96,7 +129,19 @@ Header {
         margin: 10px;
     }
 
-    .container {
+    .container0 {
+        flex-wrap: wrap;
+    }
+
+    .container1 {
+        flex-wrap: wrap;
+    }
+
+    .container2 {
+        flex-wrap: wrap;
+    }
+
+    .container3 {
         flex-wrap: wrap;
     }
 

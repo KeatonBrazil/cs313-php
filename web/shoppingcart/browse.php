@@ -37,7 +37,7 @@
 
         for ($x=0; $x < $count; $x++) {
             echo "<form name='form" . $x . "' action='' method='post'>";
-            echo "<div class='container'>";
+            echo "<div class='container" . $x . "'>";
             echo "<div class='item1'>";
             echo "<strong>" . $gameName[$x] . "</strong><br>";
             echo "<p>Price: $" . $gamePrice[$x] . "</p></div>";
