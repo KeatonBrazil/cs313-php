@@ -23,6 +23,13 @@ Header {
     top:0;
 }
 
+.element {
+    text-decoration: none;
+    margin:0;
+    padding: 10px;
+    font-size: 120%;
+}
+
 .container {
     display: flex;
     flex: 100%;
