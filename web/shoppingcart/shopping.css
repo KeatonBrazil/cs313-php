@@ -16,6 +16,7 @@ Header {
     flex: 100%;
     flex-wrap: wrap;
     background-color: antiquewhite;
+    margin:10px;
 }
 
 .logindiv {
