@@ -22,9 +22,15 @@
     <header>
         <h1>Epic Shark Games</h1>
     </header>
-    <div>
-        
-    </div>
+    <?php 
+        $gameName = array('Mysterium', 'Roll For The Galaxy', 'Scythe', 'Terraforming Mars');
+        $gamePrice = array(40, 49, 80, 43);
+        $gamePng = array('mysterium.png', 'rollGalaxy.png', 'scythe.png', 'terraformingMars.png');
+        $count = count($gamePng);
+        for ($x=0; $x < $count; $x++) {
+            echo "<div><form name='form" . $x . "' action='' method='post'></form></div>";
+        }
+    ?>
 
 
 </body>
