@@ -1,6 +1,13 @@
 <?php
     session_start();
-    $_SESSION['username'] = htmlspecialchars($_POST["user"]);
+
+    if (!isset($_SESSION['username'])) {
+        $_SESSION['username'] = htmlspecialchars($_POST["user"]);
+        if ($_SESSION['username'] == '') {
+            header("Location: login.php");
+            die();
+        }
+    }
 
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
