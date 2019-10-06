@@ -40,7 +40,7 @@
             echo "<div class='container'>";
             echo "<div class='item1'>";
             echo "<strong>" . $gameName[$x] . "</strong><br>";
-            echo "<p>Price: $" . $gamePrice[$x] . "</p></div>";
+            echo "<p>Price: $" . $gamePrice[$x] . "</p><br><input type='submit' value='Add to Cart'></div>";
             echo "<div class='item2'>";
             echo "<img class='img' src='" . $gamePng[$x] . "' alt='Picture of the boardgame " . $gameName[$x] . "'></div>";
             echo "</form>";
