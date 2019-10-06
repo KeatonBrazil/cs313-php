@@ -1,10 +1,12 @@
 <?php
     session_start();
 
-    $_SESSION['username'] = htmlspecialchars($_POST["user"]);
-
     if (!isset($_SESSION['username'])) {
-        header("Location: login.php");
+        $_SESSION['username'] = htmlspecialchars($_POST["user"]);
+        if (!isset($_SESSION['username'])) {
+            header("Location: login.php");
+            die();
+        }
     }
     
     session_destroy();
