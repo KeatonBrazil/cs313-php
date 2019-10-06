@@ -40,6 +40,7 @@ Header {
 }
 
 .img {
+    max-width: 30%;
     width: auto;
     height:auto;
     float:right;
