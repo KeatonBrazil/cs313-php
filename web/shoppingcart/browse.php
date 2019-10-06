@@ -8,10 +8,11 @@
             die();
         }
     }
-    
+
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
     }
+    
 
 
 ?>
@@ -31,6 +32,13 @@
         <h1>Epic Shark Games</h1>
         <h2>Welcome <?php echo $_SESSION['username'] ?></h2>
     </header>
+    <div id="navbar">        
+        <div>
+            <?php
+                echo sizeof($_SESSION['cart']) . " <a class='element' href='cart.php'>cart</a>";
+            ?>
+        </div>       
+    </div>
     <?php 
         $gameName = array('Mysterium', 'Roll For The Galaxy', 'Scythe', 'Terraforming Mars');
         $gamePrice = array(40, 49, 80, 43);
