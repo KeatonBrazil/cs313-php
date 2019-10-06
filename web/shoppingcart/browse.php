@@ -21,6 +21,7 @@
 <body>
     <header>
         <h1>Epic Shark Games</h1>
+        <h2>Welcome <?php echo $_SESSION['username'] ?></h2>
     </header>
     <?php 
         $gameName = array('Mysterium', 'Roll For The Galaxy', 'Scythe', 'Terraforming Mars');
@@ -28,7 +29,7 @@
         $gamePng = array('mysterium.png', 'rollGalaxy.png', 'scythe.png', 'terraformingMars.png');
         $count = count($gamePng);
         for ($x=0; $x < $count; $x++) {
-            echo "<div><form name='form" . $x . "' action='' method='post'></form></div>";
+            echo "<div><form name='form" . $x . "' action='' method='post'> Helllo </form></div>";
         }
     ?>
 
