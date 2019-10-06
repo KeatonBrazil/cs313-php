@@ -2,11 +2,9 @@
     session_start();
 
     if (!isset($_SESSION['username'])) {
-        $_SESSION['username'] = htmlspecialchars($_POST["user"]);
-        if ($_SESSION['username'] == '') {
-            header("Location: login.php");
-            die();
-        }
+        header("Location: login.php");
+        die();
+        
     }
 ?>
 
@@ -45,7 +43,7 @@
             echo "<input type='submit' value='Remove'>";            
             echo "</form>";
             echo "</div>";
-            echo $_SESSION['cart'][$i][2]
+            echo $_SESSION['cart'][$i][2];
         }        
     ?>
     
