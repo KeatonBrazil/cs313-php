@@ -11,32 +11,12 @@ Header {
     padding: 15px;
 }
 
-.container0 {
+
+.container {
     display: flex;
     flex: 100%;
     background-color: antiquewhite;
-
-}
-
-.container1 {
-    display: flex;
-    flex: 100%;
-    background-color: antiquewhite;
-
-}
-
-.container2 {
-    display: flex;
-    flex: 100%;
-    background-color: antiquewhite;
-
-}
-
-.container3 {
-    display: flex;
-    flex: 100%;
-    background-color: antiquewhite;
-
+    flex-wrap: wrap;
 }
 
 .logindiv {
@@ -64,7 +44,6 @@ Header {
     width: auto;
     height:auto;
     float:right;
-    display: block;
 }
 
 .maindiv {
@@ -89,22 +68,6 @@ Header {
         margin: 10px;
     }
 
-    .container0 {
-        flex-wrap: wrap;
-    }
-
-    .container1 {
-        flex-wrap: wrap;
-    }
-
-    .container2 {
-        flex-wrap: wrap;
-    }
-
-    .container3 {
-        flex-wrap: wrap;
-    }
-
     .maindiv {
         padding: 0;
         margin: 0;
@@ -127,22 +90,6 @@ Header {
         
         padding: 15px;
         margin: 10px;
-    }
-
-    .container0 {
-        flex-wrap: wrap;
-    }
-
-    .container1 {
-        flex-wrap: wrap;
-    }
-
-    .container2 {
-        flex-wrap: wrap;
-    }
-
-    .container3 {
-        flex-wrap: wrap;
     }
 
     .maindiv {
