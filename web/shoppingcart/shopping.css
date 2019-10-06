@@ -5,15 +5,16 @@
 }
 
 .item1 {
-    flex: 50%;
+    flex: 30%;
+    text-align: center;
 }
 
 .item2 {
-    flex: 50%;
+    flex: 70%;
 }
 
 .img {
-    max-width: 200;
+    max-width: 100;
     width: 90%;
     height:auto;
     float:right;
