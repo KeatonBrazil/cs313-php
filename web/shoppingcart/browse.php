@@ -36,12 +36,13 @@
         echo "<div class='maindiv'>";
 
         for ($x=0; $x < $count; $x++) {
-            echo "<form class='container' name='form" . $x . "' action='' method='post'>";
+            echo "<form name='form" . $x . "' action='' method='post'>";
+            echo "<div class='container'>";
             echo "<div class='item1'>";
             echo "<strong>" . $gameName[$x] . "</strong><br>";
             echo "<p>Price: $" . $gamePrice[$x] . "</p></div>";
             echo "<div class='item2'>";
-            echo "<img class='img' src='" . $gamePng[$x] . "' alt='Picture of the boardgame " . $gameName[$x] . "'>";
+            echo "<img class='img' src='" . $gamePng[$x] . "' alt='Picture of the boardgame " . $gameName[$x] . "'></div>";
             echo "</form>";
         }
 
