@@ -40,7 +40,7 @@
             echo "<p>Price: $" . $gamePrice[$x] . "</p></div>";
             echo "<div class='item2'>";
             echo "<img class='img' src='" . $gamePng[$x] . "' alt='Picture of the boardgame " . $gameName[$x] . "'></div>";
-            echo "</form></div>";
+            echo "</form></div><br><hr><br>";
         }
     ?>
 
