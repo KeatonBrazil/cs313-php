@@ -40,8 +40,8 @@
         $gameName = array('Mysterium', 'Roll For The Galaxy', 'Scythe', 'Terraforming Mars');
         $gamePrice = array(40, 49, 80, 43);
         $gamePng = array('mysterium.png', 'rollGalaxy.png', 'scythe.png', 'terraformingMars.png');
+        /*
         $count = count($gamePng);
-
         echo "<div class='maindiv'>";
 
         for ($x=0; $x < $count; $x++) {
@@ -57,9 +57,28 @@
             echo "</form>";
         }
 
-        echo "</div>";
-
+        echo "</div>"; */
     ?>
+    <div>
+        <form name="form1" action="add.php" method="post">
+            <div>
+                <div class="container">
+                    <div class="item1">
+                        <h2><?php echo $gameName[0]; ?></h2>
+                        <h3><?php echo "Price: $" . $gamePrice[0]; ?></h3>
+                    </div>
+                    <div class="item2">
+                         <?php echo "<img src='" . $gamePng . "' alt='A picture of the boardgame " . $gameName . "'>"; ?>
+                    </div>
+                </div>
+                <?php 
+                    echo "<input type='hidden' value='" . $gamePrice . "' name='price'>";
+                    echo "<input type='hidden' value='" . $gameName . "' name='product'>";                   
+                    echo "<input type='submit' value='Add'>";
+                ?>
+            </div>
+        </form>
+    </div>
 
 
 </body>
