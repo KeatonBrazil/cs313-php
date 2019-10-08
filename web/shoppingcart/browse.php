@@ -68,12 +68,12 @@
                         <h3><?php echo "Price: $" . $gamePrice[0]; ?></h3>
                     </div>
                     <div class="item2">
-                         <?php echo "<img src='" . $gamePng . "' alt='A picture of the boardgame " . $gameName . "'>"; ?>
+                         <?php echo "<img src='" . $gamePng[0] . "' alt='A picture of the boardgame " . $gameName . "'>"; ?>
                     </div>
                 </div>
                 <?php 
-                    echo "<input type='hidden' value='" . $gamePrice . "' name='price'>";
-                    echo "<input type='hidden' value='" . $gameName . "' name='product'>";                   
+                    echo "<input type='hidden' value='" . $gamePrice[0] . "' name='price'>";
+                    echo "<input type='hidden' value='" . $gameName[0] . "' name='product'>";                   
                     echo "<input type='submit' value='Add'>";
                 ?>
             </div>
