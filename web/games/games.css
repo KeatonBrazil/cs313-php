@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(rgb(209, 59, 0), rgb(255, 94, 0), rgb(209, 59, 0));
+    background-image: linear-gradient(rgb(255, 51, 0), rgb(255, 94, 0), rgb(255, 51, 0));
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgb(1, 22, 44);
