@@ -8,7 +8,7 @@
     <title>Shark Games | Login</title>
 </head>
 <body>
-        
+    <header><h1>Login</h1></header>    
 </body>
 </html>
 
