@@ -15,6 +15,7 @@
         <li><a href="shelf.php">Game Shelf</a></li>
         <li><a href="wish.php">Wish List</a></li>
         <li><a href="friends.php">Friends</a></li>
+        <li class="floatright"><a href="signOut.php">Sign Out</a></li>
         </ul>
     </div>   
 </body>
