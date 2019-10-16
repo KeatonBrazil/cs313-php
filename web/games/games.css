@@ -29,6 +29,6 @@ a:visited {
     text-decoration: none;
 }
 
-ul {
-    display: inline;
+.container {
+    float:left;
 }
