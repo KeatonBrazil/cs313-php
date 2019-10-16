@@ -11,11 +11,12 @@ $_SESSION['username'] = $username;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="shark.png" type="image/gif">
     <link rel="stylesheet" href="games.css">
     <title>Shark Games | Hub</title>
 </head>
 <body>
-    <header><h1>Board Game Hub</h1></header>  
+    <header><h1>Shark Hub</h1></header>  
     <div class="sticky">
         <ul class="nav">
         <li class="active"><a href="main.php">Hub</a></li>
