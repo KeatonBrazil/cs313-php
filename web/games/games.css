@@ -49,6 +49,10 @@ li.floatright {
     float: right;
 }
 
+li.user {
+    background-color: #333;
+}
+
 .login {
     margin: 100px 300px 100px 300px;
     background-color: white;
@@ -61,3 +65,4 @@ li.floatright {
     position: sticky;
     top:0;
 }
+

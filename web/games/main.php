@@ -1,5 +1,8 @@
 <?php
 session_start();
+$username = htmlspecialchars($_POST['user']);
+$password = htmlspecialchars($_POST['pass']);
+$_SESSION['username'] = $username;
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +23,7 @@ session_start();
         <li><a href="wish.php">Wish List</a></li>
         <li><a href="friends.php">Friends</a></li>
         <li class="floatright"><a href="signOut.php">Sign Out</a></li>
+        <li class="floatright user">Welcome <?php echo $username; ?></li>
         </ul>
     </div>   
 </body>
