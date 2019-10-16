@@ -15,6 +15,14 @@
         <li><a href="signUp.php">Sign up</a></li>
         </ul>
     </div>   
+    <div class="login">
+        <form action='main.php' method='post'>
+        <input type="text"  name="user" placeholder="Username"/><br>
+        <input type="password"  name="pass" placeholder="Password"/><br>
+        <input type="submit" value="Login">
+        </form>
+
+    </div>
 </body>
 </html>
 
