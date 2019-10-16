@@ -8,13 +8,15 @@
     <title>Shark Games | Login</title>
 </head>
 <body>
-    <header><h1>Login</h1></header>   
-        <ul class="nav">
-            <li><a href="login.php">Login</a></li>
+    <header><h1>Login</h1></header>  
+    <nav> 
+        <div class="container">
+            <ul class="nav">
+            <li class="active"><a href="login.php">Login</a></li>
             <li><a href="signUp.php">Sign up</a></li>
-        </ul>
-        
-           
+            </ul>
+        </div>
+    </nav>        
 </body>
 </html>
 
