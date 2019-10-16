@@ -50,6 +50,7 @@ li.floatright {
 }
 
 .login {
+    margin: 30%;
     background-color: white;
     border-radius: 5px;
     padding: 15px;
