@@ -29,6 +29,6 @@ a:visited {
     text-decoration: none;
 }
 
-container {
-    display: flex;
+ul {
+    display: inline;
 }
