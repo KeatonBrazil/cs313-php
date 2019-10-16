@@ -13,8 +13,8 @@ session_start();
 </head>
 <body>
     <header><h1>Board Game Hub</h1></header>  
-    <div class="container">
-        <ul class="nav sticky">
+    <div class="sticky">
+        <ul class="nav">
         <li class="active"><a href="main.php">Hub</a></li>
         <li><a href="shelf.php">Game Shelf</a></li>
         <li><a href="wish.php">Wish List</a></li>

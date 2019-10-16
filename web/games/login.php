@@ -13,8 +13,8 @@ session_start();
 </head>
 <body>
     <header><h1>Login</h1></header>  
-    <div class="container">
-        <ul class="nav sticky">
+    <div class="sticky">
+        <ul class="nav">
         <li class="active"><a href="login.php">Login</a></li>
         <li><a href="signUp.php">Sign up</a></li>
         </ul>
