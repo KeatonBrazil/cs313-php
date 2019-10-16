@@ -14,7 +14,7 @@ session_start();
 <body>
     <header><h1>Login</h1></header>  
     <div class="container">
-        <ul class="nav">
+        <ul class="nav sticky">
         <li class="active"><a href="login.php">Login</a></li>
         <li><a href="signUp.php">Sign up</a></li>
         </ul>

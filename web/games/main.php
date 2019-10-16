@@ -14,7 +14,7 @@ session_start();
 <body>
     <header><h1>Board Game Hub</h1></header>  
     <div class="container">
-        <ul class="nav">
+        <ul class="nav sticky">
         <li class="active"><a href="main.php">Hub</a></li>
         <li><a href="shelf.php">Game Shelf</a></li>
         <li><a href="wish.php">Wish List</a></li>
