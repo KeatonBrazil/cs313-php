@@ -35,3 +35,7 @@ li {
     float:left;
     padding: 15px;
 }
+
+li:hover {
+    background-color: grey; 
+}
