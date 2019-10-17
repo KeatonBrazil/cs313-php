@@ -72,7 +72,10 @@ li.user {
         margin: 10px;
     }
     li {
-        float:left;
+        float:none;
+    }
+    li.floatright {
+        float: none;
     }
 
 /*iphone X*/
@@ -81,7 +84,10 @@ li.user {
         margin: 10px;
     }
     li {
-        float:left;
+        float:none;
+    }
+    li.floatright {
+        float: none;
     }
 }
 
