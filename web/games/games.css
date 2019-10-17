@@ -89,6 +89,7 @@ li.user {
     }
     li.floatright {
         float: none;
+        text-align: center;
     }
 }
 
