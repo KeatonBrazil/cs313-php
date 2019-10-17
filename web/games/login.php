@@ -13,9 +13,6 @@ else {
     $badlogin = true;
 }
 
-#
-#
-#
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +37,7 @@ else {
         <form action='login.php' method='post'>
         <input type="text"  name="user" placeholder="Username"/><br>
         <input type="password"  name="pass" placeholder="Password"/><br>
-        <p><?php if ($badlogin) {echo 'Your username or password is incorrect';}  ?></p>
+        <p><?php #if ($badlogin) {echo 'Your username or password is incorrect';} ?></p>
         <input type="submit" value="Login">
         </form>
 
