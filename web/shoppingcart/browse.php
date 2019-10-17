@@ -50,8 +50,8 @@
             echo "<div class='item1'>";
             echo "<strong>" . $gameName[$x] . "</strong><br>";
             echo "<p>Price: $" . $gamePrice[$x] . "</p><br><input type='submit' value='Add to Cart'>";
-            echo "<input type='hidden' value='" . $gamePrice . "' name='price'>";
-            echo "<input type='hidden' value='" . $gameName . "' name='product'></div>";
+            echo "<input type='hidden' value='" . $gamePrice[$x] . "' name='price'>";
+            echo "<input type='hidden' value='" . $gameName[$x] . "' name='product'></div>";
             echo "<div class='item2'>";
             echo "<img class='img' src='" . $gamePng[$x] . "' alt='Picture of the boardgame " . $gameName[$x] . "'></div>";
             echo "</form>";

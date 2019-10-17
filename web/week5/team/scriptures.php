@@ -37,8 +37,9 @@
         <h1>Scripture Resources</h1>
     </header>
     <div>
+    <form action='scriptures.php' method='post'>
     <?php 
-        foreach ($db->query('SELECT book, chapter, verse, content FROM scr.scriptures') as $row)
+        foreach ($db->query('SELECT id, book, chapter, verse, content FROM scr.scriptures ORDER BY id DESC') as $row)
         {
           echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . ' - ' . $row['content'];
           echo '<br/>';

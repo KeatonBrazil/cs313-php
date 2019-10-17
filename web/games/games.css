@@ -1,7 +1,6 @@
 body {
     background-color: rgb(20, 57, 97);
     margin:0;
-    
 }
 
 header {
@@ -69,20 +68,17 @@ li.user {
 
 /*iphone 5 and 5s and iphone 6, 7, 8*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
-    
-    
-}
+    .login {
+        margin: 10px;
+    }
 
 /*iphone X*/
 @media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) {
-
-   
+   .login {
+        margin: 10px;
+    }
 }
 
 @media only screen and (min-device-width : 813px) and (max-width: 935px) {
     
-   
-
-    
-
 }
