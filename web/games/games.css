@@ -71,8 +71,8 @@ li.user {
     .login {
         margin: 10px;
     }
-    ul.nav li a {
-        display: block;
+    li {
+        float:left;
     }
 
 /*iphone X*/
@@ -80,8 +80,8 @@ li.user {
     .login {
         margin: 10px;
     }
-    ul.nav li a {
-        display: block;
+    li {
+        float:left;
     }
 }
 
