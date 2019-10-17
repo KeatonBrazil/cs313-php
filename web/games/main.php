@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+$username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ session_start();
         <li><a href="wish.php">Wish List</a></li>
         <li><a href="friends.php">Friends</a></li>
         <li class="floatright"><a href="signOut.php">Sign Out</a></li>
-        <li class="floatright user">Welcome <?php echo $_SESSION['username']; ?></li>
+        <li class="floatright user">Welcome <?php echo $username; ?></li>
         </ul>
     </div>   
 </body>
