@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+$username = htmlspecialchars($_POST['user']);
+$password = htmlspecialchars($_POST['pass']);
+$_SESSION['username'] = $username;
+
+
 ?>
 
 <!DOCTYPE html>
