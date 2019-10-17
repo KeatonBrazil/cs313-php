@@ -1,23 +1,21 @@
 <?php
 session_start();
 
-$fail = FALSE
+$badlogin = false;
 
-$username = htmlspecialchars($_POST['user']);
-$password = htmlspecialchars($_POST['pass']);
-
-
-if ($username) {
-    $_SESSION['username'] = $username;
+if (isset(htmlspecialchars($_POST['user'])) && isset(htmlspecialchars($_POST['pass']))) {
+    $username = htmlspecialchars($_POST['user']);
+    $password = htmlspecialchars($_POST['pass']); 
+    $_SESSION['username'] = $username;  
     header("location: main.php");
 } 
 else {
-    echo "login failed";
-    die();
+    $badlogin = true;
 }
 
-
-
+#
+#
+#
 ?>
 
 <!DOCTYPE html>
@@ -42,6 +40,7 @@ else {
         <form action='login.php' method='post'>
         <input type="text"  name="user" placeholder="Username"/><br>
         <input type="password"  name="pass" placeholder="Password"/><br>
+        <p><?php if ($badlogin) {echo 'Your username or password is incorrect';}  ?></p>
         <input type="submit" value="Login">
         </form>
 
