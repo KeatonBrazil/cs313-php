@@ -1,9 +1,21 @@
 <?php
 session_start();
 
+$fail = FALSE
+
 $username = htmlspecialchars($_POST['user']);
 $password = htmlspecialchars($_POST['pass']);
-$_SESSION['username'] = $username;
+
+
+if ($username) {
+    $_SESSION['username'] = $username;
+    header("location: main.php");
+} 
+else {
+    echo "login failed";
+    die();
+}
+
 
 
 ?>
@@ -27,7 +39,7 @@ $_SESSION['username'] = $username;
         </ul>
     </div>   
     <div class="login">
-        <form action='main.php' method='post'>
+        <form action='login.php' method='post'>
         <input type="text"  name="user" placeholder="Username"/><br>
         <input type="password"  name="pass" placeholder="Password"/><br>
         <input type="submit" value="Login">
