@@ -9,12 +9,6 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
     $_SESSION['username'] = $username;  
     header("location: main.php");
 } 
-else {
-    echo "error in login program";
-    die();
-}
-
-
 
 ?>
 
