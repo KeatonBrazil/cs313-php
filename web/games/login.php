@@ -5,7 +5,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
 {
     $username = htmlspecialchars($_POST['user']);
     $password = htmlspecialchars($_POST['pass']);
-    require_once("parking_db.php");
+    require_once("gamesDb.php");
     $db = get_db();
     $query = 'SELECT pass_word FROM member WHERE username = :username';
     $stmt = $db->prepare($query);
