@@ -3,7 +3,7 @@ session_start();
 
 $badlogin = false;
 
-if (isset($_POST['user']) && isset($_POST['pass'])) {
+if ($_POST['user'] != "" && $_POST['pass'] != "") {
     $username = htmlspecialchars($_POST['user']);
     $password = htmlspecialchars($_POST['pass']); 
     $_SESSION['username'] = $username;  
