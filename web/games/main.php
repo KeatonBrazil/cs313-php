@@ -19,7 +19,6 @@ $username = $_SESSION['username'];
     <header><h1>Shark Hub</h1></header>  
     <div class="sticky">
         <ul class="nav">
-        <li>menu</li>
         <li class="active"><a href="main.php">Hub</a></li>
         <li><a href="shelf.php">Game Shelf</a></li>
         <li><a href="wish.php">Wish List</a></li>
