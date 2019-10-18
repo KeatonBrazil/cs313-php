@@ -24,8 +24,10 @@ session_start();
         <form action="addUser.php" method="post">
             <input type="text" placeholder="username"><br>
             <input type="password" placeholder="password"><br>
-            
-        
+            <input type="text" placeholder="email"><br>
+            <input type="text" placeholder="First Name"><br>
+            <input type="text" placeholder="Last Name"><br>
+            <input type="submit" value="Add Account">        
         </form>
     </div>
 </body>
