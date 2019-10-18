@@ -16,12 +16,17 @@ session_start();
     <header><h1>Friends</h1></header>  
     <div class="sticky">
         <ul class="nav">
-        <li><a href="main.php">Hub</a></li>
-        <li><a href="shelf.php">Game Shelf</a></li>
-        <li><a href="wish.php">Wish List</a></li>
-        <li class="active"><a href="friends.php">Friends</a></li>
-        <li class="floatright"><a href="signOut.php">Sign Out</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li class="active"><a href="signUp.php">Sign up</a></li>
         </ul>
     </div>   
+    <div>
+        <form action="addUser.php" method="post">
+            <input type="text" placeholder="username"><br>
+            <input type="password" placeholder="password"><br>
+            
+        
+        </form>
+    </div>
 </body>
 </html>

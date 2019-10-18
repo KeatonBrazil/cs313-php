@@ -29,12 +29,6 @@ CREATE TABLE game.publisher
 , pub_name   VARCHAR (30) NOT NULL
 );
 
-CREATE TABLE game.gameShelf 
-( game_shelf_id SERIAL PRIMARY KEY
-, game_id       INT NOT NULL REFERENCES game.boardGame(game_id)
-, publisher_id  INT NOT NULL REFERENCES game.publisher(publisher_id)
-);
-
 CREATE TABLE game.member 
 ( member_id    SERIAL PRIMARY KEY
 , username     VARCHAR (50)   NOT NULL UNIQUE 
@@ -42,7 +36,13 @@ CREATE TABLE game.member
 , first_name   VARCHAR (30)   NOT NULL
 , last_name    VARCHAR (30)   NOT NULL
 , email        VARCHAR (30)   NOT NULL UNIQUE
-, gameShelf_id INT NOT NULL REFERENCES game.gameShelf(game_shelf_id)
+);
+
+CREATE TABLE game.gameShelf 
+( game_shelf_id SERIAL PRIMARY KEY
+, game_id       INT NOT NULL REFERENCES game.boardGame(game_id)
+, publisher_id  INT NOT NULL REFERENCES game.publisher(publisher_id) 
+, member_id     INT NOT NULL REFERENCES game.member(member_id) UNIQUE
 );
 
 CREATE TABLE game.post
