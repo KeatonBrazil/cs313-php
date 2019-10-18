@@ -10,8 +10,11 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
     header("location: main.php");
 } 
 else {
-    $badlogin = true;
+    echo "error in login program";
+    die();
 }
+
+
 
 ?>
 
