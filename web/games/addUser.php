@@ -33,7 +33,7 @@
     $query = 'SELECT username FROM game.member';
     $stmt = $db -> prepare($query);
     $stmt -> execute();
-    $names = $stmt -> fetchALL(PDO::FETCH_ASSOC);
+    $names = $stmt -> fetchall(PDO::FETCH_ASSOC);
 
     foreach ($names as $name) {
         $old_name = $name['username'];
@@ -45,10 +45,10 @@
 
     
 
-    $user_query = 'SELECT email FROM game.member';
-    $statement = $db->prepare($user_query);
-    $statement->execute();
-    $emails = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $query = 'SELECT email FROM game.member';
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    $emails = $stmt->fetchall(PDO::FETCH_ASSOC);
     
     foreach ($emails as $mail) {
         $old_email = $mail['email'];
@@ -56,7 +56,7 @@
             header("Location: signUp.php");
             die();
         }
-    
+    }
     echo "good!";
 
     // $query = 'INSERT INTO game.member (username, pass_word, first_name, last_name, email) VALUES (:user, :pass, :fname, :lname, :email)';
