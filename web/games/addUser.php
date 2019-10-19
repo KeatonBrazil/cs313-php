@@ -24,25 +24,26 @@
         die();
     }
 
+
+    $hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
+
+    require_once("gamesDb.php");
+    $db = get_db();
+
+    $query = 'SELECT username FROM game.member';
+    $stmt = $db -> prepare($query);
+    $stmt -> execute();
+    $names = $stmt -> fetchALL(PDO::FETCH_ASSOC);
+
+    foreach ($names as $name) {
+        $old_name = $name['username'];
+        if ($user === $old_name) {
+            header("location: signUp.php");
+            die();
+        }
+    }
+
     echo "good!"
-
-    // $hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
-
-    // require_once("gamesDb.php");
-    // $db = get_db();
-
-    // $query = 'SELECT username FROM game.member';
-    // $stmt = $db -> prepare($query);
-    // $stmt -> execute();
-    // $names = $stmt -> fetchALL(PDO::FETCH_ASSOC);
-
-    // foreach ($names as $name) {
-    //     $old_name = $name['username'];
-    //     if ($user === $old_name) {
-    //         header("location: signUp.php");
-    //         die();
-    //     }
-    // }
 
     // $user_query = 'SELECT email FROM game.member';
     // $statement = $db->prepare($user_query);
