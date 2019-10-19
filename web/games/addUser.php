@@ -57,20 +57,19 @@
             die();
         }
     }
-    echo "good!";
 
-    // $query = 'INSERT INTO game.member (username, pass_word, first_name, last_name, email) VALUES (:user, :pass, :fname, :lname, :email)';
-    // $stmt = $db->prepare($query);
-    // $stmt->bindValue(':user', $user, PDO::PARAM_STR);
-    // $stmt->bindValue(':pass', $hashedPassword, PDO::PARAM_STR);
-    // $stmt->bindValue(':fname', $fname, PDO::PARAM_STR);
-    // $stmt->bindValue(':lname', $lname, PDO::PARAM_STR);
-    // $stmt->bindValue(':email', $email, PDO::PARAM_STR);
-    // $result = $stmt->execute();
+    $query = 'INSERT INTO game.member (username, pass_word, first_name, last_name, email) VALUES (:user, :pass, :fname, :lname, :email)';
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':user', $user, PDO::PARAM_STR);
+    $stmt->bindValue(':pass', $hashedPassword, PDO::PARAM_STR);
+    $stmt->bindValue(':fname', $fname, PDO::PARAM_STR);
+    $stmt->bindValue(':lname', $lname, PDO::PARAM_STR);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $result = $stmt->execute();
 
-    // flush();
-    // header("Location:login.php");
-    // die();
+    flush();
+    header("Location:login.php");
+    die();
 
 
 
