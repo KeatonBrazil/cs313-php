@@ -43,7 +43,7 @@
         }
     }
 
-    echo "good!"
+    echo "good!";
 
     // $user_query = 'SELECT email FROM game.member';
     // $statement = $db->prepare($user_query);
