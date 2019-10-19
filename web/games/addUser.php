@@ -47,10 +47,10 @@
     $statement->execute();
     $emails = $statement->fetchAll(PDO::FETCH_ASSOC);
     
-    foreach ($emails as $mail) {
+    foreach ($email as $mail) {
         $old_email = $mail['email'];
         if ($email === $old_email) {
-            header("Location: sign_up.php");
+            header("Location: signUp.php");
             die();
         }
     
@@ -58,9 +58,9 @@
     $stmt = $db->prepare($query);
     $stmt->bindValue(':user', $user, PDO::PARAM_STR);
     $stmt->bindValue(':pass', $hashedPassword, PDO::PARAM_STR);
-    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
     $stmt->bindValue(':fname', $fname, PDO::PARAM_STR);
     $stmt->bindValue(':lname', $lname, PDO::PARAM_STR);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
     $result = $stmt->execute();
 
     flush();
