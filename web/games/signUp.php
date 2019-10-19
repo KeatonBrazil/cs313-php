@@ -24,7 +24,9 @@ session_start();
         <form action="addUser.php" method="post">
             <input type="text" name="uzer" placeholder="username"><br>
             <input type="password" name="pw" placeholder="password"><br>
+            <input type="password" name="cpw" placeholder="confirm password"><br>
             <input type="text" name="email" placeholder="email"><br>
+            <input type="text" name="cemail" placeholder="confirm email"><br>
             <input type="text" name="fname" placeholder="First Name"><br>
             <input type="text" name="lname" placeholder="Last Name"><br>
             <input type="submit" value="Add Account"><br>       

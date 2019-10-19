@@ -7,7 +7,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     $password = htmlspecialchars($_POST['pass']);
     require_once("gamesDb.php");
     $db = get_db();
-    $query = 'SELECT pass_word FROM member WHERE username = :username';
+    $query = 'SELECT pass_word FROM game.member WHERE username = :username';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':username', $username);
     $result = $stmt->execute();
