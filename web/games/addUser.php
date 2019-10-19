@@ -43,20 +43,22 @@
         }
     }
 
+    
+
+    $user_query = 'SELECT email FROM game.member';
+    $statement = $db->prepare($user_query);
+    $statement->execute();
+    $emails = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+    foreach ($emails as $mail) {
+        $old_email = $mail['email'];
+        if ($email === $old_email) {
+            header("Location: signUp.php");
+            die();
+        }
+    
     echo "good!";
 
-    // $user_query = 'SELECT email FROM game.member';
-    // $statement = $db->prepare($user_query);
-    // $statement->execute();
-    // $emails = $statement->fetchAll(PDO::FETCH_ASSOC);
-    
-    // foreach ($emails as $mail) {
-    //     $old_email = $mail['email'];
-    //     if ($email === $old_email) {
-    //         header("Location: signUp.php");
-    //         die();
-    //     }
-    
     // $query = 'INSERT INTO game.member (username, pass_word, first_name, last_name, email) VALUES (:user, :pass, :fname, :lname, :email)';
     // $stmt = $db->prepare($query);
     // $stmt->bindValue(':user', $user, PDO::PARAM_STR);
