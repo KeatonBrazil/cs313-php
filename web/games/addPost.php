@@ -16,12 +16,14 @@
 
     $com = $_GET['tarea'];
 
-    $query = 'SELECT member_id, username FROM member';
-    $stmt = $db->prepare($query);
-    $stmt->execute();
-    $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $echo $com;
 
-    echo $com;
+    // $query = 'SELECT member_id, username FROM member';
+    // $stmt = $db->prepare($query);
+    // $stmt->execute();
+    // $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    
 
     // $mem_id = 0;
     // foreach ($user_id as $member) {
