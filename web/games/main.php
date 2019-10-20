@@ -1,8 +1,15 @@
 <?php
 session_start();
 
-$username = $_SESSION['username'];
-
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+	header("Location: login.php");
+	die();
+}
 ?>
 
 <!DOCTYPE html>
