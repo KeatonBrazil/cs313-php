@@ -47,7 +47,8 @@
         </ul>
     </div>   
     <div class="white">
-        <div class="center" id="return">
+        <div class="center">
+            <a id="return"></a>
             <form action="addPost.php" method="post">
                 <textarea name="tarea" cols="30" rows="10"></textarea><br>
                 <input type="submit" value="Post"><br>
