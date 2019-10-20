@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="games.css">
     <title>Shark Games | Hub</title>
 </head>
-<body <?php if ($added) {echo "onload='added()'";} ?>>
+<body <?php if ($added) {echo 'onload="added()"';} ?>>
     <header><h1>Shark Hub</h1></header>  
     <div class="sticky">
         <ul class="nav">
