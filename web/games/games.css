@@ -61,8 +61,11 @@ li.user {
 }
 
 .white {
+    background-color: white;
     padding: 15px;
     margin: 10%;
+    box-shadow: 0 4px 8px 0 rgb(1, 22, 44);
+
 }
 
 .sticky {
