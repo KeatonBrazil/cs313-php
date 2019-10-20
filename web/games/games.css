@@ -62,10 +62,13 @@ li.user {
 
 .white {
     background-color: white;
-    padding: 15px;
+    padding: 15px 50px 15px 50px;
     margin: 10%;
     box-shadow: 0 4px 8px 0 rgb(1, 22, 44);
+}
 
+.center {
+    text-align: center;
 }
 
 .sticky {
