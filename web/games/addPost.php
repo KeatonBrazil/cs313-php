@@ -14,9 +14,9 @@
     require_once("gamesDb.php");
     $db = get_db();
 
-    $com = $_GET['tarea'];
+    $com = $_POST['tarea'];
 
-    $echo $com;
+    
 
     // $query = 'SELECT member_id, username FROM member';
     // $stmt = $db->prepare($query);
