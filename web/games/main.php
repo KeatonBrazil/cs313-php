@@ -11,6 +11,8 @@
         die();
     }
 
+    $added = $_GET['return'];
+
     require_once("gamesDb.php");
     $db = get_db();
 
@@ -31,7 +33,7 @@
     <link rel="stylesheet" href="games.css">
     <title>Shark Games | Hub</title>
 </head>
-<body>
+<body <?php if ($added) {echo "onload='added()'";} ?>>
     <header><h1>Shark Hub</h1></header>  
     <div class="sticky">
         <ul class="nav">
@@ -45,7 +47,7 @@
         </ul>
     </div>   
     <div class="white">
-        <div class="center">
+        <div class="center" id="return">
             <form action="addPost.php" method="post">
                 <textarea name="tarea" cols="30" rows="10"></textarea><br>
                 <input type="submit" value="Post"><br>
@@ -65,4 +67,9 @@
         </div>
     </div>
 </body>
+<script>
+    function added() {
+        locate.href('#return');
+    }
+</script>
 </html>
