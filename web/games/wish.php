@@ -30,6 +30,7 @@ else
         <li><a href="shelf.php">Game Shelf</a></li>
         <li class="active"><a href="wish.php">Wish List</a></li>
         <li><a href="friends.php">Friends</a></li>
+        <?php if ($username === 'Admin') {echo "<li><a href='admin.php'>Admin</a></li>";} ?>
         <li class="floatright"><a href="signOut.php">Sign Out</a></li>
         </ul>
     </div>   
