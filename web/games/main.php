@@ -44,10 +44,10 @@
     </div>   
     <div>
         <form action="addPost.php" method="post">
-            <textarea name="tarea" cols="100" rows="50"></textarea>
+            <textarea name="tarea" cols="30" rows="10"></textarea>
             <input type="submit" value="Post">
         </form>
-    </div>
+    </div class="white">
         <?php 
             foreach ($comments as $comment) {
                 $post = $comment['comment'];
