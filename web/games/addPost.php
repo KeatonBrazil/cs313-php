@@ -16,7 +16,7 @@
 
     $com = $_POST['tarea'];    
 
-    $query = 'SELECT member_id, username FROM member';
+    $query = 'SELECT member_id, username FROM game.member';
     $stmt = $db->prepare($query);
     $stmt->execute();
     $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
