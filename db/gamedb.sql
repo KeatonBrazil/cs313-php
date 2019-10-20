@@ -67,3 +67,4 @@ CREATE TABLE game.message
 , image_id        INT REFERENCES game.image(image_id)
 , relationship_id INT NOT NULL REFERENCES game.relationship(relationship_id)
 );
+

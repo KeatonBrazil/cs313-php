@@ -27,5 +27,8 @@ $username = $_SESSION['username'];
         <li class="floatright user">Welcome <?php echo $username; ?></li>
         </ul>
     </div>   
+    <div>
+        <form action="addPost.php" method="post"></form>
+    </div>
 </body>
 </html>
