@@ -18,21 +18,6 @@
     $stmt = $db->prepare($query);
     $stmt->execute();
     $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-    
-
-    // $query = 'SELECT member_id, username FROM member';
-    // $stmt = $db->prepare($query);
-    // $stmt->execute();
-    // $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    // $mem_id = 0;
-    // foreach ($user_id as $member) {
-    //     if ($member['username'] === $username) {
-    //         $mem_id = $member['member_id'];
-    //     }
-    // }
-
 
 ?>
 
