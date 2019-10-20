@@ -21,6 +21,8 @@
     $stmt->execute();
     $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    echo $com;
+
     // $mem_id = 0;
     // foreach ($user_id as $member) {
     //     if ($member['username'] === $username) {
