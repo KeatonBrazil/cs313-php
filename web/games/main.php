@@ -56,22 +56,23 @@
         <li class="floatright user">Welcome <?php echo $username; ?></li>
         </ul>
     </div>   
-    <div>
-        <form action="addPost.php" method="post">
-            <textarea name="tarea" cols="30" rows="10"></textarea>
-            <input type="submit" value="Post">
-        </form>
-    </div class="white">
-        <?php 
-            foreach ($comments as $comment) {
-                $post = $comment['comment'];
-                
-                echo $post . "<br>";
-            }           
-        
-        ?>
-    <div>
-
+    <div class="white">
+        <div>
+            <form action="addPost.php" method="post">
+                <textarea name="tarea" cols="30" rows="10"></textarea><br>
+                <input type="submit" value="Post"><br>
+            </form><br>
+        </div>
+        <div>
+            <?php 
+                foreach ($comments as $comment) {
+                    $post = $comment['comment'];
+                    
+                    echo $post . "<br>";
+                }           
+            
+            ?>
+        </div>
     </div>
 </body>
 </html>
