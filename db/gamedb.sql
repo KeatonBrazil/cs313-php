@@ -32,7 +32,7 @@ CREATE TABLE game.publisher
 CREATE TABLE game.member 
 ( member_id    SERIAL PRIMARY KEY
 , username     VARCHAR (50)   NOT NULL UNIQUE 
-, pass_word    VARCHAR (200)  NOT NULL
+, pass_word    VARCHAR (250)  NOT NULL
 , first_name   VARCHAR (30)   NOT NULL
 , last_name    VARCHAR (30)   NOT NULL
 , email        VARCHAR (30)   NOT NULL UNIQUE

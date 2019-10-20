@@ -1,15 +1,23 @@
 <?php
-session_start();
+    session_start();
 
-if (isset($_SESSION['username']))
-{
-	$username = $_SESSION['username'];
-}
-else
-{
-	header("Location: login.php");
-	die();
-}
+    if (isset($_SESSION['username']))
+    {
+        $username = $_SESSION['username'];
+    }
+    else
+    {
+        header("Location: login.php");
+        die();
+    }
+
+    require_once("gamesDb.php");
+    $db = get_db();
+
+    $query = 'SELECT post_id, comment FROM game.post ORDER BY post_id DESC';
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +43,21 @@ else
         </ul>
     </div>   
     <div>
-        <form action="addPost.php" method="post"></form>
+        <form action="addPost.php" method="post">
+            <textarea name="tarea" cols="100" rows="50"></textarea>
+            <input type="submit" value="Post">
+        </form>
+    </div>
+        <?php 
+            foreach ($comments as $comment) {
+                $post = $comment['comment'];
+                
+                echo $post . "<br>";
+            }           
+        
+        ?>
+    <div>
+
     </div>
 </body>
 </html>
