@@ -16,6 +16,7 @@
 
     $com = $_POST['tarea'];
 
+    echo $com;
     
 
     // $query = 'SELECT member_id, username FROM member';
