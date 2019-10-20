@@ -69,3 +69,4 @@ CREATE TABLE game.message
 );
 
 INSERT INTO game.post (comment, time_date, member_id) VALUES ('Hey Yall!, I just bought a new board game! check it out!', NOW(), 1);
+INSERT INTO game.post (comment, time_date, member_id) VALUES ('Just bought Scythe!', NOW(), 1);
