@@ -67,10 +67,10 @@
             ?>
         </div>
     </div>
-</body>
 <script>
     function added() {
         locate.href('#return');
     }
 </script>
+</body>
 </html>
