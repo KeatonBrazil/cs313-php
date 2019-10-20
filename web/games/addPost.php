@@ -28,14 +28,16 @@
         }
     }
 
-    $query = 'INSERT INTO game.post (comment, time_date, member_id) VALUES (:comment, CURRENT_TIMESTAMP, :mem_id)';
-    $stmt = $db ->prepare($query);
-    $stmt->bindValue(':comment', $com, PDO::PARAM_STR);
-    $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_STR);
-    $newcomment = $stmt->execute();
+    echo $mem_id;
 
-    flush();
-    header("Location:main.php");
-    die();
+    // $query = 'INSERT INTO game.post (comment, time_date, member_id) VALUES (:comment, CURRENT_TIMESTAMP, :mem_id)';
+    // $stmt = $db ->prepare($query);
+    // $stmt->bindValue(':comment', $com, PDO::PARAM_STR);
+    // $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_STR);
+    // $newcomment = $stmt->execute();
+
+    // flush();
+    // header("Location:main.php");
+    // die();
 
 ?>
