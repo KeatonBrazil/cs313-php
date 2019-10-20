@@ -68,3 +68,4 @@ CREATE TABLE game.message
 , relationship_id INT NOT NULL REFERENCES game.relationship(relationship_id)
 );
 
+INSERT INTO game.post (comment, time_date, member_id) VALUES ('Hey Yall!, I just bought a new board game! check it out!', NOW(), 1);
