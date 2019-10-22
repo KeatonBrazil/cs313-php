@@ -20,13 +20,13 @@ $db = get_db();
             <input type="text" name="verse" placeholder="verse"><br>
             <textarea name="content" cols="30" rows="10"></textarea>
             <?php 
-                $query = 'SELECT topic FROM scr.topics';
-                $stmt = $db -> prepare($query);
-                $stmt = execute();
-                $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                vardump($topics);
-                echo "<br>";
-                foreach ($topics as $topic) {
+                // $query = 'SELECT topic FROM scr.topics';
+                // $stmt = $db -> prepare($query);
+                // $stmt = execute();
+                // $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                // vardump($topics);
+                // echo "<br>";
+                foreach ($db->query('SELECT topic FROM scr.topics') as $topic) {
                     echo $topic['topic'];
                     echo "<input type='checkbox' name='topic' value='" . $topic['topic'] . "'>" . $topic['topic'];
                 }
