@@ -24,11 +24,13 @@ $db = get_db();
                 $stmt = $db -> prepare($query);
                 $stmt = execute();
                 $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                vardump($topics);
+                echo "<br>";
                 foreach ($topics as $topic) {
+                    echo $topic['topic'];
                     echo "<input type='checkbox' name='topic' value='" . $topic['topic'] . "'>" . $topic['topic'];
                 }
-            ?>    
-            <input type="checkbox" name="blah">BLah    
+            ?>     
         </form>
     </div>
 </body>
