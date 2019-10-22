@@ -1,6 +1,22 @@
 <?php 
 require_once("scrDb.php");
 $db = get_db();
+
+$book = $_POST['book'];
+$chapter = $_POST['chapter'];
+$verse = $_POST['verse']; 
+$content = $_POST['content'];
+
+if (isset($book)) {
+    $query = 'INSERT INTO scr.scriptures (book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content)';
+    $stmt = $db -> prepare($query);
+    $stmt->bindValue(':book', $book, PDO::PARAM_STR);
+    $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);  
+    $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+    $stmt->bindValue(':content', $content, PDO::PARAM_STR);  
+    $result = $stmt->execute(); 
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -14,17 +30,11 @@ $db = get_db();
 <body>
     <div>
         <form action="insert.php" method="post">
-            <input type="hidden" name="sent" value="True">
             <input type="text" name="book" placeholder="Book"><br>
             <input type="text" name="chapter" placeholder="chapter"><br>
             <input type="text" name="verse" placeholder="verse"><br>
             <textarea name="content" cols="30" rows="10"></textarea>
             <?php 
-                // $query = 'SELECT topic FROM scr.topics';
-                // $stmt = $db -> prepare($query);
-                // $stmt = execute();
-                // $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                // vardump($topics);
                 echo "<br>";
                 foreach ($db->query('SELECT topic FROM scr.topics') as $topic) {
                     echo "<input type='checkbox' name='topic' value='" . $topic['topic'] . "'>" . $topic['topic'];
