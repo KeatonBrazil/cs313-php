@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="games.css">
     <title>Shark Games | Hub</title>
 </head>
-<body <?php if ($added) {echo 'onload="added()"';} ?>>
+<body>
     <header><h1>Shark Hub</h1></header>  
     <div class="sticky">
         <ul class="nav">
@@ -68,9 +68,6 @@
         </div>
     </div>
 <script>
-    function added() {
-        locate.href('#return');
-    }
 </script>
 </body>
 </html>
