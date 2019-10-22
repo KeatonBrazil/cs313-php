@@ -27,7 +27,6 @@ $db = get_db();
                 // vardump($topics);
                 // echo "<br>";
                 foreach ($db->query('SELECT topic FROM scr.topics') as $topic) {
-                    echo $topic['topic'];
                     echo "<input type='checkbox' name='topic' value='" . $topic['topic'] . "'>" . $topic['topic'];
                 }
             ?>     
