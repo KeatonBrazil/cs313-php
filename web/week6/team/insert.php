@@ -20,7 +20,7 @@ $db = get_db();
             <input type="text" name="verse" placeholder="verse"><br>
             <textarea name="content" cols="30" rows="10"></textarea>
             <?php 
-                $query = 'SELECT topic, topic_id FROM scr.topic';
+                $query = 'SELECT topic, topic_id FROM scr.topics';
                 $stmt = $db -> prepare($query);
                 $stmt = execute();
                 $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
