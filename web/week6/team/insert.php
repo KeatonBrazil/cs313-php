@@ -40,8 +40,17 @@ if (isset($book)) {
                     echo "<input type='checkbox' name='topic' value='" . $topic['topic'] . "'>" . $topic['topic'];
                 }
             ?>    
-            <input type="submit" value="Go Go"> 
+            <br><input type="submit" value="Go Go"> 
         </form>
+    </div>
+    <div>
+        <?php 
+        foreach ($db->query('SELECT id, book, chapter, verse, content FROM scr.scriptures ORDER BY id DESC') as $row)
+        {
+          echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . ' - ' . $row['content'];
+          echo '<br/>';
+        }
+        ?>
     </div>
 </body>
 </html>
