@@ -25,7 +25,7 @@ $db = get_db();
                 // $stmt = execute();
                 // $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 // vardump($topics);
-                // echo "<br>";
+                echo "<br>";
                 foreach ($db->query('SELECT topic FROM scr.topics') as $topic) {
                     echo "<input type='checkbox' name='topic' value='" . $topic['topic'] . "'>" . $topic['topic'];
                 }
