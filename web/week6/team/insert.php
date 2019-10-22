@@ -39,7 +39,8 @@ if (isset($book)) {
                 foreach ($db->query('SELECT topic FROM scr.topics') as $topic) {
                     echo "<input type='checkbox' name='topic' value='" . $topic['topic'] . "'>" . $topic['topic'];
                 }
-            ?>     
+            ?>    
+            <input type="submit" value="Go Go"> 
         </form>
     </div>
 </body>
