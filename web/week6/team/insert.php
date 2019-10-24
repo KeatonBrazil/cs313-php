@@ -92,7 +92,7 @@ if (isset($book)) {
                 echo " - Topics:";
                 foreach ($toppics as $topic) 
                 {
-                    echo " " . $topic['topic'] . ", ";
+                    echo " " . $topic['topic'];
                 }
             } else {
                 echo " - Topic:";
