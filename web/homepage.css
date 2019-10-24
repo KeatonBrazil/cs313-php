@@ -99,13 +99,17 @@ header {
     color: black;
 }
 
+.ul {
+    list-style-type: none;
+}
+
 .projects {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .projects:visited {
-    color: white;
+    color: black;
 }
 
 .intro {
