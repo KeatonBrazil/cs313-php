@@ -20,20 +20,26 @@ if (isset($book)) {
 
     $new_id = $pdo->lastInsertId('id');
     $count = sizeof($topic);
-    for ($i=0; $i < $count; $i++) {
-        $query = 'SELECT topic_id, topic FROM scr.topics WHERE topic = :topic';
-        $stmt = $db->prepare($query);
-        $stmt->bindValue(':topic', $topic[$i], PDO::PARAM_STR);
-        $stmt->execute();
-        $topic_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $query = 'INSERT INTO scr.link (topic_id, scr_id) VALUES (:t_id, :s_id)'; 
-        $stmt = $db -> prepare($query);
-        $stmt->bindValue(':t_id', $topic_id, PDO::PARAM_INT);
-        $stmt->bindValue(':s_id', $new_id, PDO::PARAM_INT); 
-        $result = $stmt->execute(); 
-        
+    echo $new_id;
+    echo $count;
+    for ($i=0; $i < $count; $i++) {
+        echo $topic[$i];
     }
+    // for ($i=0; $i < $count; $i++) {
+    //     $query = 'SELECT topic_id, topic FROM scr.topics WHERE topic = :topic';
+    //     $stmt = $db->prepare($query);
+    //     $stmt->bindValue(':topic', $topic[$i], PDO::PARAM_STR);
+    //     $stmt->execute();
+    //     $topic_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    //     $query = 'INSERT INTO scr.link (topic_id, scr_id) VALUES (:t_id, :s_id)'; 
+    //     $stmt = $db -> prepare($query);
+    //     $stmt->bindValue(':t_id', $topic_id, PDO::PARAM_INT);
+    //     $stmt->bindValue(':s_id', $new_id, PDO::PARAM_INT); 
+    //     $result = $stmt->execute(); 
+        
+    // }
 }
 
 
