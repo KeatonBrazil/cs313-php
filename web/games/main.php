@@ -16,7 +16,7 @@
     require_once("gamesDb.php");
     $db = get_db();
 
-    $query = 'SELECT post_id, username, comment FROM game.post p LEFT JOIN game.member m ON p.member_id = m.member_id ORDER BY post_id DESC';
+    $query = 'SELECT post_id, username, comment, post_time, post_date FROM game.post p LEFT JOIN game.member m ON p.member_id = m.member_id ORDER BY post_id DESC';
     $stmt = $db->prepare($query);
     $stmt->execute();
     $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -59,8 +59,10 @@
                 foreach ($comments as $comment) {
                     $post = $comment['comment'];
                     $mem = $comment['username'];
+                    $tim = $comment['post_time'];
+                    $dat = $comment['post_dat'];
                     
-                    echo $mem . "<br>"; 
+                    echo $mem . " " . $tim . " " . $dat . "<br><hr>"; 
                     echo $post . "<br><br>";
                 }           
             
