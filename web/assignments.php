@@ -21,7 +21,10 @@
         <a class="link" href="index.php">Welcome</a>              
     </div>
     <div>
-        <h1>Coming Soon...</h1>
+        <ul class="projects">
+            <li><a href="shoppingcart/login.php">Shopping Cart App</a></li>
+            <li><a href="games/login.php">Board Game Social App</a></li>
+        </ul>
     </div>
 </body>
 </html>

@@ -99,6 +99,15 @@ header {
     color: black;
 }
 
+.projects {
+    text-decoration: none;
+    color: white;
+}
+
+.projects:visited {
+    color: white;
+}
+
 .intro {
     padding: 10px;
     margin: 10px;
