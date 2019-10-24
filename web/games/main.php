@@ -45,8 +45,8 @@
         <li class="floatright"><a href="signOut.php">Sign Out</a></li>
         <li class="floatright user">Welcome <?php echo $username; ?></li>
         </ul>
-    </div>   
-    <div class="white" id="return">
+    </div  id="return">   
+    <div class="white">
         <div class="center">
             <form action="addPost.php" method="post">
                 <textarea name="tarea" cols="30" rows="10"></textarea><br>
