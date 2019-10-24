@@ -80,6 +80,7 @@ li.user {
 .post {
     border: 2px solid black;
     border-radius: 5px;
+    padding: 10px;
 }
 
 /*iphone 5 and 5s and iphone 6, 7, 8*/
