@@ -87,7 +87,8 @@ if (isset($book)) {
           $stmt->bindValue(':scr_id', $row['id'], PDO::PARAM_INT);
           $stmt->execute();
           $toppics = $stmt->fetchAll(PDO::FETCH_ASSOC);
-          if ($toppics != "") {
+          vardump($toppics);
+          if (isset($toppics)) {
               if (sizeof($toppics) > 1) {
                 echo " Topics: ";
               } else {echo " Topic: ";}
