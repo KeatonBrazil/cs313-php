@@ -77,6 +77,11 @@ li.user {
     top:0;
 }
 
+.post {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
 /*iphone 5 and 5s and iphone 6, 7, 8*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
     .login {
