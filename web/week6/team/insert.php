@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 require_once("scrDb.php");
 $db = get_db();
 
@@ -44,6 +46,7 @@ if (isset($book)) {
         $result = $stmt->execute(); 
         
     }
+session_destroy();
 }
 
 
