@@ -17,11 +17,8 @@ if (isset($book)) {
     $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);  
     $result = $stmt->execute(); 
-
-    $new_id = $db->lastInsertId('id');
+    
     $count = sizeof($topic);
-
-    echo $new_id;
     echo "<br>";
     echo $count;
     echo "<br>";
