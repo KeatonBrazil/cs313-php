@@ -46,11 +46,7 @@ if (isset($book)) {
         $result = $stmt->execute(); 
         
     }
-unset($book);
-unset($chapter);
-unset($verse);
-unset($content);
-unset($topic);
+
 }
 
 
