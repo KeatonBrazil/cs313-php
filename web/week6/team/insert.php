@@ -27,16 +27,14 @@ if (isset($book)) {
     $stmt->execute();
     $scr_ids = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach ($scr_ids as $scr_id) {
-        echo $scr_id['id'];
-    }
+    echo $scr_ids[0]['id'];
     echo "<br>";
     $count = sizeof($topic);
-    echo "<br>";
     echo $count;
     echo "<br>";
     for ($i=0; $i < $count; $i++) {
         echo $topic[$i];
+        echo "<br>";
     }
     echo "<br>";
 
