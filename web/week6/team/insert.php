@@ -6,8 +6,10 @@ $book = $_POST['book'];
 $chapter = $_POST['chapter'];
 $verse = $_POST['verse']; 
 $content = $_POST['content'];
+$topic = $_POST['topic'];
 
 if (isset($book)) {
+
     $query = 'INSERT INTO scr.scriptures (book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content)';
     $stmt = $db -> prepare($query);
     $stmt->bindValue(':book', $book, PDO::PARAM_STR);
@@ -15,7 +17,26 @@ if (isset($book)) {
     $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);  
     $result = $stmt->execute(); 
+
+    $new_id = $pdo->lastInsertId('id');
+    $count = sizeof($topic);
+    for ($i=0; $i < $count; $i++) {
+        $query = 'SELECT topic_id, topic FROM scr.topics WHERE topic = :topic';
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(':topic', $topic[$i], PDO::PARAM_STR);
+        $stmt->execute();
+        $topic_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $query = 'INSERT INTO scr.link (topic_id, scr_id) VALUES (:t_id, :s_id)'; 
+        $stmt = $db -> prepare($query);
+        $stmt->bindValue(':t_id', $topic_id, PDO::PARAM_INT);
+        $stmt->bindValue(':s_id', $new_id, PDO::PARAM_INT); 
+        $result = $stmt->execute(); 
+        
+    }
 }
+
+
 
 ?>
 
@@ -37,7 +58,7 @@ if (isset($book)) {
             <?php 
                 echo "<br>";
                 foreach ($db->query('SELECT topic FROM scr.topics') as $topic) {
-                    echo "<input type='checkbox' name='topic' value='" . $topic['topic'] . "'>" . $topic['topic'];
+                    echo "<input type='checkbox' name='topic[]' value='" . $topic['topic'] . "'>" . $topic['topic'];
                 }
             ?>    
             <br><input type="submit" value="Go Go"> 
