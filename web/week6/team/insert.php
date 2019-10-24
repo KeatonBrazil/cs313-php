@@ -18,14 +18,18 @@ if (isset($book)) {
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);  
     $result = $stmt->execute(); 
 
-    //$new_id = $pdo->lastInsertId('id');
+    $new_id = lastInsertId();
     $count = sizeof($topic);
 
-    //echo $new_id;
+    echo $new_id;
+    echo "<br>";
     echo $count;
+    echo "<br>";
     for ($i=0; $i < $count; $i++) {
         echo $topic[$i];
     }
+    echo "<br>";
+
     // for ($i=0; $i < $count; $i++) {
     //     $query = 'SELECT topic_id, topic FROM scr.topics WHERE topic = :topic';
     //     $stmt = $db->prepare($query);
