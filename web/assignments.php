@@ -21,9 +21,9 @@
         <a class="link" href="index.php">Welcome</a>              
     </div>
     <div>
-        <ul class="projects">
-            <li><a href="shoppingcart/login.php">Shopping Cart App</a></li>
-            <li><a href="games/login.php">Board Game Social App</a></li>
+        <ul>
+            <li><a class="projects" href="shoppingcart/login.php">Shopping Cart App</a></li>
+            <li><a class="projects" href="games/login.php">Board Game Social App</a></li>
         </ul>
     </div>
 </body>
