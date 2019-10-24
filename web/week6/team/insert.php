@@ -88,6 +88,7 @@ if (isset($book)) {
           $stmt->execute();
           $toppics = $stmt->fetchAll(PDO::FETCH_ASSOC);
           
+          var_dump($toppics);
         //   if (isset($toppics)) {
         //       if (sizeof($toppics) > 1) {
         //         echo " Topics: ";
