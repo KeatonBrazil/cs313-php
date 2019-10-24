@@ -18,10 +18,10 @@ if (isset($book)) {
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);  
     $result = $stmt->execute(); 
 
-    $new_id = $pdo->lastInsertId('id');
+    //$new_id = $pdo->lastInsertId('id');
     $count = sizeof($topic);
 
-    echo $new_id;
+    //echo $new_id;
     echo $count;
     for ($i=0; $i < $count; $i++) {
         echo $topic[$i];
