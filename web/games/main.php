@@ -35,7 +35,7 @@
 </head>
 <body>
     <header><h1>Shark Hub</h1></header>  
-    <div class="sticky">
+    <div class="sticky" id="return">
         <ul class="nav">
         <li class="active"><a href="main.php">Hub</a></li>
         <li><a href="shelf.php">Game Shelf</a></li>
@@ -45,7 +45,7 @@
         <li class="floatright"><a href="signOut.php">Sign Out</a></li>
         <li class="floatright user">Welcome <?php echo $username; ?></li>
         </ul>
-    </div  id="return">   
+    </div>   
     <div class="white">
         <div class="center">
             <form action="addPost.php" method="post">
