@@ -39,7 +39,7 @@ if (isset($book)) {
 
         $query = 'INSERT INTO scr.link (topic_id, scr_id) VALUES (:t_id, :s_id)'; 
         $stmt = $db -> prepare($query);
-        $stmt->bindValue(':t_id', $topic_id, PDO::PARAM_INT);
+        $stmt->bindValue(':t_id', $topic_id[0]['topic_id'], PDO::PARAM_INT);
         $stmt->bindValue(':s_id', $scr_ids[0]['id'], PDO::PARAM_INT); 
         $result = $stmt->execute(); 
         
