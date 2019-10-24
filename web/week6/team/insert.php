@@ -81,12 +81,19 @@ if (isset($book)) {
         <?php
         foreach ($db->query('SELECT id, book, chapter, verse, content FROM scr.scriptures ORDER BY id DESC') as $row)
         {
-          echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . ' - ' . $row['content'] . "Topic(s):";
+          echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . ' - ' . $row['content'];
           $query = 'SELECT topic FROM scr.scriptures sc LEFT JOIN scr.link l ON id = scr_id LEFT JOIN scr.topics t ON t.topic_id = l.topic_id WHERE id = :scr_id';
           $stmt = $db -> prepare($query);
           $stmt->bindValue(':scr_id', $row['id'], PDO::PARAM_INT);
           $stmt->execute();
           $toppics = $stmt->fetchAll(PDO::FETCH_ASSOC);
+          
+          if (sizeof($toppics) > 0) {
+              if (sizeof($toppics) > 1) {
+                echo " Topics: ";
+              } else {echo " Topic: ";}
+          }
+
           foreach ($toppics as $topic) 
           {
             echo " " . $topic['topic'];
