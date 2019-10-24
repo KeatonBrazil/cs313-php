@@ -17,7 +17,20 @@ if (isset($book)) {
     $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);  
     $result = $stmt->execute(); 
-    
+
+    $query = 'SELECT id, book, chapter, verse, content FROM scr.scriptures WHERE book = :book AND chapter = :chapter AND verse = :verse AND content = :content';
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':book', $book, PDO::PARAM_STR);
+    $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);  
+    $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+    $stmt->bindValue(':content', $content, PDO::PARAM_STR);
+    $stmt->execute();
+    $scr_ids = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($scr_ids as $scr_id) {
+        echo $scr_id['id'];
+    }
+    echo "<br>";
     $count = sizeof($topic);
     echo "<br>";
     echo $count;
