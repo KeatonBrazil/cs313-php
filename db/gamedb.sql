@@ -48,7 +48,8 @@ CREATE TABLE game.gameShelf
 CREATE TABLE game.post
 ( post_id    SERIAL PRIMARY KEY 
 , comment    VARCHAR (500) 
-, time_date  DATE NOT NULL   
+, post_time  TEXT NOT NULL 
+, post_date  DATE NOT NULL  
 , image_id   INT REFERENCES game.image(image_id)  
 , member_id  INT NOT NULL REFERENCES game.member(member_id)  
 );
@@ -68,5 +69,5 @@ CREATE TABLE game.message
 , relationship_id INT NOT NULL REFERENCES game.relationship(relationship_id)
 );
 
-INSERT INTO game.post (comment, time_date, member_id) VALUES ('Hey Yall!, I just bought a new board game! check it out!', NOW(), 1);
-INSERT INTO game.post (comment, time_date, member_id) VALUES ('Just bought Scythe!', NOW(), 1);
+/*INSERT INTO game.post (comment, post_time, post_date, member_id) VALUES ('Hey Yall!, I just bought a new board game! check it out!', NOW(), 1);
+INSERT INTO game.post (comment, post_time, post_date, member_id) VALUES ('Just bought Scythe!', NOW(), 1);*/
