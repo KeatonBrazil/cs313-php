@@ -18,7 +18,7 @@
         <h1>About Me</h1>
     </header>
     <div class="navbar sticky">
-        <a class="link" href="homepage.php">Welcome</a>  
+        <a class="link" href="index.php">Welcome</a>  
         <a class="link" href="assignments.php">Assignments</a>              
     </div>
     <div class = "container2">

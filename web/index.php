@@ -53,7 +53,7 @@
                  myself and to show the projects I will be working 
                  on over a period of 13 weeks!
                 </p>
-                <form action="homepage.php" method="get">
+                <form action="index.php" method="get">
                     <input type="text" placeholder="First Name" name="fname">
                     <input type="submit" value="Log In">
                 </form>
