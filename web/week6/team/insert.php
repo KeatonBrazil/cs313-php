@@ -46,7 +46,11 @@ if (isset($book)) {
         $result = $stmt->execute(); 
         
     }
-session_destroy();
+unset($book);
+unset($chapter);
+unset($verse);
+unset($content);
+unset($topic);
 }
 
 
