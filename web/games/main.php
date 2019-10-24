@@ -60,7 +60,7 @@
                     $post = $comment['comment'];
                     $mem = $comment['username'];
                     $tim = $comment['post_time'];
-                    $dat = $comment['post_dat'];
+                    $dat = $comment['post_date'];
                     
                     echo $mem . " " . $tim . " " . $dat . "<br><hr>"; 
                     echo $post . "<br><br>";
