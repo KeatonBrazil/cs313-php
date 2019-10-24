@@ -41,7 +41,7 @@
     $newcomment = $stmt->execute();
 
     flush();
-    header("Location:main.php");
+    header("Location:main.php#return");
     die();
 
 ?>
