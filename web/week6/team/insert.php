@@ -89,13 +89,20 @@ if (isset($book)) {
           $toppics = $stmt->fetchAll(PDO::FETCH_ASSOC);
           if ($toppics[0]['topic'] != NULL) {
             if (sizeof($toppics) > 1) {
-                echo " Topics: ";
-            } else {echo " Topic: ";}
+                echo " - Topics:";
+                foreach ($toppics as $topic) 
+                {
+                    echo " " . $topic['topic'];
+                }
+            } else {
+                echo " - Topic:";
+                foreach ($toppics as $topic) 
+                {
+                    echo " " . $topic['topic'];
+                }
+            }
           }
-          foreach ($toppics as $topic) 
-          {
-            echo " " . $topic['topic'];
-          }
+          
           echo '<br/>';
         }
         ?>
