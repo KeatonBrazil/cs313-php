@@ -37,6 +37,8 @@
     <header><h1>Shark Hub</h1></header>  
     <div class="sticky" id="return">
         <ul class="nav">
+        <li class="menu">Menu</li>
+        <div id="mylinks">
         <li class="active"><a href="main.php">Hub</a></li>
         <li><a href="shelf.php">Game Shelf</a></li>
         <li><a href="wish.php">Wish List</a></li>
@@ -44,6 +46,7 @@
         <?php if ($username === 'Admin') {echo "<li><a href='admin.php'>Admin</a></li>";} ?>
         <li class="floatright"><a href="signOut.php">Sign Out</a></li>
         <li class="floatright user">Welcome <?php echo $username; ?></li>
+        </div>
         </ul>
     </div>   
     <div class="white">

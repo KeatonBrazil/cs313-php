@@ -67,6 +67,10 @@ li.user {
     box-shadow: 0 4px 8px 0 rgb(1, 22, 44);
 }
 
+.menu {
+    display: none;
+}
+
 .center {
     text-align: center;
 }
@@ -100,6 +104,9 @@ li.user {
     .user {
         display: none;
     }
+    .menu {
+        display: inline-block;
+    }
 }
 /*iphone X*/
 @media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) {
@@ -117,6 +124,9 @@ li.user {
     }
     .user {
         display: none;
+    }
+    .menu {
+        display: inline-block;
     }
     
 }
