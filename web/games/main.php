@@ -31,13 +31,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="shark.png" type="image/gif">
     <link rel="stylesheet" href="games.css">
+    <script src="game.js"></script>
     <title>Shark Games | Hub</title>
 </head>
 <body>
     <header><h1>Shark Hub</h1></header>  
     <div class="sticky" id="return">
         <ul class="nav">
-        <li class="menu">Menu</li>
+        <li class="menu" onclick='hide()'>Menu</li>
         <div id="mylinks">
         <li class="active"><a href="main.php">Hub</a></li>
         <li><a href="shelf.php">Game Shelf</a></li>
@@ -72,7 +73,5 @@
             ?>
         </div>
     </div>
-<script>
-</script>
 </body>
 </html>
