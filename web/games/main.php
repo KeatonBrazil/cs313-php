@@ -38,7 +38,7 @@
     <header><h1>Shark Hub</h1></header>  
     <div class="sticky" id="return">
         <ul class="nav">
-        <li class="menu" onclick="hide()">Menu</li>
+        <li class="menu"><button onclick="hide()">Menu</button></li>
         <li class="active mylink"><a href="main.php">Hub</a></li>
         <li class="mylink"><a href="shelf.php">Game Shelf</a></li>
         <li class="mylink"><a href="wish.php">Wish List</a></li>
