@@ -108,7 +108,7 @@ li.user {
         display: inline-block;
     }
     .mylink {
-        display: none;
+        display: block;
     }
 }
 /*iphone X*/
@@ -132,7 +132,7 @@ li.user {
         display: inline-block;
     }
     .mylink {
-        display: none;
+        display: block;
     }
     
 }
