@@ -103,6 +103,10 @@ li.user {
     ul.nav {
         text-align: center;
     }
+    .white {
+        margin: 5%;
+        padding: 10px;
+    }
     .menu {
         display: inline-block;
         color:white;
@@ -127,6 +131,10 @@ li.user {
     }
     ul.nav {
         text-align: center;
+    }
+    .white {
+        margin: 5%;
+        padding: 10px;
     }
     .menu {
         display: inline-block;
