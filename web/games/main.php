@@ -39,13 +39,13 @@
     <div class="sticky" id="return">
         <ul class="nav">
         <li class="menu"><button onclick="hide()">Menu</button></li>
-        <li class="active mylink"><a href="main.php">Hub</a></li>
+        <li class="active mylink" id="dude"><a href="main.php">Hub</a></li>
         <li class="mylink"><a href="shelf.php">Game Shelf</a></li>
         <li class="mylink"><a href="wish.php">Wish List</a></li>
         <li class="mylink"><a href="friends.php">Friends</a></li>
         <?php if ($username === 'Admin') {echo "<li class='mylink'><a href='admin.php'>Admin</a></li>";} ?>
         <li class="floatright mylink"><a href="signOut.php">Sign Out</a></li>
-        <li class="floatright">Welcome <?php echo $username; ?></li>
+        <li class="floatright user">Welcome <?php echo $username; ?></li>
         </ul>
     </div>   
     <div class="white">
@@ -73,12 +73,17 @@
     </div>
 <script>
 function hide() {
-  var x = document.getElementByClassName("myLink");
-  if (x.style.display === "block") {
+    var x = document.getElementById("dude");
     x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+
+
+
+//   var x = document.getElementByClassName("myLink");
+//   if (x.style.display === "block") {
+//     x.style.display = "none";
+//   } else {
+//     x.style.display = "block";
+//   }
 }
 </script>
 </body>
