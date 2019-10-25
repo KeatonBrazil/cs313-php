@@ -67,6 +67,17 @@
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
     $result = $stmt->execute();
 
+    $query = 'SELECT member_id, username FROM game.member WHERE username = :user';
+    $stmt = $db -> prepare($query);
+    $stmt->bindValue(':user', $user, PDO::PARAM_STR);
+    $stmt -> execute();
+    $mem_id = $stmt -> fetchall(PDO::FETCH_ASSOC);
+
+    $query = 'INSERT INTO game.gameShelf (member_id) VALUES (:mem_id)';
+    $stmt = $db -> prepare($query);
+    $stmt->bindValue(':mem_id', $mem_id[0]['member_id'], PDO::PARAM_STR);
+    $result = $stmt -> execute();
+
     flush();
     header("Location:login.php");
     die();

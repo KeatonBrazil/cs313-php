@@ -3,10 +3,15 @@ session_start();
 
 if (isset($_POST['user']) && isset($_POST['pass']))
 {
+    //Store user and password
     $username = htmlspecialchars($_POST['user']);
     $password = htmlspecialchars($_POST['pass']);
+
+    //Get database
     require_once("gamesDb.php");
     $db = get_db();
+
+    //Find password with username in database
     $query = 'SELECT pass_word FROM game.member WHERE username = :username';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':username', $username);
@@ -14,8 +19,10 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     if ($result)
     {
         $row = $stmt->fetch();
+        //Get password from database
         $hashedPassword = $row['pass_word'];
         
+        //verifies if stored password matches password in database
         if (password_verify($password, $hashedPassword))
         {
             $_SESSION['username'] = $username;

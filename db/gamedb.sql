@@ -5,11 +5,22 @@ CREATE SCHEMA game;
 DROP TABLE game.message;
 DROP TABLE game.relationship;
 DROP TABLE game.post;
+DROP TABLE game.collection;
 DROP TABLE game.gameShelf;
-DROP TABLE game.member;
 DROP TABLE game.boardGame;
+DROP TABLE game.member;
+DROP TABLE game.game;
 DROP TABLE game.publisher;
 DROP TABLE game.image;
+
+CREATE TABLE game.member 
+( member_id    SERIAL PRIMARY KEY
+, username     VARCHAR (50)   NOT NULL UNIQUE 
+, pass_word    VARCHAR (250)  NOT NULL
+, first_name   VARCHAR (30)   NOT NULL
+, last_name    VARCHAR (30)   NOT NULL
+, email        VARCHAR (30)   NOT NULL UNIQUE
+);
 
 CREATE TABLE game.image 
 ( image_id    SERIAL PRIMARY KEY
@@ -17,7 +28,7 @@ CREATE TABLE game.image
 , picture     BYTEA NOT NULL
 );
 
-CREATE TABLE game.boardGame
+CREATE TABLE game.game
 ( game_id         SERIAL PRIMARY KEY
 , title           VARCHAR (100) NOT NULL
 , time_length_min INT           NOT NULL 
@@ -29,20 +40,21 @@ CREATE TABLE game.publisher
 , pub_name   VARCHAR (30) NOT NULL
 );
 
-CREATE TABLE game.member 
-( member_id    SERIAL PRIMARY KEY
-, username     VARCHAR (50)   NOT NULL UNIQUE 
-, pass_word    VARCHAR (250)  NOT NULL
-, first_name   VARCHAR (30)   NOT NULL
-, last_name    VARCHAR (30)   NOT NULL
-, email        VARCHAR (30)   NOT NULL UNIQUE
+CREATE TABLE game.boardGame 
+( boardGame_id SERIAL PRIMARY KEY
+, game_id       INT NOT NULL REFERENCES game.game(game_id)
+, publisher_id  INT NOT NULL REFERENCES game.publisher(publisher_id) 
 );
 
 CREATE TABLE game.gameShelf 
-( game_shelf_id SERIAL PRIMARY KEY
-, game_id       INT NOT NULL REFERENCES game.boardGame(game_id)
-, publisher_id  INT NOT NULL REFERENCES game.publisher(publisher_id) 
-, member_id     INT NOT NULL REFERENCES game.member(member_id) UNIQUE
+( shelf_id SERIAL PRIMARY KEY
+, member_id INT NOT NULL REFERENCES game.member(member_id) UNIQUE 
+);
+
+CREATE TABLE game.collection 
+( collection_id SERIAL PRIMARY KEY
+, shelf_id      INT NOT NULL REFERENCES game.gameShelf(shelf_id)
+, boardGame_id  INT NOT NULL REFERENCES game.boardGame(boardGame_id)
 );
 
 CREATE TABLE game.post
@@ -69,5 +81,4 @@ CREATE TABLE game.message
 , relationship_id INT NOT NULL REFERENCES game.relationship(relationship_id)
 );
 
-/*INSERT INTO game.post (comment, post_time, post_date, member_id) VALUES ('Hey Yall!, I just bought a new board game! check it out!', NOW(), 1);
-INSERT INTO game.post (comment, post_time, post_date, member_id) VALUES ('Just bought Scythe!', NOW(), 1);*/
+
