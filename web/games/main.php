@@ -37,8 +37,8 @@
 <body>
     <header><h1>Shark Hub</h1></header>  
     <div class="sticky" id="return">
-        <ul class="nav" onclick="hide()">
-        <li class="menu">Menu</li>
+        <ul class="nav">
+        <li class="menu" onclick="hide()">Menu</li>
         <div id="dude">
         <li class="active mylink"><a href="main.php">Hub</a></li>
         <li class="mylink"><a href="shelf.php">Game Shelf</a></li>
@@ -76,7 +76,11 @@
 <script>
 function hide() {
     var x = document.getElementById("dude");
-    x.style.display = "none";
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
 
 
 

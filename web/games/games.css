@@ -71,6 +71,8 @@ li.user {
     display: none;
 }
 
+
+
 .center {
     text-align: center;
 }
@@ -101,11 +103,12 @@ li.user {
     ul.nav {
         text-align: center;
     }
-    .user {
-        display: none;
-    }
     .menu {
         display: inline-block;
+        color:white;
+    }
+    #dude {
+        display: none;
     }
     .mylink {
         display: block;
@@ -125,11 +128,12 @@ li.user {
     ul.nav {
         text-align: center;
     }
-    .user {
-        display: none;
-    }
     .menu {
         display: inline-block;
+        color:white;
+    }
+    #dude {
+        display: none;
     }
     .mylink {
         display: block;
