@@ -20,19 +20,24 @@ else
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="games.css">
     <link rel="icon" href="shark.png" type="image/gif">
+    <script src="game.js"></script>
     <title>Shark Games | Shelf</title>
 </head>
 <body>
     <header><h1>Your Shelf</h1></header>  
-    <div class="sticky">
+    <div class="sticky" id="return">
         <ul class="nav">
-        <li><a href="main.php">Hub</a></li>
-        <li class="active"><a href="shelf.php">Game Shelf</a></li>
-        <li><a href="wish.php">Wish List</a></li>
-        <li><a href="friends.php">Friends</a></li>
-        <?php if ($username === 'Admin') {echo "<li><a href='admin.php'>Admin</a></li>";} ?>
-        <li class="floatright"><a href="signOut.php">Sign Out</a></li>
+        <li class="menu" onclick="hide()">Menu</li>
+        <div id="dude">
+        <li class="mylink"><a href="main.php">Hub</a></li>
+        <li class="active mylink"><a href="shelf.php">Game Shelf</a></li>
+        <li class="mylink"><a href="wish.php">Wish List</a></li>
+        <li class="mylink"><a href="friends.php">Friends</a></li>
+        <?php if ($username === 'Admin') {echo "<li class='mylink'><a href='admin.php'>Admin</a></li>";} ?>
+        <li class="floatright mylink"><a href="signOut.php">Sign Out</a></li>
+        <li class="floatright user">Welcome <?php echo $username; ?></li>
+        </div>
         </ul>
-    </div>   
+    </div>     
 </body>
 </html>
