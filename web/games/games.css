@@ -131,7 +131,7 @@ li.user {
     .menu {
         display: inline-block;
     }
-    #mylink {
+    .mylink {
         display: none;
     }
     
