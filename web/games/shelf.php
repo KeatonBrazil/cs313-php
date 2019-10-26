@@ -67,7 +67,7 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 $stmt->bindValue(':g_id', $game_info[$i]['bg.game_id'], PDO::PARAM_INT);
                 $stmt->execute();
                 $pub = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                var_dump($pub);
+                var_dump($game_info[$i]['bg.game_id']);
 
                 echo "<div class='post'>";
                 echo $game_info[$i]['title'].'<br><hr>';
