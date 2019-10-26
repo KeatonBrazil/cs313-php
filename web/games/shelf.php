@@ -17,7 +17,7 @@ $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->execute();
 $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($user_id);
+//var_dump($user_id);
 //$mem_id = $user_id[0]['member_id'];
 //echo $mem_id;
 
