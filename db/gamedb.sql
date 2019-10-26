@@ -34,6 +34,7 @@ CREATE TABLE game.game
 , title           VARCHAR  NOT NULL
 , time_length_min INT      NOT NULL 
 , complexity      INT      NOT NULL 
+, num_players     INT      NOT NULL
 );
 
 CREATE TABLE game.publisher
