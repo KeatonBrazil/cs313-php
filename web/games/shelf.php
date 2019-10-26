@@ -11,7 +11,7 @@ else
 	die();
 }
 
-$query = 'SELECT member_id FROM game.member WHERE username = :username';
+$query = 'SELECT member_id, username FROM game.member WHERE username = :username';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->execute();
