@@ -69,7 +69,7 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 echo "<div class='post'>";
                 echo $game_info[$i]['title'].'<br><hr>';
-                echo 'Publisher: '
+                echo 'Publisher: ';
                 $p_count = count($pub);
                 for ($x=0; $x < $p_count; $x++) {
                     if ($x > 0) {
