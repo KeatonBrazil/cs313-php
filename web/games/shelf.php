@@ -56,7 +56,8 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <li class="mylink"><a href="newGame.php">Request New Game</a></li>
         <li class="floatright mylink"><a href="signOut.php">Sign Out</a></li>
         <li class="floatright user">Welcome <?php echo $username; ?></li>
-    </div>    
+        </div>  
+    </div>  
     <div class="white">
         <?php 
             $g_count = count($game_info);
@@ -77,7 +78,7 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     }
                     echo $pub[$x]['pub_name'];                    
                 }
-                echo "/div";
+                echo "</div>";
             }
         ?>
     </div>       
