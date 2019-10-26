@@ -23,13 +23,12 @@ $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $mem_id = $user_id[0]['member_id'];
 
 
-$query = 'SELECT bg.game_id, title, time_length_min, complexity, num_players FROM game.collection c LEFT JOIN game.boardGame bg ON c.boardGame_id = bg.boardGame_id LEFT JOIN game.game g ON g.game_id = bg.game_id LEFT JOIN game.publisher p ON p.publisher_id = bg.publisher_id WHERE shelf_id = (SELECT shelf_id FROM game.gameShelf WHERE member_id = :mem_id)';
+$query = 'SELECT bg.game_id, title, time_length_min, complexity, num_players FROM game.collection c LEFT JOIN game.boardGame bg ON c.boardGame_id = bg.boardGame_id LEFT JOIN game.game g ON g.game_id = bg.game_id  WHERE shelf_id = (SELECT shelf_id FROM game.gameShelf WHERE member_id = :mem_id)';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
 $stmt->execute();
 $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// $query = 'SELECT pub_name FROM game.boardGame bg LEFT JOIN game.publisher p ON bg.publisher_id = p.publisher_id WHERE game_id = :g_id';
 ?>
 
 <!DOCTYPE html>
@@ -60,9 +59,25 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>    
     <div class="white">
         <?php 
-            $count = count($game_info);
-            for ($i=0; $i < $count; $i++) {
-                echo $game_info[$i]['title'];
+            $g_count = count($game_info);
+            for ($i=0; $i < $g_count; $i++) {
+                $query = 'SELECT pub_name FROM game.boardGame bg LEFT JOIN game.publisher p ON bg.publisher_id = p.publisher_id WHERE game_id = :g_id';
+                $stmt = $db->prepare($query);
+                $stmt->bindValue(':g_id', $game_info[$i]['bg.game_id'], PDO::PARAM_INT);
+                $stmt->execute();
+                $pub = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                echo "<div class='post'>";
+                echo $game_info[$i]['title'].'<br><hr>';
+                echo 'Publisher: '
+                $p_count = count($pub);
+                for ($x=0; $x < $p_count; $x++) {
+                    if ($x > 0) {
+                        echo ', ';
+                    }
+                    echo $pub[$x]['pub_name'];                    
+                }
+                echo "/div";
             }
         ?>
     </div>       
