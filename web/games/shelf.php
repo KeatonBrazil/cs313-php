@@ -64,10 +64,10 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
             for ($i=0; $i < $g_count; $i++) {
                 $query = 'SELECT pub_name FROM game.boardGame bg LEFT JOIN game.publisher p ON bg.publisher_id = p.publisher_id WHERE game_id = :g_id';
                 $stmt = $db->prepare($query);
-                $stmt->bindValue(':g_id', $game_info[$i]['bg.game_id'], PDO::PARAM_INT);
+                $stmt->bindValue(':g_id', $game_info[$i][0], PDO::PARAM_INT);
                 $stmt->execute();
                 $pub = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                var_dump($game_info[$i]['bg.game_id']);
+                var_dump($game_info[$i][0]);
 
                 echo "<div class='post'>";
                 echo $game_info[$i]['title'].'<br><hr>';
@@ -77,7 +77,7 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     if ($x > 0) {
                         echo ', ';
                     }
-                    echo $pub[$x]['pub_name'];                    
+                    echo $pub[$x][0];                    
                 }
                 echo "</div>";
             }
