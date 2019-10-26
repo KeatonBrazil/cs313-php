@@ -94,3 +94,17 @@ CREATE TABLE game.message
 );
 
 
+INSERT INTO game.member (username, pass_word, email, first_name, last_name) VALUES ('Admin', '$2y$10$g9T59b.l815ftxRh9FcbqOSvjPGTBWQ3zXRW1uP3Xm3XneQ8FtwEy', 'san16072@byui.edu', 'Keaton', 'Sant');
+INSERT INTO game.gameShelf (member_id) VALUES (1);
+
+INSERT INTO game.game (title, time_length_min, complexity, num_players) VALUES ('Roll For The Galaxy', 45, 6, 5);
+INSERT INTO game.publisher (pub_name) VALUES ('Rio Grande Games');
+INSERT INTO game.boardGame (game_id, publisher_id) VALUES (1, 1);
+INSERT INTO game.collection (shelf_id, boardGame_id) VALUES (1, 1);
+
+INSERT INTO game.game (title, time_length_min, complexity, num_players) VALUES ('Terraforming Mars', 120, 8, 5);
+INSERT INTO game.publisher (pub_name) VALUES ('Stronghold Games');
+INSERT INTO game.publisher (pub_name) VALUES ('Fry X Games');
+INSERT INTO game.boardGame (game_id, publisher_id) VALUES (2, 2);
+INSERT INTO game.boardGame (game_id, publisher_id) VALUES (2, 3);
+INSERT INTO game.collection (shelf_id, boardGame_id) VALUES (1, 2);

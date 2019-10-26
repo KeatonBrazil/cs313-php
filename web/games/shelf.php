@@ -21,10 +21,15 @@ $stmt->execute();
 $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $mem_id = $user_id[0]['member_id'];
-echo $mem_id;
 
-//$query = 'SELECT title, time_length_min, complexity, num_players, pub_name FROM game.collection c LEFT JOIN game.boardGame bg ON boardGame_id = boardGame_id LEFT JOIN game.game g ON game_id = game_id LEFT JOIN game.publisher p ON publisher_id = publisher_id WHERE shelf_id = (SELECT shelf_id FROM game.gameShelf WHERE member_id = :mem_id)';
 
+$query = 'SELECT bg.game_id, title, time_length_min, complexity, num_players FROM game.collection c LEFT JOIN game.boardGame bg ON c.boardGame_id = bg.boardGame_id LEFT JOIN game.game g ON g.game_id = bg.game_id LEFT JOIN game.publisher p ON p.publisher_id = bg.publisher_id WHERE shelf_id = (SELECT shelf_id FROM game.gameShelf WHERE member_id = :mem_id)';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
+$stmt->execute();
+$game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// $query = 'SELECT pub_name FROM game.boardGame bg LEFT JOIN game.publisher p ON bg.publisher_id = p.publisher_id WHERE game_id = :g_id';
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +59,12 @@ echo $mem_id;
         <li class="floatright user">Welcome <?php echo $username; ?></li>
     </div>    
     <div class="white">
-
+        <?php 
+            $count = count($game_info);
+            for ($i=0; $i < $count; $i++) {
+                echo $game_info[$i]['title'];
+            }
+        ?>
     </div>       
 </body>
 </html>
