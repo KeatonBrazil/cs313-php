@@ -11,6 +11,9 @@ else
 	die();
 }
 
+require_once("gamesDb.php");
+$db = get_db();
+
 $query = 'SELECT member_id, username FROM game.member WHERE username = :username';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
