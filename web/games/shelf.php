@@ -38,6 +38,20 @@ else
         <li class="floatright user">Welcome <?php echo $username; ?></li>
         </div>
         </ul>
-    </div>     
+    </div>    
+    <div class="sticky">
+        <ul class="nav">
+        <li class="menu" onclick="hide()">Menu</li>
+        <div id="dude">
+        <li class="mylink"><a href="main.php">Hub</a></li>
+        <li class="active mylink"><a href="shelf.php">Game Shelf</a></li>
+        <li class="mylink"><a href="wish.php">Wish List</a></li>
+        <li class="mylink"><a href="friends.php">Friends</a></li>
+        <?php if ($username === 'Admin') {echo "<li class='mylink'><a href='admin.php'>Admin</a></li>";} ?>
+        <li class="floatright mylink"><a href="signOut.php">Sign Out</a></li>
+        <li class="floatright user">Welcome <?php echo $username; ?></li>
+        </div>
+        </ul>
+    </div>  
 </body>
 </html>

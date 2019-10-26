@@ -5,6 +5,7 @@ CREATE SCHEMA game;
 DROP TABLE game.message;
 DROP TABLE game.relationship;
 DROP TABLE game.post;
+DROP TABLE game.requestBG; 
 DROP TABLE game.collection;
 DROP TABLE game.gameShelf;
 DROP TABLE game.boardGame;
@@ -30,9 +31,9 @@ CREATE TABLE game.image
 
 CREATE TABLE game.game
 ( game_id         SERIAL PRIMARY KEY
-, title           VARCHAR (100) NOT NULL
-, time_length_min INT           NOT NULL 
-, complexity      INT           NOT NULL 
+, title           VARCHAR  NOT NULL
+, time_length_min INT      NOT NULL 
+, complexity      INT      NOT NULL 
 );
 
 CREATE TABLE game.publisher
@@ -55,6 +56,16 @@ CREATE TABLE game.collection
 ( collection_id SERIAL PRIMARY KEY
 , shelf_id      INT NOT NULL REFERENCES game.gameShelf(shelf_id)
 , boardGame_id  INT NOT NULL REFERENCES game.boardGame(boardGame_id)
+);
+
+CREATE TABLE game.requestBG 
+( requestBG_id SERIAL PRIMARY KEY
+, title           VARCHAR  NOT NULL
+, time_length_min INT      NOT NULL 
+, complexity      INT      NOT NULL
+, pub_name        VARCHAR (50) NOT NULL
+, stat            INT      NOT NULL
+, member_id       INT      NOT NULL REFERENCES game.member(member_id)
 );
 
 CREATE TABLE game.post
