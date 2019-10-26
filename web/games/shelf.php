@@ -11,15 +11,15 @@ else
 	die();
 }
 
-// $query = 'SELECT member_id FROM game.member WHERE member_id = :username';
-// $stmt = $db->prepare($query);
-// $stmt->bindValue(':username', $$username, PDO::PARAM_STR);
-// $stmt->execute();
-// $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$query = 'SELECT member_id FROM game.member WHERE member_id = :username';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':username', $username, PDO::PARAM_STR);
+$stmt->execute();
+$user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-//var_dump($user_id);
-//$mem_id = $user_id[0]['member_id'];
-//echo $mem_id;
+var_dump($user_id);
+$mem_id = $user_id[0]['member_id'];
+echo $mem_id;
 
 //$query = 'SELECT title, time_length_min, complexity, num_players, pub_name FROM game.collection c LEFT JOIN game.boardGame bg ON boardGame_id = boardGame_id LEFT JOIN game.game g ON game_id = game_id LEFT JOIN game.publisher p ON publisher_id = publisher_id WHERE shelf_id = (SELECT shelf_id FROM game.gameShelf WHERE member_id = :mem_id)';
 
