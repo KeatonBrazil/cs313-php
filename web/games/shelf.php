@@ -126,6 +126,9 @@ if (isset($_POST['title'])) {
                     }
                     echo $pub[$x]['pub_name'];                    
                 }
+                echo "<br>Complexity: ".$game_info[$i]['complexity']."<br>";
+                echo "Time Length (minutes): ".$game_info[$i]['time_length_min']."<br>";
+                echo "Number of Max Players: ".$game_info[$i]['num_players'];
                 echo "</div><br>";
             }
         ?>
