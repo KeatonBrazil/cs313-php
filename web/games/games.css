@@ -103,6 +103,10 @@ li.user {
     cursor: pointer;
 }
 
+.submit:hover {
+    background-color: rgb(13, 105, 4);
+}
+
 .modify {
     background-color: rgb(8, 40, 110);
     color: white;
@@ -114,7 +118,7 @@ li.user {
 }
 
 .modify:hover {
-    background-color: rgb(13, 105, 4);
+    background-color: rgb(255, 238, 0);
 }
 
 .delete {

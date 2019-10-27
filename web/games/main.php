@@ -77,7 +77,7 @@
                     if ($mem === $username || $username === 'Admin') { 
                         echo "<form action='deletePost.php' method='post'>";
                         echo "<input type='hidden' name='post_id' value='".$post_id."'>";
-                        echo "<input class='modify right' type='submit' value='Delete'>";
+                        echo "<input class='delete right' type='submit' value='Delete'>";
                         echo "</form><br><br>";
                     }                    
                     echo "</div><br>";
