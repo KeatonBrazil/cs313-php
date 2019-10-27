@@ -77,7 +77,7 @@ if (isset($_POST['title'])) {
             if (isset($title) || $title != "") {
                 echo "<form action='addGame.php#return' method='post'>";
                 foreach ($games as $game) {
-                    echo "<input type='checkbox' name='".$game['title']."' value='".$game['game_id']."'>";
+                    echo "<input type='checkbox' name='".$game['title']."' value='".$game['game_id']."'>" . $game['title'] . "<br>";
                 }
                 echo "</form><br>";
             }
