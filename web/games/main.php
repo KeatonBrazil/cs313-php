@@ -69,7 +69,7 @@
                     echo "<span class='name'>" . $mem . "</span> " . "<span class='time_date right'>" . $tim . " " . $dat . "</span><br><hr>"; 
                     echo $post . "<br><br>";
                     if ($mem === $username) {
-                        echo "<form action='updatePost.php' method='post'>";
+                        echo "<form action='editPost.php' method='post'>";
                         echo "<input type='hidden' name='post_id' value='".$post_id."'>";
                         echo "<input class='modify right' type='submit' value='Edit'>";
                         echo "</form>";
@@ -86,7 +86,5 @@
             ?>
         </div>
     </div>
-<script>
-</script>
 </body>
 </html>
