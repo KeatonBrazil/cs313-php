@@ -68,7 +68,7 @@
                     echo "<div class='post'>";
                     echo "<span class='name'>" . $mem . "</span> " . "<span class='time_date right'>" . $tim . " " . $dat . "</span><br><hr>"; 
                     echo $post . "<br><br>";
-                    if ($mem === $username || $mem === 'Admin') { 
+                    if ($mem === $username || $mem == 'Admin') { 
                     echo "<form action='deletePost.php' method='post'>";
                     echo "<input type='hidden' name='post_id' value='".$post_id."'>";
                     echo "<input class='right' type='submit' value='Delete'>";
