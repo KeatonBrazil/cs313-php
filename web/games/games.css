@@ -155,7 +155,7 @@ input[type=radio] {
      -moz-appearance: none;
      appearance: none;
      display: inline-block;
-     /*position: relative;*/
+     position: relative;
      background-color: #afafaf;
      color: rgb(77, 77, 77);
      top: 10px;
