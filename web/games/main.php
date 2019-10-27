@@ -86,5 +86,10 @@
             ?>
         </div>
     </div>
+<script>
+function warn() {
+    confirm('Are you sure you want to delete this post?');
+}
+</script>
 </body>
 </html>
