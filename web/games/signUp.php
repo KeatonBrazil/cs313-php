@@ -32,7 +32,7 @@ session_start();
             <input type="text" name="email" placeholder="email"><br>
             <p>Confirm Email</p>
             <input type="text" name="cemail" placeholder="confirm email"><br>
-            <p>FIrst Name</p>
+            <p>First Name</p>
             <input type="text" name="fname" placeholder="First Name"><br>
             <p>Last Name</p>
             <input type="text" name="lname" placeholder="Last Name"><br>
