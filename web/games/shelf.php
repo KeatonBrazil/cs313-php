@@ -116,7 +116,7 @@ if (isset($_POST['title'])) {
                 $stmt->execute();
                 $pub = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                echo "<div class='post'>";
+                echo "<div class='check_game'>";
                 echo $game_info[$i]['title'].'<br><hr>';
                 echo 'Publisher: ';
                 $p_count = count($pub);
