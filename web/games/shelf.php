@@ -29,6 +29,15 @@ $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
 $stmt->execute();
 $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+if (isset($_POST['title'])) {
+    $title = $_POST['title'];
+    $query = 'SELECT bg.game_id, title, time_length_min, complexity, num_players FROM game.boardGame bg LEFT JOIN game.game g ON bg.game_id = g.game_id WHERE title = :title';
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':title', $title, PDO::PARAM_STR);
+    $stmt->execute();
+    $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -58,11 +67,21 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <li class="floatright user">Welcome <?php echo $username; ?></li>
         </div>  
     </div>  
+    
     <div class="white">
-        <form action="addGame.php" method="post">
+        <form action="addGame.php#return" method="post">
             <input type="text" name="title">
             <input class="submit" type="submit" value="Search">
-        </form>
+        </form><br>
+        <?php 
+            if (isset($title) || $title != "") {
+                echo "<form action='addGame.php#return' method='post'>";
+                foreach ($games as $game) {
+                    echo "<input type='checkbox' name='".$game['title']."' value='".$game['game_id']."'>";
+                }
+                echo "</form><br>";
+            }
+        ?>
         <?php 
             $g_count = count($game_info);
             for ($i=0; $i < $g_count; $i++) {
