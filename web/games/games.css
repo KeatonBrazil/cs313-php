@@ -88,7 +88,9 @@ li.user {
     border: 2px solid black;
     border-radius: 5px;
     padding: 10px;
+    background-color: white;
 }
+
 
 .submit {
     width: 30%;
