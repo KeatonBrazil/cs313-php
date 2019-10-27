@@ -39,7 +39,7 @@ $query = 'SELECT post_id, comment, post_time, post_date FROM game.post WHERE pos
 <body>
     <div class="center edit">
         <form action="updatePost.php" method="post">
-            <textarea class="left" name="newPost" cols="30" rows="10">
+            <textarea name="newPost" cols="30" rows="10">
                 <?php 
                     echo $comments[0]['comment'];
                 ?>
