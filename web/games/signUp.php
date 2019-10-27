@@ -13,7 +13,7 @@ session_start();
     <title>Shark Games | Friends</title>
 </head>
 <body>
-    <header><h1>Friends</h1></header>  
+    <header><h1>Create Account</h1></header>  
     <div class="sticky">
         <ul class="nav">
         <li><a href="login.php">Login</a></li>
@@ -36,7 +36,7 @@ session_start();
             <input type="text" name="fname" placeholder="First Name"><br>
             <p>Last Name</p><br>
             <input type="text" name="lname" placeholder="Last Name"><br>
-            <input class="submit" type="submit" value="Add Account"><br>       
+            <input class="submit" type="submit" value="Create Account"><br>       
         </form>
     </div>
 </body>
