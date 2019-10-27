@@ -65,7 +65,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     <div class="login center">
         <form action='login.php' method='post'>
         <input type="text"  name="user" placeholder="Username"/><br><br>
-        <input type="password"  name="pass" placeholder="Password"/><br><br>
+        <input type="password"  name="pass" placeholder="Password"/><br>
         <p><?php if ($badLogin) {echo 'Your username or password is incorrect';} ?></p>
         <input class="submit" type="submit" value="Login">
         </form>
