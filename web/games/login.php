@@ -33,12 +33,12 @@ if (isset($_POST['user']) && isset($_POST['pass']))
         }
         else 
         {
-            $badLogin = true;
+            $badLogin = TRUE;
         }
     }
     else
     {
-        $badLogin = true;
+        $badLogin = TRUE;
     }
 }
 
@@ -64,8 +64,8 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     </div>   
     <div class="login center">
         <form action='login.php' method='post'>
-        <input type="text"  name="user" placeholder="Username"/><br>
-        <input type="password"  name="pass" placeholder="Password"/><br>
+        <input type="text"  name="user" placeholder="Username"/><br><br>
+        <input type="password"  name="pass" placeholder="Password"/><br><br>
         <p><?php if ($badlogin) {echo 'Your username or password is incorrect';} ?></p>
         <input type="submit" value="Login">
         </form>
