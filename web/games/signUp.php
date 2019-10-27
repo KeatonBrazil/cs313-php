@@ -23,19 +23,19 @@ session_start();
     <div class="white center">
         <form action="addUser.php" method="post">
             <p>Username</p>
-            <input type="text" name="uzer" placeholder="username"><br>
+            <input type="text" name="uzer" placeholder="username" maxlength="50"><br>
             <p>Password</p>
             <input type="password" name="pw" placeholder="password"><br>
             <p>Confirm Password</p>
             <input type="password" name="cpw" placeholder="confirm password"><br>
             <p>Email</p>
-            <input type="text" name="email" placeholder="email"><br>
+            <input type="text" name="email" placeholder="email" maxlength="50"><br>
             <p>Confirm Email</p>
-            <input type="text" name="cemail" placeholder="confirm email"><br>
+            <input type="text" name="cemail" placeholder="confirm email" maxlength="50"><br>
             <p>First Name</p>
-            <input type="text" name="fname" placeholder="First Name"><br>
+            <input type="text" name="fname" placeholder="First Name" maxlength="50"><br>
             <p>Last Name</p>
-            <input type="text" name="lname" placeholder="Last Name"><br>
+            <input type="text" name="lname" placeholder="Last Name" maxlength="50"><br>
             <input class="submit" type="submit" value="Create Account"><br>       
         </form>
     </div>

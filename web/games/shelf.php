@@ -78,7 +78,7 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     }
                     echo $pub[$x]['pub_name'];                    
                 }
-                echo "</div>";
+                echo "</div><br>";
             }
         ?>
     </div>       

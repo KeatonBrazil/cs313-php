@@ -18,9 +18,9 @@ CREATE TABLE game.member
 ( member_id    SERIAL PRIMARY KEY
 , username     VARCHAR (50)   NOT NULL UNIQUE 
 , pass_word    VARCHAR (250)  NOT NULL
-, first_name   VARCHAR (30)   NOT NULL
-, last_name    VARCHAR (30)   NOT NULL
-, email        VARCHAR (30)   NOT NULL UNIQUE
+, first_name   VARCHAR (50)   NOT NULL
+, last_name    VARCHAR (50)   NOT NULL
+, email        VARCHAR (50)   NOT NULL UNIQUE
 );
 
 CREATE TABLE game.image 
@@ -96,6 +96,9 @@ CREATE TABLE game.message
 
 INSERT INTO game.member (username, pass_word, email, first_name, last_name) VALUES ('Admin', '$2y$10$g9T59b.l815ftxRh9FcbqOSvjPGTBWQ3zXRW1uP3Xm3XneQ8FtwEy', 'san16072@byui.edu', 'Keaton', 'Sant');
 INSERT INTO game.gameShelf (member_id) VALUES (1);
+
+INSERT INTO game.member (username, pass_word, email, first_name, last_name) VALUES ('THEBANANABOAT', '$2y$10$yO6RJNtowcJb0tQdieIAV.D0vqzgjR9bB2.RHFlKuQt1yhjsMw/um', 'hanrich9@gmail.com', 'Hannah', 'Sant');
+INSERT INTO game.gameShelf (member_id) VALUES (2);
 
 INSERT INTO game.game (title, time_length_min, complexity, num_players) VALUES ('Roll For The Galaxy', 45, 6, 5);
 INSERT INTO game.publisher (pub_name) VALUES ('Rio Grande Games');
