@@ -20,7 +20,7 @@ session_start();
         <li class="active"><a href="signUp.php">Sign up</a></li>
         </ul>
     </div>   
-    <div class="white">
+    <div class="white center">
         <form action="addUser.php" method="post">
             <input type="text" name="uzer" placeholder="username"><br>
             <input type="password" name="pw" placeholder="password"><br>

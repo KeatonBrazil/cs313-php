@@ -62,7 +62,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
         <li><a href="signUp.php">Sign up</a></li>
         </ul>
     </div>   
-    <div class="login">
+    <div class="login center">
         <form action='login.php' method='post'>
         <input type="text"  name="user" placeholder="Username"/><br>
         <input type="password"  name="pass" placeholder="Password"/><br>
