@@ -69,7 +69,7 @@ if (isset($_POST['title'])) {
     </div>  
     
     <div class="white">
-        <form action="addGame.php#return" method="post">
+        <form action="shelf.php#return" method="post">
             <input type="text" name="title">
             <input class="submit" type="submit" value="Search">
         </form><br>
