@@ -50,6 +50,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="games.css">
     <link rel="icon" href="shark.png" type="image/gif">
     <title>Shark Games | Login</title>
@@ -64,8 +65,14 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     </div>   
     <div class="login center">
         <form action='login.php' method='post'>
-        <input type="text"  name="user" placeholder="Username"/><br><br>
-        <input type="password"  name="pass" placeholder="Password"/><br><br>
+            <div class="inner-addon left-addon">
+                    <span class="glyphicon glyphicon-user"></span>      
+                    <input type="text"  name="user" placeholder="Username"/>
+            </div><br>
+            <div class="inner-addon left-addon">
+                    <span class="glyphicon glyphicon-lock"></span>      
+                    <input type="password"  name="pass" placeholder="Password"/>
+            </div><br>
         <p><?php if ($badLogin) {echo 'Your username or password is incorrect';} ?></p>
         <input type="submit" value="Login">
         </form>
