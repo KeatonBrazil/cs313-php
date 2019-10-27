@@ -76,6 +76,7 @@ if (isset($_POST['title'])) {
             </form><br>
             <?php 
                 if (isset($title) || $title != "") {
+                    if (count($games) === 0) {echo "<span class='none'>No Results Found</span>";}
                     echo "<form action='addGame.php#return' method='post'>";
                     foreach ($games as $game) {
                         echo "<div class='check_game'>";
