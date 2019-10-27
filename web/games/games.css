@@ -121,6 +121,11 @@ textarea {
     border: 1px solid #ccc;
 }
 
+.time_date {
+    font-size: 80%;
+    color: rgb(53, 53, 53);
+}
+
 /*iphone 5 and 5s and iphone 6, 7, 8*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
     .login {

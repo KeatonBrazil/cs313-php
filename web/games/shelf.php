@@ -59,6 +59,10 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>  
     </div>  
     <div class="white">
+        <form action="addGame.php" method="post">
+            <input type="text" name="title">
+            <input class="submit" type="submit" value="Search">
+        </form>
         <?php 
             $g_count = count($game_info);
             for ($i=0; $i < $g_count; $i++) {
