@@ -106,6 +106,7 @@ if (isset($_POST['title'])) {
                 }
             ?>
         </div><br>
+        <div class="shelf">
         <?php 
             $g_count = count($game_info);
             for ($i=0; $i < $g_count; $i++) {
@@ -128,6 +129,7 @@ if (isset($_POST['title'])) {
                 echo "</div><br>";
             }
         ?>
+        </div>
     </div>       
 </body>
 </html>
