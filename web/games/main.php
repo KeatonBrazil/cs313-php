@@ -73,7 +73,7 @@
                     echo "<form action='deletePost.php' method='post'>";
                     echo "<input type='hidden' name='post_id' value='".$post_id."'>";
                     echo "<input class='right' type='submit' value='Delete'>";
-                    echo "</form>";
+                    echo "</form><br>";
                     }
                     if ($mem === $username) {
                     echo "<form action='updatePost.php' method='post'>";
