@@ -134,10 +134,12 @@ textarea {
     border: 2px solid rgb(55, 3, 71);
     border-radius: 5px;
     padding: 10px;
+    background-color: rgb(55, 3, 71);
 }
 
 .check_game {
     border: 2px solid rgb(55, 3, 71);
+    background-color: white;
     border-radius: 5px;
     padding: 10px;
 }
