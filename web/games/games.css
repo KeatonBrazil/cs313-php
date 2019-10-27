@@ -149,6 +149,42 @@ input[type=password] {
     border-radius: 4px; 
 }
 
+
+input[type=radio] {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+input[type=radio]:checked::before
+{
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+input[type=radio]:hover
+{
+     background-color: #f7f7f7;
+}
+input[type=radio]:checked
+{
+     background-color: #f1f1f1;
+}
+
 textarea {
     width: 50%;
     border-radius: 4px; 
