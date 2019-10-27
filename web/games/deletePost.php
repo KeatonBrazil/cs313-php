@@ -21,6 +21,6 @@
     $stmt->bindValue(':post_id', $post_id, PDO::PARAM_INT);
     $stmt->execute();
 
-    header("Location: main.php");
+    header("Location: main.php#return");
     die();
 ?>
