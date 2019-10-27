@@ -244,7 +244,7 @@ textarea {
 
 .edit {
     background-color: rgb(65, 65, 65);
-    padding: 15px 50px 15px 50px;
+    padding: 15px;
     margin: 5% 20%;
     box-shadow: 0 4px 8px 0 rgb(1, 22, 44);
     border-radius: 5px;
