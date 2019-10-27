@@ -71,13 +71,13 @@
                     if ($mem === $username || $username === 'Admin') { 
                     echo "<form action='deletePost.php' method='post'>";
                     echo "<input type='hidden' name='post_id' value='".$post_id."'>";
-                    echo "<input class='submit right' type='submit' value='Delete'>";
+                    echo "<input class='modify right' type='submit' value='Delete'>";
                     echo "</form><br>";
                     }
                     if ($mem === $username) {
                     echo "<form action='updatePost.php' method='post'>";
                     echo "<input type='hidden' name='post_id' value='".$post_id."'>";
-                    echo "<input class='right' type='submit' value='Edit'>";
+                    echo "<input class='modify right' type='submit' value='Edit'>";
                     echo "</form><br>";
                     echo "</div><br>";
                     }
