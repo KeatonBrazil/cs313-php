@@ -37,7 +37,7 @@ $query = 'SELECT post_id, comment, post_time, post_date FROM game.post WHERE pos
     <title>Shark Games | Hub</title>
 </head>
 <body>
-    <div class="center white">
+    <div class="center edit">
         <form action="updatePost.php">
             <textarea name="newPost" cols="30" rows="10">
                 <?php 
