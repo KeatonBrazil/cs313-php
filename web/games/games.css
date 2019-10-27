@@ -178,11 +178,11 @@ input[type=radio]:checked::before
 }
 input[type=radio]:hover
 {
-     background-color: #acacac;
+     background-color: #4e4e4e;
 }
 input[type=radio]:checked
 {
-     background-color: #acacac;
+     background-color: #afafaf;
 }
 
 textarea {
