@@ -54,7 +54,7 @@
         <div class="center">
             <form action="addPost.php" method="post">
                 <textarea name="tarea" cols="30" rows="10"></textarea><br>
-                <input type="submit" value="Post"><br>
+                <input class="submit" type="submit" value="Post"><br>
             </form><br>
         </div>
         <div>
