@@ -14,7 +14,7 @@
     require_once("gamesDb.php");
     $db = get_db();
 
-    $post_id = $_GET['post_id'];
+    $post_id = $_POST['post_id'];
     $locate = $post_id - 1;
 
     $query = 'DELETE FROM game.post WHERE post_id=:post_id';
@@ -22,6 +22,6 @@
     $stmt->bindValue(':post_id', $post_id, PDO::PARAM_INT);
     $stmt->execute();
 
-    header("Location: main.php#post$locate");
-    die();
+    // header("Location: main.php#post$locate");
+    // die();
 ?>
