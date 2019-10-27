@@ -115,7 +115,7 @@ input[type=password] {
 }
 
 textarea {
-    width: 80%;
+    width: 70%;
 }
 
 /*iphone 5 and 5s and iphone 6, 7, 8*/
@@ -146,6 +146,10 @@ textarea {
     .mylink {
         display: block;
     }
+    textarea {
+        width: 90%;
+    }
+    
 }
 /*iphone X*/
 @media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) {
@@ -174,6 +178,9 @@ textarea {
     }
     .mylink {
         display: block;
+    }
+    textarea {
+        width: 90%;
     }
     
 }
