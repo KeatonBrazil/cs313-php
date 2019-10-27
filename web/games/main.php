@@ -60,6 +60,7 @@
         <div>
             <?php 
                 foreach ($comments as $comment) {
+                    $post_id = $comment['post_id'];
                     $post = $comment['comment'];
                     $mem = $comment['username'];
                     $tim = $comment['post_time'];
@@ -67,7 +68,19 @@
                     echo "<div class='post'>";
                     echo "<span class='name'>" . $mem . "</span> " . "<span class='time_date right'>" . $tim . " " . $dat . "</span><br><hr>"; 
                     echo $post . "<br><br>";
+                    if ($mem === $username || $mem === 'Admin') { 
+                    echo "<form action='deletePost.php' method='post'>";
+                    echo "<input type='hidden' name='post_id' value='".$post_id."'>";
+                    echo "<input class='submit right' type='submit' value='Delete'>";
+                    echo "</form>";
+                    }
+                    if ($mem === $username) {
+                    echo "<form action='updatePost.php' method='post'>";
+                    echo "<input type='hidden' name='post_id' value='".$post_id."'>";
+                    echo "<input class='submit right' type='submit' value='Edit'>";
+                    echo "</form>";
                     echo "</div><br>";
+                    }
                 }           
             
             ?>
