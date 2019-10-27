@@ -16,6 +16,7 @@
 
     $post_id = $_POST['post_id'];
     $locate = $post_id - 1;
+    echo $post_id;
 
     $query = 'DELETE FROM game.post WHERE post_id=:post_id';
     $stmt = $db->prepare($query);
