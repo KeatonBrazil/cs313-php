@@ -59,6 +59,7 @@
         </div>
         <div>
             <?php 
+                $tracker = 0;
                 foreach ($comments as $comment) {
                     $post_id = $comment['post_id'];
                     $post = $comment['comment'];
@@ -68,19 +69,26 @@
                     echo "<div class='post'>";
                     echo "<span class='name'>" . $mem . "</span> " . "<span class='time_date right'>" . $tim . " " . $dat . "</span><br><hr>"; 
                     echo $post . "<br><br>";
-                    if ($mem === $username) {
-                        echo "<form action='updatePost.php' method='post'>";
-                        echo "<input type='hidden' name='post_id' value='".$post_id."'>";
-                        echo "<input class='modify right' type='submit' value='Edit'>";
-                        echo "</form>";
-                        }
                     if ($mem === $username || $username === 'Admin') { 
                         echo "<form action='deletePost.php' method='post'>";
                         echo "<input type='hidden' name='post_id' value='".$post_id."'>";
                         echo "<input class='modify right' type='submit' value='Delete'>";
+                        echo "</form>";
+                        if ($tracker == count($comments)) {
+                            echo "<br><br>";
+                        }
+                    }    
+                    if ($mem === $username) {
+                        echo "<form action='updatePost.php' method='post'>";
+                        echo "<input type='hidden' name='post_id' value='".$post_id."'>";
+                        echo "<input class='modify right' type='submit' value='Edit'>";
                         echo "</form><br><br>";
-                    }                    
+                        
+                        }
+                                    
                     echo "</div><br>";
+                    $tracker += 1;
+                    
                 }           
             
             ?>
