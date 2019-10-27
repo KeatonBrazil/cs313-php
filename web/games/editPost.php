@@ -41,8 +41,9 @@ $query = 'SELECT post_id, comment, post_time, post_date FROM game.post WHERE pos
 <body>
     <div>
         <textarea name="newPost" cols="30" rows="10">
-
-
+        <?php 
+        echo $comments[0]['comment'];
+        ?>
         </textarea>
     </div>    
 </body>
