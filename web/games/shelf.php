@@ -71,6 +71,7 @@ if (isset($_POST['title'])) {
     <div class="white">
         <div class="search">
             <form action="shelf.php#return" method="post">
+                <span class="none"><h3>Add to your shelf</h3></span><br>
                 <input type="text" name="title">
                 <input class="submit" type="submit" value="Search">
             </form><br>
@@ -100,6 +101,7 @@ if (isset($_POST['title'])) {
 
                         echo "</div><br>";
                     }
+                    echo "<input class='submit' type='submit' value='Add to shelf'>";
                     echo "</form><br>";
                 }
             ?>
