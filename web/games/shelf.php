@@ -79,7 +79,7 @@ if (isset($_POST['title'])) {
                     echo "<form action='addGame.php#return' method='post'>";
                     foreach ($games as $game) {
                         echo "<div class='check_game'>";
-                        echo "<input type='checkbox' name='".$game['title']."' value='".$game['game_id']."'>" . $game['title'] . "<hr><br>";
+                        echo "<input type='radio' name='newGame' value='".$game['game_id']."'>" . $game['title'] . "<hr><br>";
                         echo "Publisher: ";
                         $query = 'SELECT pub_name FROM game.boardGame bg LEFT JOIN game.publisher p ON bg.publisher_id = p.publisher_id WHERE game_id = :game_id';
                         $stmt = $db->prepare($query);
@@ -102,7 +102,7 @@ if (isset($_POST['title'])) {
                     echo "</form><br>";
                 }
             ?>
-        </div>
+        </div><br>
         <?php 
             $g_count = count($game_info);
             for ($i=0; $i < $g_count; $i++) {
