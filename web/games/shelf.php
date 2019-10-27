@@ -23,7 +23,7 @@ $user_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $mem_id = $user_id[0]['member_id'];
 
 
-$query = 'SELECT bg.game_id, title, time_length_min, complexity, num_players FROM game.collection c LEFT JOIN game.boardGame bg ON c.boardGame_id = bg.boardGame_id LEFT JOIN game.game g ON g.game_id = bg.game_id  WHERE shelf_id = (SELECT shelf_id FROM game.gameShelf WHERE member_id = :mem_id) ORDER BY title DESC';
+$query = 'SELECT bg.game_id, title, time_length_min, complexity, num_players FROM game.collection c LEFT JOIN game.boardGame bg ON c.boardGame_id = bg.boardGame_id LEFT JOIN game.game g ON g.game_id = bg.game_id  WHERE shelf_id = (SELECT shelf_id FROM game.gameShelf WHERE member_id = :mem_id) ORDER BY title';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
 $stmt->execute();
@@ -31,7 +31,7 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if (isset($_POST['title'])) {
     $title = $_POST['title'];
-    $query = 'SELECT game_id, title, time_length_min, complexity, num_players FROM game.game WHERE title = :title ORDER BY title DESC';
+    $query = 'SELECT game_id, title, time_length_min, complexity, num_players FROM game.game WHERE title = :title ORDER BY title';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':title', $title, PDO::PARAM_STR);
     $stmt->execute();
