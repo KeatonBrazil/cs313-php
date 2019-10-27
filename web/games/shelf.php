@@ -101,7 +101,7 @@ if (isset($_POST['title'])) {
 
                         echo "</div><br>";
                     }
-                    echo "<input class='submit' type='submit' value='Add to shelf'>";
+                    if (count($games)>0) {echo "<input class='submit' type='submit' value='Add to shelf'>";}
                     echo "</form><br>";
                 }
             ?>
