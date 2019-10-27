@@ -7,6 +7,6 @@ function hide() {
     }
 }
 
-function warn() {
-    confirm('Are you sure you want to delete this post?');
+function cancel() {
+    window.location.href = "main.php#return";
 }

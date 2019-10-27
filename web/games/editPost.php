@@ -16,8 +16,6 @@ $db = get_db();
 
 $post_id = $_POST['post_id'];
 
-echo $post_id;
-
 $query = 'SELECT post_id, comment, post_time, post_date FROM game.post WHERE post_id=:post_id';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':post_id', $post_id, PDO::PARAM_INT);
@@ -39,12 +37,17 @@ $query = 'SELECT post_id, comment, post_time, post_date FROM game.post WHERE pos
     <title>Shark Games | Hub</title>
 </head>
 <body>
-    <div>
-        <textarea name="newPost" cols="30" rows="10">
-        <?php 
-        echo $comments[0]['comment'];
-        ?>
-        </textarea>
+    <div class="center white">
+        <form action="updatePost.php">
+            <textarea name="newPost" cols="30" rows="10">
+                <?php 
+                    echo $comments[0]['comment'];
+                ?>
+            </textarea><br><br>
+            <?php echo "<input type='hidden' name='post_id' value='".$post_id."'>"; ?>     
+            <input class="confirm left" type="submit" value="Edit">       
+        </form>
+        <input class="delete right" type="button" value="Cancel" onclick="cancel()">
     </div>    
 </body>
 </html>
