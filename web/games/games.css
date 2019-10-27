@@ -131,7 +131,15 @@ textarea {
 }
 
 .search {
-    border: 1px solid rgb(55, 3, 71);
+    border: 2px solid rgb(55, 3, 71);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.check_game {
+    border: 2px solid rgb(55, 3, 71);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 /*iphone 5 and 5s and iphone 6, 7, 8*/

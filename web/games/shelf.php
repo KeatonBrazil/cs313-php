@@ -78,7 +78,26 @@ if (isset($_POST['title'])) {
                 if (isset($title) || $title != "") {
                     echo "<form action='addGame.php#return' method='post'>";
                     foreach ($games as $game) {
-                        echo "<input type='checkbox' name='".$game['title']."' value='".$game['game_id']."'>" . $game['title'] . "<br>";
+                        echo "<div class='check_game'>";
+                        echo "<input type='checkbox' name='".$game['title']."' value='".$game['game_id']."'>" . $game['title'] . "<hr><br>";
+                        echo "Publisher: ";
+                        $query = 'SELECT pub_name FROM game.boardGame bg LEFT JOIN game.publisher p ON bg.publisher_id = p.publisher_id WHERE game_id = :game_id';
+                        $stmt = $db->prepare($query);
+                        $stmt->bindValue(':game_id', $game['game_id'], PDO::PARAM_INT);
+                        $stmt->execute();
+                        $pubname = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        $count = count($pubname);
+                        for ($x=0; $x < $count; $x++) {
+                            if ($x > 0) {
+                                echo ', ';
+                            }
+                            echo $pubname[$x]['pub_name'];                    
+                        }
+                        echo "<br>Complexity: ".$game['complexity']."<br>";
+                        echo "Time Length (minutes): ".$game['time_length_min']."<br>";
+                        echo "Number of Max Players: ".$game['num_players'];
+
+                        echo "</div><br>";
                     }
                     echo "</form><br>";
                 }
