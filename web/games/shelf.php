@@ -69,19 +69,21 @@ if (isset($_POST['title'])) {
     </div>  
     
     <div class="white">
-        <form action="shelf.php#return" method="post">
-            <input type="text" name="title">
-            <input class="submit" type="submit" value="Search">
-        </form><br>
-        <?php 
-            if (isset($title) || $title != "") {
-                echo "<form action='addGame.php#return' method='post'>";
-                foreach ($games as $game) {
-                    echo "<input type='checkbox' name='".$game['title']."' value='".$game['game_id']."'>" . $game['title'] . "<br>";
+        <div class="search">
+            <form action="shelf.php#return" method="post">
+                <input type="text" name="title">
+                <input class="submit" type="submit" value="Search">
+            </form><br>
+            <?php 
+                if (isset($title) || $title != "") {
+                    echo "<form action='addGame.php#return' method='post'>";
+                    foreach ($games as $game) {
+                        echo "<input type='checkbox' name='".$game['title']."' value='".$game['game_id']."'>" . $game['title'] . "<br>";
+                    }
+                    echo "</form><br>";
                 }
-                echo "</form><br>";
-            }
-        ?>
+            ?>
+        </div>
         <?php 
             $g_count = count($game_info);
             for ($i=0; $i < $g_count; $i++) {
