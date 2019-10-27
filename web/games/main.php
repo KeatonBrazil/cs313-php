@@ -65,7 +65,7 @@
                     $tim = $comment['post_time'];
                     $dat = $comment['post_date'];
                     echo "<div class='post'>";
-                    echo $mem . " " . "<span class='time_date right'>" . $tim . " " . $dat . "</span><br><hr>"; 
+                    echo "<span class='name'>" . $mem . "</span> " . "<span class='time_date right'>" . $tim . " " . $dat . "</span><br><hr>"; 
                     echo $post . "<br><br>";
                     echo "</div><br>";
                 }           
