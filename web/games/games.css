@@ -156,8 +156,8 @@ input[type=radio] {
      appearance: none;
      display: inline-block;
      position: relative;
-     background-color: #f1f1f1;
-     color: #666;
+     background-color: #afafaf;
+     color: rgb(77, 77, 77);
      top: 10px;
      height: 30px;
      width: 30px;
@@ -178,11 +178,11 @@ input[type=radio]:checked::before
 }
 input[type=radio]:hover
 {
-     background-color: #f7f7f7;
+     background-color: #acacac;
 }
 input[type=radio]:checked
 {
-     background-color: #f1f1f1;
+     background-color: #acacac;
 }
 
 textarea {
