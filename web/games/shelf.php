@@ -107,6 +107,7 @@ if (isset($_POST['title'])) {
             ?>
         </div><br>
         <div class="shelf">
+        <span class="none"><h3>Games you own</h3></span><br>
         <?php 
             $g_count = count($game_info);
             for ($i=0; $i < $g_count; $i++) {
