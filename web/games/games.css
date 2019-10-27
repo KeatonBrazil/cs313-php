@@ -242,6 +242,13 @@ textarea {
     background-color: rgb(65, 65, 65);
 }
 
+.edit {
+    background-color: rgb(65, 65, 65);
+    padding: 15px 50px 15px 50px;
+    margin: 5% 40%;
+    box-shadow: 0 4px 8px 0 rgb(1, 22, 44);
+}
+
 /*iphone 5 and 5s and iphone 6, 7, 8*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
     .login {
@@ -259,6 +266,10 @@ textarea {
     .white {
         margin: 5%;
         padding: 10px;
+    }
+    .edit {
+        margin: 5%;
+        padding: 10%;
     }
     .menu {
         display: inline-block;
@@ -295,6 +306,10 @@ textarea {
     .white {
         margin: 5%;
         padding: 10px;
+    }
+    .edit {
+        margin: 5%;
+        padding: 10%;
     }
     .menu {
         display: inline-block;
