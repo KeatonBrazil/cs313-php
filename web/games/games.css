@@ -118,7 +118,7 @@ li.user {
 }
 
 .modify:hover {
-    background-color: rgb(255, 238, 0);
+    background-color: rgb(255, 230, 0);
 }
 
 .delete {
@@ -132,7 +132,7 @@ li.user {
 }
 
 .delete:hover {
-    background-color: rgb(110, 20, 8);
+    background-color: rgb(212, 4, 4);
 }
 
 input[type=text] {
