@@ -69,17 +69,16 @@
                     echo "<span class='name'>" . $mem . "</span> " . "<span class='time_date right'>" . $tim . " " . $dat . "</span><br><hr>"; 
                     echo $post . "<br><br>";
                     if ($mem === $username || $username === 'Admin') { 
-                    echo $mem;
                     echo "<form action='deletePost.php' method='post'>";
                     echo "<input type='hidden' name='post_id' value='".$post_id."'>";
-                    echo "<input class='right' type='submit' value='Delete'>";
+                    echo "<input class='submit right' type='submit' value='Delete'>";
                     echo "</form><br>";
                     }
                     if ($mem === $username) {
                     echo "<form action='updatePost.php' method='post'>";
                     echo "<input type='hidden' name='post_id' value='".$post_id."'>";
                     echo "<input class='right' type='submit' value='Edit'>";
-                    echo "</form>";
+                    echo "</form><br>";
                     echo "</div><br>";
                     }
                 }           
