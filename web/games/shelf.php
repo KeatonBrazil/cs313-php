@@ -31,7 +31,7 @@ $game_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if (isset($_POST['title'])) {
     $title = $_POST['title'];
-    $query = 'SELECT bg.game_id, title, time_length_min, complexity, num_players FROM game.boardGame bg LEFT JOIN game.game g ON bg.game_id = g.game_id WHERE title = :title';
+    $query = 'SELECT game_id, title, time_length_min, complexity, num_players FROM game.game WHERE title = :title';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':title', $title, PDO::PARAM_STR);
     $stmt->execute();
