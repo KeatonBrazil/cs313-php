@@ -218,6 +218,10 @@ textarea {
     float: left;
 }
 
+.text_left {
+    text-align: left;
+}
+
 .search {
     border: 2px solid rgb(55, 3, 71);
     border-radius: 5px;
