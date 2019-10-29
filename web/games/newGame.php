@@ -50,13 +50,13 @@ $db = get_db();
     
         <form action="requestBG.php" method="post">
             Board Game Title: <span class="red">*</span><br>
-            <input type="text" name="title"><br>
+            <input type="text" id="tit" name="title"><br>
             Estimated Time Length (minutes): <br>
-            <input type="text" name="tlm"><br>
+            <input type="text" id="tlmin" name="tlm"><br>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
-            <input type="text" name="comp"><br>
+            <input type="text" id="cmplx" name="comp"><br>
             Max Number of Players<br>
-            <input type="text" name="num_p"><br>
+            <input type="text" id="nplayers" name="num_p"><br>
             Select the number of Publishers
             <select id="num_pub" onchange="numPub()">
                 <option value="1">1</option>
@@ -66,12 +66,12 @@ $db = get_db();
                 <option value="5">5</option>
                 <option value="6">6</option>
             </select>
-            <div id="show_pub">Publisher 1:<span class='red'>*</span><br><input type='text' name='pub0'><br></div>
+            <div id="show_pub">Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br></div>
             <p>Please leave a description if you are not sure <br>if any of the information is correct.</p>
-            <textarea name="desc" cols="30" rows="10"></textarea><br>
+            <textarea name="desc" id='text' cols="30" rows="10"></textarea><br>
             <input class="confirm" type="submit" value="Request">
         </form>
-            <input class="delete" type="button" value="Reset" onclick="cancel()">
+            <input class="delete" type="button" value="Reset" onclick="reset()">
     </div>
 
 </body>

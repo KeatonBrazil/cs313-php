@@ -12,11 +12,19 @@ function cancel() {
 }
 
 function reset() {
-    window.location.href = "newGame.php#return";
+    var x = document;
+    x.getElementById("tit").innerHTML = "";
+    x.getElementById("tlmin").innerHTML = "";
+    x.getElementById("cmplx").innerHTML = "";
+    x.getElementById("nplayers").innerHTML = "";
+    x.getElementById("num_pub").value = 1;
+    x.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br>";
+    
+
 }
 
 function numPub() {
-    document.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' name='pub0'><br>";
+    document.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br>";
     var x = document.getElementById("num_pub");
     var count = 0;
     if (x.value == 1) {
@@ -35,7 +43,7 @@ function numPub() {
     for (var i=1; i < count; i++) {
         var newi = i + 1;
         var input = document.getElementById("show_pub");
-        input.innerHTML = input.innerHTML + "Publisher "+newi+":<br><input type='text' name='pub" + i + "'><br>";
+        input.innerHTML = input.innerHTML + "Publisher "+newi+":<br><input type='text' id='pub"+newi+"' name='pub" + i + "'><br>";
     }
 }
 
