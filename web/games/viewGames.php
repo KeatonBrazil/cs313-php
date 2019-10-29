@@ -14,7 +14,7 @@ else
 require_once("gamesDb.php");
 $db = get_db();
 
-$query = 'SELECT g.game_id, title, time_length_min, complexity, num_players FROM game.boardGame bg LEFT JOIN game.game g ON bg.game_id=g.game_id ORDER BY title';
+$query = 'SELECT game_id, title, time_length_min, complexity, num_players FROM game.game ORDER BY title';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
