@@ -6,10 +6,8 @@ DROP TABLE game.message;
 DROP TABLE game.relationship;
 DROP TABLE game.post;
 DROP TABLE game.requestBG; 
-/*
 DROP TABLE game.requestG;
 DROP TABLE game.requestP;
-*/
 DROP TABLE game.collection;
 DROP TABLE game.gameShelf;
 DROP TABLE game.boardGame;
@@ -66,23 +64,25 @@ CREATE TABLE game.collection
 CREATE TABLE game.requestG
 ( requestG_id SERIAL PRIMARY KEY
 , title           VARCHAR  NOT NULL
-, time_length_min INT      NOT NULL 
-, complexity      INT      NOT NULL
-, num_players     INT      NOT NULL
+, time_length_min INT      
+, complexity      INT      
+, num_players     INT 
+, member_id       INT    NOT NULL REFERENCES game.member(member_id)     
 );
 
 CREATE TABLE game.requestP
 ( requestP_id SERIAL PRIMARY KEY
 , pub_name   VARCHAR (30) NOT NULL
+, member_id       INT    NOT NULL REFERENCES game.member(member_id)
 );
 
 CREATE TABLE game.requestBG
 ( requestBG_id SERIAL PRIMARY KEY
 , descript        VARCHAR  
-, stat            INT      NOT NULL
-, requestG_id       INT    NOT NULL REFERENCES game.requestG(requestG_id)
-, requestP_id       INT    NOT NULL REFERENCES game.requestP(requestP_id)
-, member_id       INT      NOT NULL REFERENCES game.member(member_id)
+, stat            INT    NOT NULL
+, requestG_id     INT    NOT NULL REFERENCES game.requestG(requestG_id)
+, requestP_id     INT    NOT NULL REFERENCES game.requestP(requestP_id)
+, member_id       INT    NOT NULL REFERENCES game.member(member_id)
 );
 
 CREATE TABLE game.post
