@@ -13,12 +13,13 @@ function cancel() {
 
 function reset() {
     var x = document;
-    x.getElementById("tit").innerHTML = "";
-    x.getElementById("tlmin").innerHTML = "";
-    x.getElementById("cmplx").innerHTML = "";
-    x.getElementById("nplayers").innerHTML = "";
+    x.getElementById("tit").value = "";
+    x.getElementById("tlmin").value = "";
+    x.getElementById("cmplx").value = "";
+    x.getElementById("nplayers").value = "";
     x.getElementById("num_pub").value = 1;
     x.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br>";
+    x.getElementById("text").value = "";
 }
 
 function numPub() {
