@@ -163,6 +163,13 @@ input[type=password] {
     border-radius: 4px; 
 }
 
+input[type=email] {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+}
+
 
 input[type=radio] {
      -webkit-appearance: none;

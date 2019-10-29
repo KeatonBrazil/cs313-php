@@ -69,9 +69,9 @@ $db = get_db();
             <div id="show_pub">Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br></div>
             <p>Please leave a description if you are not sure <br>if any of the information is correct.</p>
             <textarea name="desc" id='text' cols="30" rows="10"></textarea><br>
-            <input class="confirm right" type="submit" value="Request">
+            <input class="confirm" type="submit" value="Request">
         </form>
-        <input class="delete left" type="button" value="Clear" onclick="clear()">
+        <input class="delete" type="button" value="Clear" onclick="clear()">
     </div>
 
 </body>

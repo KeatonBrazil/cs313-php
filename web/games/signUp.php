@@ -29,9 +29,9 @@ session_start();
             <p>Confirm Password</p>
             <input type="password" name="cpw" placeholder="confirm password"><br>
             <p>Email</p>
-            <input type="text" name="email" placeholder="email" maxlength="50"><br>
+            <input type="email" name="email" placeholder="email" maxlength="50"><br>
             <p>Confirm Email</p>
-            <input type="text" name="cemail" placeholder="confirm email" maxlength="50"><br>
+            <input type="email" name="cemail" placeholder="confirm email" maxlength="50"><br>
             <p>First Name</p>
             <input type="text" name="fname" placeholder="First Name" maxlength="50"><br>
             <p>Last Name</p>
