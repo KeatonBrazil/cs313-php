@@ -36,7 +36,7 @@ function numPub() {
         var newi = i + 1;
         var input = document.getElementById("show_pub");
         if (i==0) {
-        input.innerHTML = input.innerHTML + "Publisher "+newi+":<span class='red'></span><br><input type='text' name='pub" + i + "'><br>";
+        input.innerHTML = input.innerHTML + "Publisher "+newi+":<span class='red'>*</span><br><input type='text' name='pub" + i + "'><br>";
         } else {input.innerHTML = input.innerHTML + "Publisher "+newi+":<br><input type='text' name='pub" + i + "'><br>";}
     }
 }
