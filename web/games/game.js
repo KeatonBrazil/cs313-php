@@ -16,7 +16,7 @@ function reset() {
 }
 
 function numPub() {
-    document.getElementById("show_pub").innerHTML = "";
+    document.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' name='pub" + i + "'><br>";
     var x = document.getElementById("num_pub");
     var count = 0;
     if (x.value == 1) {
@@ -32,12 +32,10 @@ function numPub() {
     } else if (x.value == 6) {
         count = 6;
     }
-    for (var i=0; i < count; i++) {
+    for (var i=1; i < count; i++) {
         var newi = i + 1;
         var input = document.getElementById("show_pub");
-        if (newi===1) {
-        input.innerHTML = input.innerHTML + "Publisher "+newi+":<span class='red'>*</span><br><input type='text' name='pub" + i + "'><br>";
-        } else {input.innerHTML = input.innerHTML + "Publisher "+newi+":<br><input type='text' name='pub" + i + "'><br>";}
+        input.innerHTML = input.innerHTML + "Publisher "+newi+":<br><input type='text' name='pub" + i + "'><br>";
     }
 }
 
