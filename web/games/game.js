@@ -11,7 +11,7 @@ function cancel() {
     window.location.href = "main.php#return";
 }
 
-function clear() {
+function reset() {
     var x = document;
     x.getElementById("tit").value = "";
     x.getElementById("tlmin").value = "";
