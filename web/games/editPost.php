@@ -34,7 +34,7 @@ $query = 'SELECT post_id, comment, post_time, post_date FROM game.post WHERE pos
     <link rel="icon" href="shark.png" type="image/gif">
     <link rel="stylesheet" href="games.css">
     <script src="game.js"></script>
-    <title>Shark Games | Hub</title>
+    <title>Shark Games | Edit Post</title>
 </head>
 <body>
     <div class="center edit">

@@ -15,7 +15,7 @@ require_once("gamesDb.php");
 $db = get_db();
 
 $post_id = $_POST['post_id'];
-$newPost = $_POST['newPost'];
+$newPost = htmlspecialchars($_POST['newPost']);
 
 date_default_timezone_set("America/Denver");
 $time = date("h:i:sa");
