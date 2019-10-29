@@ -34,8 +34,9 @@
             <input type="text" name="tlm"><br>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
             <input type="text" name="comp"><br>
-            Select the number of Publishers
+            Max Number of Players<br>
             <input type="text" name="num_p"><br>
+            Select the number of Publishers
             <select id="num_pub" onchange="numPub()">
                 <option value="1">1</option>
                 <option value="2">2</option>
