@@ -16,44 +16,25 @@ function reset() {
 }
 
 function numPub() {
+    input.innerHTML = "";
     var x = document.getElementById("num_pub");
+    var input = document.getElementById("show_pub");
     var count = 0;
     if (x.value == 1) {
         count = 1;
-        for (var i=0; i < count; i++) {
-            var input = document.getElementById("show_pub");
-            input.innerHTML = input.innerHTML + "<input type='text' name='pub" + i + "'><br>";
-        }
     } else if (x.value == 2) {
         count = 2;
-        for (var i=0; i < count; i++) {
-            var input = document.getElementById("show_pub");
-            input.innerHTML = input.innerHTML + "<input type='text' name='pub" + i + "'><br>";
-        }
     } else if (x.value == 3) {
         count = 3; 
-        for (var i=0; i < count; i++) {
-            var input = document.getElementById("show_pub");
-            input.innerHTML = input.innerHTML + "<input type='text' name='pub" + i + "'><br>";
-        }
     } else if (x.value == 4) {
         count = 4;
-        for (var i=0; i < count; i++) {
-            var input = document.getElementById("show_pub");
-            input.innerHTML = input.innerHTML + "<input type='text' name='pub" + i + "'><br>";
-        }
     } else if (x.value == 5) {
         count = 5;
-        for (var i=0; i < count; i++) {
-            var input = document.getElementById("show_pub");
-            input.innerHTML = input.innerHTML + "<input type='text' name='pub" + i + "'><br>";
-        }
     } else if (x.value == 6) {
         count = 6;
-        for (var i=0; i < count; i++) {
-            var input = document.getElementById("show_pub");
-            input.innerHTML = input.innerHTML + "<input type='text' name='pub" + i + "'><br>";
-        }
+    }
+    for (var i=0; i < count; i++) {
+        input.innerHTML = input.innerHTML + "<input type='text' name='pub" + i + "'><br>";
     }
 }
 
