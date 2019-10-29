@@ -17,7 +17,7 @@ function reset() {
     x.getElementById("tlmin").innerHTML = "";
     x.getElementById("cmplx").innerHTML = "";
     x.getElementById("nplayers").innerHTML = "";
-    //x.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br>";
+    x.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br>";
 }
 
 function numPub() {
