@@ -32,7 +32,7 @@
     below<br>Required Fields: <span class="red">*</span><br><br>
     
         <form action="requestBG.php" method="post">
-            Board Game Title:<br>
+            Board Game Title: <span class="red">*</span><br>
             <input type="text" name="title"><br>
             Estimated Time Length (minutes): <br>
             <input type="text" name="tlm"><br>
