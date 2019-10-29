@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+	header("Location: login.php");
+	die();
+}
+
+require_once("gamesDb.php");
+$db = get_db();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
