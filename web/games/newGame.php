@@ -44,7 +44,7 @@ $db = get_db();
         </div>  
     </div>  
     <div class="white center">
-    If the board game desire does not exist within the database<br> 
+    If the board game you desire does not exist within the database<br> 
     you may request to add a board game by filling in the information 
     below<br>Required Fields: <span class="red">*</span><br><br>
     
