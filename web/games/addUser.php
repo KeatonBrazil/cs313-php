@@ -8,19 +8,19 @@
     $lname = htmlspecialchars($_POST['lname']);
     
     if (!isset($user) || $user == "") {
-        header("location: signUp.php/?no_user=TRUE");
+        header("location: signUp.php?no_user=TRUE");
         die();
     } elseif (!isset($pass) || $pass == "" || !isset($cpass) || $cpass == "") {
-        header("location: signUp.php/?no_pass=TRUE");
+        header("location: signUp.php?no_pass=TRUE");
         die();
     } elseif (!isset($email) || $email == "" || !isset($cemail) || $cemail == "") {
-        header("location: signUp.php/?no_email=TRUE");
+        header("location: signUp.php?no_email=TRUE");
         die();
     } elseif (!isset($fname) || $fname == "" || !isset($lname) || $lname == "") {
-        header("location: signUp.php/?no_fname=TRUE");
+        header("location: signUp.php?no_fname=TRUE");
         die();
     } elseif ($pass != $cpass) {
-        header("location: signUp.php/?no_lname=TRUE");
+        header("location: signUp.php?no_lname=TRUE");
         die();
     }
 
@@ -38,7 +38,7 @@
     foreach ($names as $name) {
         $old_name = $name['username'];
         if ($user === $old_name) {
-            header("location: signUp.php/?user_exists=TRUE");
+            header("location: signUp.php?user_exists=TRUE");
             die();
         }
     }
@@ -53,7 +53,7 @@
     foreach ($emails as $mail) {
         $old_email = $mail['email'];
         if ($email === $old_email) {
-            header("Location: signUp.php/?email_exists=TRUE");
+            header("Location: signUp.php?email_exists=TRUE");
             die();
         }
     }
