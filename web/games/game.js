@@ -32,7 +32,9 @@ function numPub() {
         count = 6;
     }
     for (var i=0; i < count; i++) {
-        document.getElementById("show_pub").innerHTML = "<input type='text' name='pub" + i + "'>";
+        var input = document.getElementById("show_pub").innerHTML = "<input type='text' name='pub" + i + "'><br>";
+        input.value;
+        console.log(input.value)
     }
 }
 
