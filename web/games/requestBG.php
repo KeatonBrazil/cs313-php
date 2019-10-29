@@ -33,7 +33,45 @@ $pub4 = htmlspecialchars($_POST['pub4']);
 $pub5 = htmlspecialchars($_POST['pub5']);
 $desc = htmlspecialchars($_POST['desc']);
 
-$query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
+if ($title == "") {
+    header("location: newGame.php?no_title=TRUE")
+    die();
+} elseif ($pub0 == "") {
+    header("location: newGame.php?no_pub=TRUE")
+    die();
+} elseif ($pub1 == "") {
+    header("location: newGame.php?no_pub=TRUE")
+    die();
+} elseif ($pub2 == "") {
+    header("location: newGame.php?no_pub=TRUE")
+    die();
+} elseif ($pub3 == "") {
+    header("location: newGame.php?no_pub=TRUE")
+    die();
+} elseif ($pub4 == "") {
+    header("location: newGame.php?no_pub=TRUE")
+    die();
+} elseif ($pub5 == "") {
+    header("location: newGame.php?no_pub=TRUE")
+    die();
+} 
+
+$regex = '/\d+/';
+
+$express = preg_match($regex, $tlm);
+
+var_dump($express);
+echo $express;
+
+
+// $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
+// $stmt = $db->prepare($query);
+// $stmt->bindValue(':title', $title, PDO::PARAM_STR);
+// $stmt->bindValue(':tlm', $tlm, PDO::PARAM_INT);
+// $stmt->bindValue(':comp', $comp, PDO::PARAM_INT);
+// $stmt->bindValue(':num_p', $num_players, PDO::PARAM_INT);
+// $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
+
 
 
 
