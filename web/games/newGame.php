@@ -71,7 +71,7 @@ $db = get_db();
             <textarea name="desc" cols="30" rows="10"></textarea><br>
             <input class="confirm" type="submit" value="Request">
         </form>
-            <input class="delete" type="button" value="Reset" onclick="reset()">
+            <input class="delete" type="button" value="Reset" onclick="cancel()">
     </div>
 
 </body>
