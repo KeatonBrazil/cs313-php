@@ -28,9 +28,13 @@
     </div>  
     <div class="white center">
         <form action="requestBG.php" method="post">
+            Board Game Title:<br>
             <input type="text" name="title"><br>
+            Estimated Time Length (minutes): <br>
             <input type="text" name="tlm"><br>
+            Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
             <input type="text" name="comp"><br>
+            Select the number of Publishers
             <input type="text" name="num_p"><br>
             <select id="num_pub" onchange="numPub()">
                 <option value="1">1</option>
@@ -41,6 +45,7 @@
                 <option value="6">6</option>
             </select>
             <div id="show_pub"></div>
+            <p>Please leave a description if you are not sure \nif any of the information is correct.</p>
             <textarea name="desc" cols="30" rows="10"></textarea><br>
         </form>
 
