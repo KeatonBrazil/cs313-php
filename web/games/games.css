@@ -239,6 +239,10 @@ textarea {
     color:white;
 }
 
+.red {
+    color:red;
+}
+
 .shelf {
     border: 2px solid rgb(65, 65, 65);
     border-radius: 5px;

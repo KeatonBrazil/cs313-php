@@ -28,7 +28,9 @@
     </div>  
     <div class="white center">
     If the board game desire does not exist within the database<br> 
-    you may request to add a board game by filling in the information below<br><br><br>
+    you may request to add a board game by filling in the information 
+    below<br>Required Fields: <span class="red">*</span><br><br>
+    
         <form action="requestBG.php" method="post">
             Board Game Title:<br>
             <input type="text" name="title"><br>
