@@ -46,7 +46,7 @@ $query = 'SELECT post_id, comment, post_time, post_date FROM game.post WHERE pos
             </textarea><br><br>
             <?php echo "<input type='hidden' name='post_id' value='".$post_id."'>"; ?>        
             <input class="delete" type="button" value="Cancel" onclick="cancel()">  
-            <input class="edit" type="submit" value="Edit"><br><br>
+            <input class="modify" type="submit" value="Edit"><br><br>
         </form>        
     </div>    
 </body>
