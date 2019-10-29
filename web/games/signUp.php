@@ -31,7 +31,7 @@ $email_exists=$_GET['email_exists'];
         <li class="active"><a href="signUp.php">Sign up</a></li>
         </ul>
     </div>   
-    <div class="white center">
+    <div class="white center" id="return">
         <form action="addUser.php" method="post">
             <p>Username</p>
             <input type="text" name="uzer" placeholder="username" maxlength="50"><br>
