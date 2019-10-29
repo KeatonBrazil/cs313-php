@@ -18,6 +18,8 @@ $query = 'SELECT member_id FROM game.member WHERE username = :user';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':user', $username, PDO::PARAM_STR);
 $mem_id = $stmt->execute();
+var_dump($mem_id);
+echo "<br><br>";
 
 $title = $_POST['title'];
 $tlm = $_POST['tlm'];
