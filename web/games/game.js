@@ -16,7 +16,7 @@ function reset() {
 }
 
 function numPub() {
-    document.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' name='pub" + i + "'><br>";
+    document.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' name='pub0'><br>";
     var x = document.getElementById("num_pub");
     var count = 0;
     if (x.value == 1) {
