@@ -26,8 +26,24 @@
         <li class="floatright user">Welcome <?php echo $username; ?></li>
         </div>  
     </div>  
-    <div>
-    
+    <div class="white center">
+        <form action="requestBG.php" method="post">
+            <input type="text" name="title"><br>
+            <input type="text" name="tlm"><br>
+            <input type="text" name="comp"><br>
+            <input type="text" name="num_p"><br>
+            <select id="num_pub" onchange="numPub()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <div id="show_pub"></div>
+            <textarea name="desc" cols="30" rows="10"></textarea><br>
+        </form>
+
     </div>
 
 </body>
