@@ -46,7 +46,7 @@
                 <option value="6">6</option>
             </select>
             <div id="show_pub"></div>
-            <p>Please leave a description if you are not sure \nif any of the information is correct.</p>
+            <p>Please leave a description if you are not sure <br>if any of the information is correct.</p>
             <textarea name="desc" cols="30" rows="10"></textarea><br>
         </form>
 
