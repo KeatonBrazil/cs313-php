@@ -13,8 +13,14 @@
     } elseif (!isset($pass) || $pass == "" || !isset($cpass) || $cpass == "") {
         header("location: signUp.php?no_pass=TRUE");
         die();
+    } elseif ($pass != $cpass) {
+        header("location: signUp.php?no_pass_match=TRUE");
+        die();
     } elseif (!isset($email) || $email == "" || !isset($cemail) || $cemail == "") {
         header("location: signUp.php?no_email=TRUE");
+        die();
+    } elseif ($email != $cemail) {
+        header("location: signUp.php?no_email_match=TRUE");
         die();
     } elseif (!isset($fname) || $fname == "" || !isset($lname) || $lname == "") {
         header("location: signUp.php?no_fname=TRUE");
