@@ -14,6 +14,11 @@ else
 require_once("gamesDb.php");
 $db = get_db();
 
+$query = 'SELECT member_id FROM game.member WHERE username = :user';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':user', $username, PDO::PARAM_STR);
+$mem_id = $stmt->execute();
+
 $title = $_POST['title'];
 $tlm = $_POST['tlm'];
 $comp = $_POST['comp'];
