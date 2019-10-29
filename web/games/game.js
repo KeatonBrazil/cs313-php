@@ -19,8 +19,6 @@ function reset() {
     x.getElementById("nplayers").innerHTML = "";
     x.getElementById("num_pub").value = 1;
     x.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br>";
-    
-
 }
 
 function numPub() {
