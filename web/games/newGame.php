@@ -49,7 +49,7 @@
                 <option value="5">5</option>
                 <option value="6">6</option>
             </select>
-            <div id="show_pub"></div>
+            <div id="show_pub">Publisher 1:<span class='red'>*</span><br><input type='text' name='pub0'><br></div>
             <p>Please leave a description if you are not sure <br>if any of the information is correct.</p>
             <textarea name="desc" cols="30" rows="10"></textarea><br>
         </form>
