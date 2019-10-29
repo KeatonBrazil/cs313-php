@@ -34,7 +34,8 @@ function numPub() {
         count = 6;
     }
     for (var i=0; i < count; i++) {
-        input.innerHTML = input.innerHTML + "<input type='text' name='pub" + i + "'><br>";
+        var newi = i + 1;
+        input.innerHTML = input.innerHTML + "Publisher "+newi+":<br><input type='text' name='pub" + i + "'><br>";
     }
 }
 
