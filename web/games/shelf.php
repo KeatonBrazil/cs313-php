@@ -59,8 +59,8 @@ if (isset($_POST['title'])) {
         <div id="dude">
         <li class="mylink"><a href="main.php">Hub</a></li>
         <li class="active mylink"><a href="shelf.php">Game Shelf</a></li>
-        <li class="mylink"><a href="wish.php">Wish List</a></li>
-        <li class="mylink"><a href="friends.php">Friends</a></li>
+        <!--<li class="mylink"><a href="wish.php">Wish List</a></li>
+        <li class="mylink"><a href="friends.php">Friends</a></li>-->
         <?php if ($username === 'Admin') {echo "<li class='mylink'><a href='admin.php'>Admin</a></li>";} ?>
         <li class="mylink"><a href="viewGames.php">Browse Games</a></li>
         <li class="mylink"><a href="newGame.php">Request New Game</a></li>
