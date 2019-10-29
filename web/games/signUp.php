@@ -35,7 +35,8 @@ session_start();
             <p>First Name</p>
             <input type="text" name="fname" placeholder="First Name" maxlength="50"><br>
             <p>Last Name</p>
-            <input type="text" name="lname" placeholder="Last Name" maxlength="50"><br>
+            <input type="text" name="lname" placeholder="Last Name" maxlength="50"><br><br>
+            <span class="red">All fields are required</span><br><br> 
             <input class="submit" type="submit" value="Create Account"><br>       
         </form>
     </div>
