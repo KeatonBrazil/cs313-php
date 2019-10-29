@@ -17,7 +17,8 @@ $db = get_db();
 $query = 'SELECT member_id FROM game.member WHERE username = :user';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':user', $username, PDO::PARAM_STR);
-$mem_id = $stmt->execute();
+$stmt->execute();
+$mem_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 var_dump($mem_id);
 echo "<br><br>";
 
