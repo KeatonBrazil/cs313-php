@@ -16,9 +16,8 @@ function reset() {
 }
 
 function numPub() {
-    input.innerHTML = "";
+    document.getElementById("show_pub").innerHTML = "";
     var x = document.getElementById("num_pub");
-    var input = document.getElementById("show_pub");
     var count = 0;
     if (x.value == 1) {
         count = 1;
@@ -35,6 +34,7 @@ function numPub() {
     }
     for (var i=0; i < count; i++) {
         var newi = i + 1;
+        var input = document.getElementById("show_pub");
         input.innerHTML = input.innerHTML + "Publisher "+newi+":<br><input type='text' name='pub" + i + "'><br>";
     }
 }
