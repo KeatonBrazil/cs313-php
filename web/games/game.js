@@ -42,7 +42,7 @@ function numPub() {
     for (var i=1; i < count; i++) {
         var newi = i + 1;
         var input = document.getElementById("show_pub");
-        input.innerHTML = input.innerHTML + "Publisher "+newi+":<br><input type='text' id='pub"+newi+"' name='pub" + i + "'><br>";
+        input.innerHTML = input.innerHTML + "Publisher "+newi+":<span class='red'>*</span><br><input type='text' id='pub"+newi+"' name='pub" + i + "'><br>";
     }
 }
 
