@@ -13,6 +13,11 @@ else
 
 require_once("gamesDb.php");
 $db = get_db();
+
+$no_title = $_GET['no_title'];
+$no_pub = $_GET['no_pub'];
+$tlm_no_int = $_GET['tlm_no_int'];
+
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +56,7 @@ $db = get_db();
         <form action="requestBG.php" method="post">
             Board Game Title: <span class="red">*</span><br>
             <input type="text" id="tit" name="title"><br>
+            <?php if ($no_title) {echo "<p><span class='red' >You must include a title</span><p>";} ?>
             Estimated Time Length (minutes): <br>
             <input type="text" id="tlmin" name="tlm"><br>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
