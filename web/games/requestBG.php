@@ -26,12 +26,12 @@ $tlm = htmlspecialchars($_POST['tlm']);
 $comp = htmlspecialchars($_POST['comp']);
 $num_players = htmlspecialchars($_POST['num_p']);
 $pub0 = htmlspecialchars($_POST['pub0']);
-$pub1 = ($_POST['pub1']);
-$pub2 = ($_POST['pub2']);
-$pub3 = ($_POST['pub3']);
-$pub4 = ($_POST['pub4']);
-$pub5 = ($_POST['pub5']);
-$desc = ($_POST['desc']);
+$pub1 = htmlspecialchars($_POST['pub1']);
+$pub2 = htmlspecialchars($_POST['pub2']);
+$pub3 = htmlspecialchars($_POST['pub3']);
+$pub4 = htmlspecialchars($_POST['pub4']);
+$pub5 = htmlspecialchars($_POST['pub5']);
+$desc = htmlspecialchars($_POST['desc']);
 
 
 // header("location: newGame.php?no_pub0=TRUE");
@@ -40,25 +40,25 @@ $desc = ($_POST['desc']);
 //     header("location: newGame.php?no_title=TRUE");
 //     die();
 // } 
-if ($pub0 == "") {
-    header("location: newGame.php?no_pub=TRUE");
-    die();
-} if ($pub1 == "") {
-    header("location: newGame.php?no_pub=TRUE");
-    die();
-} if ($pub2 == "") {
-    header("location: newGame.php?no_pub=TRUE");
-    die();
-} if ($pub3 == "") {
-    header("location: newGame.php?no_pub=TRUE");
-    die();
-} if ($pub4 == "") {
-    header("location: newGame.php?no_pub=TRUE");
-    die();
-} if ($pub5 == "") {
-    header("location: newGame.php?no_pub=TRUE");
-    die();
-} 
+// if ($pub0 == "") {
+//     header("location: newGame.php?no_pub=TRUE");
+//     die();
+// } if ($pub1 == "") {
+//     header("location: newGame.php?no_pub=TRUE");
+//     die();
+// } if ($pub2 == "") {
+//     header("location: newGame.php?no_pub=TRUE");
+//     die();
+// } if ($pub3 == "") {
+//     header("location: newGame.php?no_pub=TRUE");
+//     die();
+// } if ($pub4 == "") {
+//     header("location: newGame.php?no_pub=TRUE");
+//     die();
+// } if ($pub5 == "") {
+//     header("location: newGame.php?no_pub=TRUE");
+//     die();
+// } 
 
 
 // $regex = '/\d+/';
