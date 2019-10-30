@@ -33,40 +33,10 @@ $pub4 = htmlspecialchars($_POST['pub4']);
 $pub5 = htmlspecialchars($_POST['pub5']);
 $desc = htmlspecialchars($_POST['desc']);
 
-if ($title == "") {
-    header("location: newGame.php?no_title=TRUE");
-    die();
-} elseif ($pub0 != NULL) {
-    if ($pub0 === "") {
-        header("location: newGame.php?no_pub0=TRUE");
-        die();
-    }
-} elseif ($pub1 != NULL) {
-    if ($pub1 === "") {
-        header("location: newGame.php?no_pub1=TRUE");
-        die();
-    }
-} elseif ($pub2 != NULL) {
-    if ($pub2 === "") {
-        header("location: newGame.php?no_pub2=TRUE");
-        die();
-    }
-} elseif ($pub3 != NULL) {
-    if ($pub3 === "") {
-        header("location: newGame.php?no_pub3=TRUE");
-        die();
-    }
-} elseif ($pub4 != NULL) {
-    if ($pub4 === "") {
-        header("location: newGame.php?no_pub4=TRUE");
-        die();
-    }
-} elseif ($pub5 != NULL) {
-    if ($pub5 === "") {
-        header("location: newGame.php?no_pub5=TRUE");
-        die();
-    }
-} 
+// header("location: newGame.php?no_title=TRUE");
+// header("location: newGame.php?no_pub0=TRUE");
+
+
 
 $regex = '/\d+/';
     
@@ -96,19 +66,19 @@ if (preg_match($regex, $tlm) === 0) {
 // var_dump($comp);
 // echo "<br><br>";
 // var_dump($num_players);
-// echo "<br><br>";
-// var_dump($pub0);
-// echo "<br><br>";
-// var_dump($pub1);
-// echo "<br><br>";
-// var_dump($pub2);
-// echo "<br><br>";
-// var_dump($pub3);
-// echo "<br><br>";
-// var_dump($pub4);
-// echo "<br><br>";
-// var_dump($pub5);
-// echo "<br><br>";
+echo "<br><br>";
+var_dump($pub0);
+echo "<br><br>";
+var_dump($pub1);
+echo "<br><br>";
+var_dump($pub2);
+echo "<br><br>";
+var_dump($pub3);
+echo "<br><br>";
+var_dump($pub4);
+echo "<br><br>";
+var_dump($pub5);
+echo "<br><br>";
 // var_dump($desc);
 // echo "<br><br>";
 ?>
