@@ -33,10 +33,13 @@ $pub4 = htmlspecialchars($_POST['pub4']);
 $pub5 = htmlspecialchars($_POST['pub5']);
 $desc = htmlspecialchars($_POST['desc']);
 
-// header("location: newGame.php?no_title=TRUE");
+
 // header("location: newGame.php?no_pub0=TRUE");
 
-
+if ($title == "") {
+    header("location: newGame.php?no_title=TRUE");
+    die();
+} 
 
 $regex = '/\d+/';
     
