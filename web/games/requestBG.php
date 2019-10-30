@@ -38,24 +38,24 @@ $desc = htmlspecialchars($_POST['desc']);
 //     die();
 // } 
 if ($pub0 == "") {
-    header("location: newGame.php?no_pub=TRUE");
+    header("location: newGame.php?no_pub0=TRUE");
     die();
 } if ($pub1 == "") {
-    header("location: newGame.php?no_pub=TRUE");
+    header("location: newGame.php?no_pub1=TRUE");
     die();
-// } if ($pub2 == "") {
-//     header("location: newGame.php?no_pub=TRUE");
-//     die();
-// } if ($pub3 == "") {
-//     header("location: newGame.php?no_pub=TRUE");
-//     die();
-// } if ($pub4 == "") {
-//     header("location: newGame.php?no_pub=TRUE");
-//     die();
-// } if ($pub5 == "") {
-//     header("location: newGame.php?no_pub=TRUE");
-//     die();
-// } 
+} if ($pub2 == "") {
+    header("location: newGame.php?no_pub2=TRUE");
+    die();
+} if ($pub3 == "") {
+    header("location: newGame.php?no_pub3=TRUE");
+    die();
+} if ($pub4 == "") {
+    header("location: newGame.php?no_pub4=TRUE");
+    die();
+} if ($pub5 == "") {
+    header("location: newGame.php?no_pub5=TRUE");
+    die();
+} 
 
 
 $regex1 = '/\d+/';
