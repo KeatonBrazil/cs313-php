@@ -58,12 +58,24 @@ if ($pub0 == "") {
 } 
 
 
-// $regex = '/\d+/';
+$regex1 = '/\d+/';
     
-// if (preg_match($regex, $tlm) === 0) {
-//     header("location: newGame.php?tlm_no_int=TRUE");
-//     die();
-// }
+if (preg_match($regex1, $tlm) === 0 || $tlm != "") {
+    header("location: newGame.php?tlm_no_int=TRUE");
+    die();
+}
+
+$regex2 = '/(5)\.[0][0]?|[0-4]\.[0-9][0-9]?/';
+
+if (preg_match($regex2, $comp) === 0 || $comp != "") {
+    header("location: newGame.php?comp_no_int=TRUE");
+    die();
+}
+
+if (preg_match($regex1, $num_players) === 0 || $num_players != "") {
+    header("location: newGame.php?num_p_no_int=TRUE");
+    die();
+}
 
 // $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
 // $stmt = $db->prepare($query);
