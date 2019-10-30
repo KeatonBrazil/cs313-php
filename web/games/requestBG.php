@@ -36,17 +36,17 @@ $desc = htmlspecialchars($_POST['desc']);
 
 // header("location: newGame.php?no_pub0=TRUE");
 
-if ($title == "") {
-    header("location: newGame.php?no_title=TRUE");
-    die();
-} 
+// if ($title == "") {
+//     header("location: newGame.php?no_title=TRUE");
+//     die();
+// } 
 
-$regex = '/\d+/';
+// $regex = '/\d+/';
     
-if (preg_match($regex, $tlm) === 0) {
-    header("location: newGame.php?tlm_no_int=TRUE");
-    die();
-}
+// if (preg_match($regex, $tlm) === 0) {
+//     header("location: newGame.php?tlm_no_int=TRUE");
+//     die();
+// }
 
 // $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
 // $stmt = $db->prepare($query);
@@ -60,15 +60,15 @@ if (preg_match($regex, $tlm) === 0) {
 
 
 
-// var_dump($mem_id);
-// echo "<br><br>";
-// var_dump($title);
-// echo "<br><br>";
-// var_dump($tlm);
-// echo "<br><br>";
-// var_dump($comp);
-// echo "<br><br>";
-// var_dump($num_players);
+var_dump($mem_id);
+echo "<br><br>";
+var_dump($title);
+echo "<br><br>";
+var_dump($tlm);
+echo "<br><br>";
+var_dump($comp);
+echo "<br><br>";
+var_dump($num_players);
 echo "<br><br>";
 var_dump($pub0);
 echo "<br><br>";
@@ -82,6 +82,6 @@ var_dump($pub4);
 echo "<br><br>";
 var_dump($pub5);
 echo "<br><br>";
-// var_dump($desc);
-// echo "<br><br>";
+var_dump($desc);
+echo "<br><br>";
 ?>
