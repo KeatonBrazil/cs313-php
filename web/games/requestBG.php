@@ -37,12 +37,12 @@ $desc = htmlspecialchars($_POST['desc']);
 //     header("location: newGame.php?no_title=TRUE");
 //     die();
 // } 
-// if ($pub0 == "") {
-//     header("location: newGame.php?no_pub=TRUE");
-//     die();
-// } if ($pub1 == "") {
-//     header("location: newGame.php?no_pub=TRUE");
-//     die();
+if ($pub0 == "") {
+    header("location: newGame.php?no_pub=TRUE");
+    die();
+} if ($pub1 == "") {
+    header("location: newGame.php?no_pub=TRUE");
+    die();
 // } if ($pub2 == "") {
 //     header("location: newGame.php?no_pub=TRUE");
 //     die();
