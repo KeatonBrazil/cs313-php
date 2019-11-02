@@ -78,7 +78,7 @@ session_start();
                 $stmt -> bindValue(':rg_id', $requestG[$i]['requestG_id'], PDO::PARAM_INT);
                 $stmt -> execute();
                 $requestP = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-                var_dump($requestP);
+                var_dump($requestG[$i]['requestG_id']);
 
                 for ($x=0; $x < count($requestP); $x++) {
                     $newx = $x +1;
