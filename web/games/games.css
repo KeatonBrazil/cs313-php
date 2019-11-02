@@ -218,7 +218,7 @@ textarea {
 
 textarea:focus {
     outline: none !important;
-    border: 2px solid rgb(56, 1, 255);
+    border: 3px solid rgb(56, 1, 255);
     
 }
 
