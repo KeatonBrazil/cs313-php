@@ -73,7 +73,7 @@ session_start();
                 echo "<p>Number of Maximum Players</p>";
                 echo "<input type='text' value='".$requestG[$i]['num_players']."'>"; 
 
-                $query = 'SELECT pub_name FROM game.requestP p LEFT JOIN game.requestBG bg ON p.requestP_id = bg.requestP_id WHERE requestG_id = :rg_id;';
+                $query = 'SELECT pub_name FROM game.requestP p LEFT JOIN game.requestBG bg ON p.requestP_id = bg.requestP_id WHERE requestG_id = :rg_id';
                 $stmt = $db->prepare($query);
                 $stmt -> bindValue(':rg_id', $requestG[$i]['requestG_id'], PDO::PARAM_INT);
                 $stmt -> execute();
