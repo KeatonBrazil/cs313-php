@@ -102,7 +102,7 @@ function validate() {
         if (reg1.test(time_length.value) != true) {
             console.log("not a digit");
             console.log(time_length.value);
-            console.log(reg2.test(time_length.value));
+            console.log(reg1.test(time_length.value));
             return false;
         }
     }
