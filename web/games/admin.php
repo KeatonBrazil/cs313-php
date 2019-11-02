@@ -55,10 +55,31 @@ session_start();
                 echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
                 echo "<input type='hidden' value='".$requestG[$i]['requestG_id']."'>";
+                echo "<input type='hidden' value='".$requestG[$i]['member_id']."'>";
+                echo "<p>Title</p>";
                 echo "<input type='text' value='".$requestG[$i]['title']."'>"; 
-                echo "<input type='text' value='".$requestG[$i]['time_length_min']."'>"; 
+                echo "<p>Estimated Time (Minutes)</p>";
+                echo "<input type='text' value='".$requestG[$i]['time_length_min']."'>";
+                echo "<p>Complexity</p>"; 
                 echo "<input type='text' value='".$requestG[$i]['complexity']."'>";
+                echo "<p>Number of Maximum Players</p>";
                 echo "<input type='text' value='".$requestG[$i]['num_players']."'>"; 
+
+                $query = 'SELECT pub_name FROM game.requestP p LEFT JOIN game.requestBG bg ON p.requestP_id = bg.requestP_id WHERE requestG_id = :rg_id;';
+                $stmt = $db->prepare($query);
+                $stmt -> bindValue(':rg_id', $requestG[$i]['requestG_id'], PDO::PARAM_INT);
+                $stmt -> execute();
+                $requestP = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+
+                for ($x=0; $x < count($requestP); $x++) {
+                    $newx = $x +1;
+                    echo "<p>Publisher ".$newx."</p>"; 
+                    echo "<input type='hidden' value='".$requestP[$i]['requestP_id']."'>";
+                    echo "<input type='hidden' value='".$requestP[$i]['member_id']."'>";
+                    echo "<input type='text' name='pub".$x."' id='pub".$newx."' value='".$requestP[0]['pub_name']."'>";
+                }
+
+                echo "<p>Description</p>";
                 echo "<textarea>".$requestG[$i]['descript']."</textarea>"; 
                 echo "</form>";
                 echo "</div>";
