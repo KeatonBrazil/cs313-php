@@ -61,7 +61,7 @@ session_start();
             for ($i=0; $i < count($requestG); $i++) {
                 echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
-                echo "<strong>".$name[0]['username']."</strong><br><hr>";
+                echo "<strong>".$name[$i]['username']."</strong><br><hr>";
                 echo "<input type='hidden' value='".$requestG[$i]['requestG_id']."'>";
                 echo "<input type='hidden' value='".$requestG[$i]['member_id']."'>";
                 echo "<p>Title</p>";
