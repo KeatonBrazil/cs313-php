@@ -85,11 +85,23 @@ for ($i=0; $i < $count; $i++){
         $stmt->bindValue(':g_id', $g_id, PDO::PARAM_INT);
         $stmt->bindValue(':p_id', $p_id, PDO::PARAM_INT);
         $result = $stmt->execute();
-
+        
     }
 }
 
+$admin = 'Admin';
+$query = 'SELECT email FROM game.member WHERE username = :admi';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':admi', $admin, PDO::PARAM_STR);
+$stmt->execute();
+$email = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$email = $email[0]['email'];
+$subject = "Board Game Request";
+$message = "You have recieved a Board Game request on epicsharks.herokuapp.com/games/admin.php";
+$headers = "From: $username";
+mail($email, $subject, $message, $headers);
 
-
+header("location: newGame.php?thankyou = TRUE");
+die();
 
 ?>
