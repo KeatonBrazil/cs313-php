@@ -121,43 +121,46 @@ function validate() {
             return false;
         }
     } 
+    console.log(pub1.value);
     if (pub1) {
-        if (pub1 === "") {
+        if (pub1.value === "") {
             document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
             console.log("pub1");
             return false;
         }
     } 
+    console.log(pub2);
+    console.log(pub2.value);
     if (pub2) {
-        if (pub2 === "") {
+        if (pub2.value === "") {
             document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
             console.log("pub2");
             return false;
         }
     }
     if (pub3) {
-        if (pub3 === "") {
+        if (pub3.value === "") {
             document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
             console.log("pub3");
             return false;
         }
     }
     if (pub4) {
-        if (pub4 === "") {
+        if (pub4.value === "") {
             document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
             console.log("pub4");
             return false;
         }
     }
     if (pub5) {
-        if (pub5 === "") {
+        if (pub5.value === "") {
             document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
             console.log("pub5");
             return false;
         }
     }
     if (pub6) {
-        if (pub6 === "") {
+        if (pub6.value === "") {
             document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
             console.log("pub6");
             return false;
