@@ -64,8 +64,8 @@ $tlm_no_int = $_GET['tlm_no_int'];
             <input type="text" id="cmplx" name="comp"><br>
             <p id="noFloat"><p>
             Max Number of Players<br>
-            <p id="noNum2"><p>
             <input type="text" id="nplayers" name="num_p"><br>
+            <p id="noNum2"><p>
             Select the number of Publishers
             <select id="num_pub" onchange="numPub()">
                 <option value="1">1</option>
@@ -76,6 +76,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
                 <option value="6">6</option>
             </select>
             <div id="show_pub">Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br></div>
+            <p id="pubs"></p>
             <p>Please leave a description if you are not sure <br>if any of the information is correct.</p>
             <textarea name="desc" id='text' cols="30" rows="10"></textarea><br>
             <input class="confirm" type="submit" value="Request">
@@ -90,10 +91,10 @@ function validate() {
     var nplayers = document.getElementById("nplayers");
     var pub1 = document.getElementById("pub1");
     var pub2 = document.getElementById("pub2");
-    var pub2 = document.getElementById("pub3");
-    var pub2 = document.getElementById("pub4");
-    var pub2 = document.getElementById("pub5");
-    var pub2 = document.getElementById("pub6");
+    var pub3 = document.getElementById("pub3");
+    var pub4 = document.getElementById("pub4");
+    var pub5 = document.getElementById("pub5");
+    var pub6 = document.getElementById("pub6");
     var reg1 = /(5)\.[0][0]?|[0-4]\.[0-9][0-9]?/;
     var reg2 = /\d+/;
 
@@ -120,10 +121,52 @@ function validate() {
             return false;
         }
     } 
+    if (pub1) {
+        if (pub1 === "") {
+            document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
+            console.log("pub1");
+            return false;
+        }
+    } 
+    if (pub2) {
+        if (pub2 === "") {
+            document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
+            console.log("pub2");
+            return false;
+        }
+    }
+    if (pub3) {
+        if (pub3 === "") {
+            document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
+            console.log("pub3");
+            return false;
+        }
+    }
+    if (pub4) {
+        if (pub4 === "") {
+            document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
+            console.log("pub4");
+            return false;
+        }
+    }
+    if (pub5) {
+        if (pub5 === "") {
+            document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
+            console.log("pub5");
+            return false;
+        }
+    }
+    if (pub6) {
+        if (pub6 === "") {
+            document.getElementById("pubs").innerHTML = "<span class='red'>Selected publisher boxes must me filled in</span>";
+            console.log("pub6");
+            return false;
+        }
+    }
     console.log("good");
     return true;
 
-}
+} 
 </script>
 </body>
 </html>
