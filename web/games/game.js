@@ -60,7 +60,12 @@ function validateForm() {
 
   if (title.value === "" || title.value === null) {
     document.getElementById("noTitle").innerHTML = "You must include a title";
+    console.log(title.value);
+    console.log("bad");
     return false;
   } 
+  console.log(title.value);
+  console.log("good");
+  return true;
 
 }
