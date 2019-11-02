@@ -210,6 +210,8 @@ textarea {
     width: 50%;
     border-radius: 4px; 
     border: 1px solid #ccc;
+    font-family: "Times New Roman";
+
 }
 
 .time_date {
