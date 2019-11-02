@@ -27,6 +27,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="games.css">
+    <script src="game.js"></script>
     <link rel="icon" href="shark.png" type="image/gif">
     <title>Shark Games | Request Game</title>
 </head>
@@ -78,7 +79,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
         </form>
         <input class="delete" type="button" value="Reset" onclick="reset()">
     </div>
-<script src="game.js">
+<script>
 function validate() {
     var title = document.getElementById("tit");
     var time_length = document.getElementById("tlmin");
