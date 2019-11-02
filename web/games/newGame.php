@@ -101,6 +101,7 @@ function validate() {
     } else if (time_length != "") {
         if (reg2.test(time_length.value) != true) {
             console.log("not a digit");
+            console.log(reg2.test(time_length.value));
             return false;
         }
     }
