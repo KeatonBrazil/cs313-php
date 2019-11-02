@@ -99,9 +99,9 @@ function validate() {
         console.log("bad");
         return false;
     } else if (time_length != "") {
-        if (reg2.test(time_length.value) != true) {
+        if (reg2.test(Number(time_length.value)) != true) {
             console.log("not a digit");
-            console.log(reg2.test(time_length.value));
+            console.log(reg2.test(Number(time_length.value)));
             return false;
         }
     }
