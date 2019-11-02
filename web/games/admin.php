@@ -50,7 +50,7 @@ session_start();
             $stmt = $db->prepare($query);
             $stmt -> execute();
             $requestG = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            echo "<div class='white'>";
+            echo "<div class='white admin'>";
             for ($i=0; $i < count($requestG); $i++) {
                 echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
