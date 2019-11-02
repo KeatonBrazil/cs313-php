@@ -35,7 +35,7 @@ CREATE TABLE game.game
 ( game_id         SERIAL PRIMARY KEY
 , title           VARCHAR  NOT NULL
 , time_length_min INT      NOT NULL 
-, complexity      INT      NOT NULL 
+, complexity      NUMERIC  NOT NULL 
 , num_players     INT      NOT NULL
 );
 
@@ -65,7 +65,7 @@ CREATE TABLE game.requestG
 ( requestG_id SERIAL PRIMARY KEY
 , title           VARCHAR  NOT NULL
 , time_length_min INT      
-, complexity      INT      
+, complexity      NUMERIC      
 , num_players     INT 
 , member_id       INT    NOT NULL REFERENCES game.member(member_id)     
 );
