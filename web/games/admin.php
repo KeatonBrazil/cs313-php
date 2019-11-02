@@ -51,14 +51,14 @@ session_start();
             $stmt -> execute();
             $requestG = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            $query = 'SELECT username FROM game.member WHERE member_id = :mem_id';
-            $stmt = $db->prepare($query);
-            $stmt -> bindValue(':mem_id', $requestG[$i]['member_id'], PDO::PARAM_INT);
-            $stmt -> execute();
-            $name = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
             echo "<div class='white'>";
             for ($i=0; $i < count($requestG); $i++) {
+                $query = 'SELECT username FROM game.member WHERE member_id = :mem_id';
+                $stmt = $db->prepare($query);
+                $stmt -> bindValue(':mem_id', $requestG[$i]['member_id'], PDO::PARAM_INT);
+                $stmt -> execute();
+                $name = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
                 echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
                 echo "<strong>".$name[$i]['username']."</strong><br><hr>";
@@ -88,7 +88,7 @@ session_start();
                 }
 
                 echo "<p>Description</p>";
-                echo "<textarea>".$requestG[$i]['descript']."</textarea>"; 
+                echo "<textarea>".$requestG[$i]['descript']."</textarea><br>"; 
                 echo "<input type='submit' class='confirm' value='Confirm'>";
                 echo "</form>";
                 echo "<form action='deleteRequest' method='post'>";
