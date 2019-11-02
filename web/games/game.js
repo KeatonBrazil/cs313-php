@@ -58,7 +58,7 @@ function validateForm() {
   var pub2 = document.getElementById("pub5");
   var pub2 = document.getElementById("pub6");
 
-  if (title.value == "") {
+  if (title.value === "" || title.value === null) {
     document.getElementById("noTitle").innerHTML = "You must include a title";
     return false;
   } 
