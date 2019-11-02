@@ -92,8 +92,8 @@ function validate() {
     var pub2 = document.getElementById("pub5");
     var pub2 = document.getElementById("pub6");
 
-    if (title.value === "" || title.value === null) {
-        document.getElementById("noTitle").style.display = "block";
+    if (title.value === "") {
+       // document.getElementById("noTitle").style.display = "block";
         console.log(title.value);
         console.log("bad");
         return false;
