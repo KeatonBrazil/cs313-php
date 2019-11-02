@@ -59,7 +59,7 @@ function validateForm() {
   var pub2 = document.getElementById("pub6");
 
   if (title.value == "") {
-    document.getElementById("noTitle").style.display = "block";
+    document.getElementById("noTitle").innerHTML = "You must include a title";
     return false;
   } 
 

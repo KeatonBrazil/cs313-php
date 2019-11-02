@@ -56,7 +56,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
         <form action="requestBG.php" onsubmit="return validateForm()" method="post">
             Board Game Title: <span class="red">*</span><br>
             <input type="text" id="tit" name="title"><br>
-            <p id="noTitle"><span class='red good' >You must include a title</span><p>
+            <p id="noTitle"><span class='red good' ></span><p>
             Estimated Time Length (minutes): <br>
             <input type="text" id="tlmin" name="tlm"><br>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
