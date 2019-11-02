@@ -11,6 +11,9 @@ session_start();
         die();
     }
 
+    require_once("gamesDb.php");
+    $db = get_db();
+
 ?>
 
 <!DOCTYPE html>
@@ -41,5 +44,21 @@ session_start();
         </div>
         </ul>
     </div> 
+    <div>
+        <?php 
+            $query = 'SELECT * FROM game.requestG';
+            $stmt = $db->prepare($query);
+            $stmt -> execute();
+            $requestG = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            for ($i=0; $i < count($requestG); $i++) {
+                echo "<div>";
+                echo "<form action='insertGame.php' method='post'>";
+                echo "<input type='text' value='".$requestG[$i]['title']."'>"; 
+                echo "</form>";
+                echo "</div>";
+            }
+        ?>
+    </div>
 </body>
 </html>
