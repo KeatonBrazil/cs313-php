@@ -44,40 +44,53 @@ if ($num_players === "") {
 }
 
 
-// $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
-// $stmt = $db->prepare($query);
-// $stmt->bindValue(':title', $title, PDO::PARAM_STR);
-// $stmt->bindValue(':tlm', $tlm, PDO::PARAM_INT);
-// $stmt->bindValue(':comp', $comp, PDO::PARAM_INT);
-// $stmt->bindValue(':num_p', $num_players, PDO::PARAM_INT);
-// $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
+$query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':title', $title, PDO::PARAM_STR);
+$stmt->bindValue(':tlm', $tlm, PDO::PARAM_INT);
+$stmt->bindValue(':comp', $comp, PDO::PARAM_INT);
+$stmt->bindValue(':num_p', $num_players, PDO::PARAM_INT);
+$stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
+$result = $stmt -> execute();
+
+$query = 'SELECT lastval()';
+$stmt = $db->prepare($query);
+$g_id = $stmt -> execute();
+echo $g_id;
+
+// if ($pub0 != "") {
+//     $query = 'INSERT INTO game.requestP (pub_name, member_id) VALUES (:pub0, :mem_id)';
+//     $stmt = $db->prepare($query);
+//     $stmt->bindValue(':pub0', $pub0, PDO::PARAM_STR);
+//     $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
+//     $result = $stmt -> execute();
+// }
 
 
 
 
-
-var_dump($mem_id);
-echo "<br><br>";
-var_dump($title);
-echo "<br><br>";
-var_dump($tlm);
-echo "<br><br>";
-var_dump($comp);
-echo "<br><br>";
-var_dump($num_players);
-echo "<br><br>";
-var_dump($pub0);
-echo "<br><br>";
-var_dump($pub1);
-echo "<br><br>";
-var_dump($pub2);
-echo "<br><br>";
-var_dump($pub3);
-echo "<br><br>";
-var_dump($pub4);
-echo "<br><br>";
-var_dump($pub5);
-echo "<br><br>";
-var_dump($desc);
-echo "<br><br>";
+// var_dump($mem_id);
+// echo "<br><br>";
+// var_dump($title);
+// echo "<br><br>";
+// var_dump($tlm);
+// echo "<br><br>";
+// var_dump($comp);
+// echo "<br><br>";
+// var_dump($num_players);
+// echo "<br><br>";
+// var_dump($pub0);
+// echo "<br><br>";
+// var_dump($pub1);
+// echo "<br><br>";
+// var_dump($pub2);
+// echo "<br><br>";
+// var_dump($pub3);
+// echo "<br><br>";
+// var_dump($pub4);
+// echo "<br><br>";
+// var_dump($pub5);
+// echo "<br><br>";
+// var_dump($desc);
+// echo "<br><br>";
 ?>
