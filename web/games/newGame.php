@@ -104,8 +104,9 @@ function validate() {
         if (reg2.test(time_length.value) != true) {
             document.getElementById("noNum1").innerHTML = "<span class='red'>Estimated time needs to be a whole number</span>";
             return false;
-        }
+        } else {console.log("passed time");}
     } else if (comp.value != "") {
+        console.log("made it!");
         if (reg1.test(comp.value) != true) {
             document.getElementById("noFloat").innerHTML = "<span class='red'>The complexity needs to be a number between 0.00 and 5.00</span>";
             return false;
