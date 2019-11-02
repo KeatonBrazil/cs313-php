@@ -53,10 +53,10 @@ $tlm_no_int = $_GET['tlm_no_int'];
     you may request to add a board game by filling in the information 
     below<br>Required Fields: <span class="red">*</span><br><br>
     
-        <form action="requestBG.php" method="post">
+        <form action="requestBG.php" onsubmit="return validateForm()" method="post">
             Board Game Title: <span class="red">*</span><br>
             <input type="text" id="tit" name="title"><br>
-            <?php if ($no_title) {echo "<p><span class='red' >You must include a title</span><p>";} ?>
+            <p id="noTitle"><span class='red good' >You must include a title</span><p>
             Estimated Time Length (minutes): <br>
             <input type="text" id="tlmin" name="tlm"><br>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>

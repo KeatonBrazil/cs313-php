@@ -46,3 +46,21 @@ function numPub() {
     }
 }
 
+function validateForm() {
+  var title = document.getElementById("tit");
+  var time_length = document.getElementById("tlmin");
+  var comp = document.getElementById("cmplx");
+  var nplayers = document.getElementById("nplayers");
+  var pub1 = document.getElementById("pub1");
+  var pub2 = document.getElementById("pub2");
+  var pub2 = document.getElementById("pub3");
+  var pub2 = document.getElementById("pub4");
+  var pub2 = document.getElementById("pub5");
+  var pub2 = document.getElementById("pub6");
+
+  if (title.value == "") {
+    document.getElementById("noTitle").style.display = "block";
+    return false;
+  } 
+
+}

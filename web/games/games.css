@@ -250,6 +250,10 @@ textarea {
     color:red;
 }
 
+.good {
+    display: none;
+}
+
 .shelf {
     border: 2px solid rgb(65, 65, 65);
     border-radius: 5px;

@@ -32,50 +32,49 @@ $pub3 = $_POST['pub3'];
 $pub4 = $_POST['pub4'];
 $pub5 = $_POST['pub5'];
 $desc = htmlspecialchars($_POST['desc']);
-
-// if ($title == "") {
-//     header("location: newGame.php?no_title=TRUE");
+$tempLocation = "location: newGame.php";
+// if (is_null($title)) {
+// 	$location += "?no_title=TRUE";
+// } elseif (!is_null($pub0)) {
+// 	$location += "?no_pub0=TRUE";
+// } if (!is_null($pub1)) {
+//     header("location: newGame.php?no_pub1=TRUE");
+//     die();
+// } if (!is_null($pub2)) {
+//     header("location: newGame.php?no_pub2=TRUE");
+//     die();
+// } if (!is_null($pub3)) {
+//     header("location: newGame.php?no_pub3=TRUE");
+//     die();
+// } if (!is_null($pub4)) {
+//     header("location: newGame.php?no_pub4=TRUE");
+//     die();
+// } if (!is_null($pub5)) {
+//     header("location: newGame.php?no_pub5=TRUE");
 //     die();
 // } 
-if ($pub0 == "") {
-    header("location: newGame.php?no_pub0=TRUE");
-    die();
-} if ($pub1 == "") {
-    header("location: newGame.php?no_pub1=TRUE");
-    die();
-} if ($pub2 == "") {
-    header("location: newGame.php?no_pub2=TRUE");
-    die();
-} if ($pub3 == "") {
-    header("location: newGame.php?no_pub3=TRUE");
-    die();
-} if ($pub4 == "") {
-    header("location: newGame.php?no_pub4=TRUE");
-    die();
-} if ($pub5 == "") {
-    header("location: newGame.php?no_pub5=TRUE");
-    die();
-} 
 
 
-$regex1 = '/\d+/';
+// header($location);
+// die();
+// $regex1 = '/\d+/';
     
-if (preg_match($regex1, $tlm) === 0) {
-    header("location: newGame.php?tlm_no_int=TRUE");
-    die();
-}
+// if (preg_match($regex1, $tlm) === 0) {
+//     header("location: newGame.php?tlm_no_int=TRUE");
+//     die();
+// }
 
-$regex2 = '/(5)\.[0][0]?|[0-4]\.[0-9][0-9]?/';
+// $regex2 = '/(5)\.[0][0]?|[0-4]\.[0-9][0-9]?/';
 
-if (preg_match($regex2, $comp) === 0) {
-    header("location: newGame.php?comp_no_int=TRUE");
-    die();
-}
+// if (preg_match($regex2, $comp) === 0) {
+//     header("location: newGame.php?comp_no_int=TRUE");
+//     die();
+// }
 
-if (preg_match($regex1, $num_players) === 0) {
-    header("location: newGame.php?num_p_no_int=TRUE");
-    die();
-}
+// if (preg_match($regex1, $num_players) === 0) {
+//     header("location: newGame.php?num_p_no_int=TRUE");
+//     die();
+// }
 
 // $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
 // $stmt = $db->prepare($query);
