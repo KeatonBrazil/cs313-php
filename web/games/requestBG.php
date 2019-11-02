@@ -44,14 +44,14 @@ if ($num_players === "") {
 }
 
 
-$query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
-$stmt = $db->prepare($query);
-$stmt->bindValue(':title', $title, PDO::PARAM_STR);
-$stmt->bindValue(':tlm', $tlm, PDO::PARAM_INT);
-$stmt->bindValue(':comp', $comp, PDO::PARAM_INT);
-$stmt->bindValue(':num_p', $num_players, PDO::PARAM_INT);
-$stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
-$result = $stmt -> execute();
+// $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
+// $stmt = $db->prepare($query);
+// $stmt->bindValue(':title', $title, PDO::PARAM_STR);
+// $stmt->bindValue(':tlm', $tlm, PDO::PARAM_INT);
+// $stmt->bindValue(':comp', $comp, PDO::PARAM_INT);
+// $stmt->bindValue(':num_p', $num_players, PDO::PARAM_INT);
+// $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
+// $result = $stmt -> execute();
 
 // $query = 'SELECT lastval()';
 // $stmt = $db->prepare($query);

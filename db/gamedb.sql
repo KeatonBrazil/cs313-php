@@ -41,7 +41,7 @@ CREATE TABLE game.game
 
 CREATE TABLE game.publisher
 ( publisher_id SERIAL PRIMARY KEY
-, pub_name   VARCHAR (30) NOT NULL
+, pub_name     VARCHAR  NOT NULL
 );
 
 CREATE TABLE game.boardGame 
@@ -72,7 +72,7 @@ CREATE TABLE game.requestG
 
 CREATE TABLE game.requestP
 ( requestP_id SERIAL PRIMARY KEY
-, pub_name   VARCHAR (30) NOT NULL
+, pub_name    VARCHAR NOT NULL
 , member_id       INT    NOT NULL REFERENCES game.member(member_id)
 );
 
