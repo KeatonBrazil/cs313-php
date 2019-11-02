@@ -55,6 +55,10 @@ session_start();
                 echo "<div>";
                 echo "<form action='insertGame.php' method='post'>";
                 echo "<input type='text' value='".$requestG[$i]['title']."'>"; 
+                echo "<input type='text' value='".$requestG[$i]['time_length_min']."'>"; 
+                echo "<input type='text' value='".$requestG[$i]['complexity']."'>";
+                echo "<input type='text' value='".$requestG[$i]['num_players']."'>"; 
+                echo "<textarea>".$requestG[$i]['descript']."</textarea>"; 
                 echo "</form>";
                 echo "</div>";
             }

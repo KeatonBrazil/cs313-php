@@ -39,11 +39,7 @@ $query = 'SELECT post_id, comment, post_time, post_date FROM game.post WHERE pos
 <body>
     <div class="center edit">
         <form action="updatePost.php" method="post">
-            <textarea class="text_left" name="newPost" cols="30" rows="10">
-                <?php 
-                    echo $comments[0]['comment'];
-                ?>
-            </textarea><br><br>
+            <textarea class="text_left" name="newPost" cols="30" rows="10"><?php echo $comments[0]['comment']; ?></textarea><br><br>
             <?php echo "<input type='hidden' name='post_id' value='".$post_id."'>"; ?>        
             <input class="delete" type="button" value="Cancel" onclick="cancel()">  
             <input class="modify" type="submit" value="Edit"><br><br>
