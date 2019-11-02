@@ -33,26 +33,15 @@ $pub4 = htmlspecialchars($_POST['pub4']);
 $pub5 = htmlspecialchars($_POST['pub5']);
 $desc = htmlspecialchars($_POST['desc']);
 
-// if (is_null($title)) {
-// 	$location += "?no_title=TRUE";
-// } elseif (!is_null($pub0)) {
-// 	$location += "?no_pub0=TRUE";
-// } if (!is_null($pub1)) {
-//     header("location: newGame.php?no_pub1=TRUE");
-//     die();
-// } if (!is_null($pub2)) {
-//     header("location: newGame.php?no_pub2=TRUE");
-//     die();
-// } if (!is_null($pub3)) {
-//     header("location: newGame.php?no_pub3=TRUE");
-//     die();
-// } if (!is_null($pub4)) {
-//     header("location: newGame.php?no_pub4=TRUE");
-//     die();
-// } if (!is_null($pub5)) {
-//     header("location: newGame.php?no_pub5=TRUE");
-//     die();
-// } 
+if ($tlm === "") {
+    $tlm = 0;
+}
+if ($comp === "") {
+    $comp = 0;
+}
+if ($num_players === "") {
+    $num_players = 0;
+}
 
 
 // $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
