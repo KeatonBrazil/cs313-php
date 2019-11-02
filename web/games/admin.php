@@ -98,7 +98,7 @@ session_start();
                     echo "<input type='hidden' value='".$requestP[$i]['requestP_id']."'>";
                     echo "<input type='hidden' value='".$requestP[$i]['member_id']."'>";
                 }
-                echo "<input type='submit' class='delete' value='Confirm'>";
+                echo "<input type='submit' class='delete' value='Delete'>";
                 echo "</form>";
                 echo "</div>";
             }
