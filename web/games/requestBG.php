@@ -83,7 +83,8 @@ $result = $stmt -> execute();
 
 $query = 'SELECT lastval()';
 $stmt = $db->prepare($query);
-$g_id = $stmt -> execute();
+$stmt -> execute();
+$g_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 var_dump($g_id;); 
 
 // if ($pub0 != "") {
