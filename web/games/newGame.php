@@ -91,8 +91,8 @@ function validate() {
     var pub2 = document.getElementById("pub4");
     var pub2 = document.getElementById("pub5");
     var pub2 = document.getElementById("pub6");
-    var reg1 = new RegExp('/(5)\.[0][0]?|[0-4]\.[0-9][0-9]?/');
-    var reg2 = new RegExp('/\d+/');
+    var reg1 = /(5)\.[0][0]?|[0-4]\.[0-9][0-9]?/;
+    var reg2 = /\d+/;
 
     if (title.value === "") {
         document.getElementById("noTitle").innerHTML = "<span class='red'>You must include a title</span>";
