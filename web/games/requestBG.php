@@ -47,30 +47,30 @@ if ($num_players === "") {
     $num_players = 0;
 }
 
-var_dump($mem_id);
-echo "<br><br>";
-var_dump($title);
-echo "<br><br>";
-var_dump($tlm);
-echo "<br><br>";
-var_dump($comp);
-echo "<br><br>";
-var_dump($num_players);
-echo "<br><br>";
-var_dump($pub0);
-echo "<br><br>";
-var_dump($pub1);
-echo "<br><br>";
-var_dump($pub2);
-echo "<br><br>";
-var_dump($pub3);
-echo "<br><br>";
-var_dump($pub4);
-echo "<br><br>";
-var_dump($pub5);
-echo "<br><br>";
-var_dump($desc);
-echo "<br><br>";
+// var_dump($mem_id);
+// echo "<br><br>";
+// var_dump($title);
+// echo "<br><br>";
+// var_dump($tlm);
+// echo "<br><br>";
+// var_dump($comp);
+// echo "<br><br>";
+// var_dump($num_players);
+// echo "<br><br>";
+// var_dump($pub0);
+// echo "<br><br>";
+// var_dump($pub1);
+// echo "<br><br>";
+// var_dump($pub2);
+// echo "<br><br>";
+// var_dump($pub3);
+// echo "<br><br>";
+// var_dump($pub4);
+// echo "<br><br>";
+// var_dump($pub5);
+// echo "<br><br>";
+// var_dump($desc);
+// echo "<br><br>";
 
 $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
 $stmt = $db->prepare($query);
@@ -85,7 +85,7 @@ $query = 'SELECT lastval()';
 $stmt = $db->prepare($query);
 $stmt -> execute();
 $g_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-var_dump($g_id;); 
+var_dump($g_id); 
 
 // if ($pub0 != "") {
 //     $query = 'INSERT INTO game.requestP (pub_name, member_id) VALUES (:pub0, :mem_id)';
