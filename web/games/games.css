@@ -254,6 +254,12 @@ textarea:focus {
     padding: 10px;
 }
 
+.admin {
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
 .none {
     color:white;
 }

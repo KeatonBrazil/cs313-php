@@ -52,7 +52,7 @@ session_start();
             $requestG = $stmt->fetchAll(PDO::FETCH_ASSOC);
             echo "<div class='white'>";
             for ($i=0; $i < count($requestG); $i++) {
-                echo "<div class='post'>";
+                echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
                 echo "<input type='hidden' value='".$requestG[$i]['requestG_id']."'>";
                 echo "<input type='text' value='".$requestG[$i]['title']."'>"; 
