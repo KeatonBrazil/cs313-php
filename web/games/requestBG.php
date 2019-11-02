@@ -43,6 +43,30 @@ if ($num_players === "") {
     $num_players = 0;
 }
 
+var_dump($mem_id);
+echo "<br><br>";
+var_dump($title);
+echo "<br><br>";
+var_dump($tlm);
+echo "<br><br>";
+var_dump($comp);
+echo "<br><br>";
+var_dump($num_players);
+echo "<br><br>";
+var_dump($pub0);
+echo "<br><br>";
+var_dump($pub1);
+echo "<br><br>";
+var_dump($pub2);
+echo "<br><br>";
+var_dump($pub3);
+echo "<br><br>";
+var_dump($pub4);
+echo "<br><br>";
+var_dump($pub5);
+echo "<br><br>";
+var_dump($desc);
+echo "<br><br>";
 
 $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
 $stmt = $db->prepare($query);
@@ -51,7 +75,7 @@ $stmt->bindValue(':tlm', $tlm, PDO::PARAM_INT);
 $stmt->bindValue(':comp', $comp, PDO::PARAM_INT);
 $stmt->bindValue(':num_p', $num_players, PDO::PARAM_INT);
 $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
-// $result = $stmt -> execute();
+$stmt -> execute();
 
 // $query = 'SELECT lastval()';
 // $stmt = $db->prepare($query);
@@ -69,28 +93,5 @@ $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
 
 
 
-// var_dump($mem_id);
-// echo "<br><br>";
-// var_dump($title);
-// echo "<br><br>";
-// var_dump($tlm);
-// echo "<br><br>";
-// var_dump($comp);
-// echo "<br><br>";
-// var_dump($num_players);
-// echo "<br><br>";
-// var_dump($pub0);
-// echo "<br><br>";
-// var_dump($pub1);
-// echo "<br><br>";
-// var_dump($pub2);
-// echo "<br><br>";
-// var_dump($pub3);
-// echo "<br><br>";
-// var_dump($pub4);
-// echo "<br><br>";
-// var_dump($pub5);
-// echo "<br><br>";
-// var_dump($desc);
-// echo "<br><br>";
+
 ?>
