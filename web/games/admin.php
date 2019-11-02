@@ -46,7 +46,7 @@ session_start();
     </div> 
     <div>
         <?php 
-            $query = 'SELECT * FROM game.requestG';
+            $query = 'SELECT requestG_id, title, time_length_min, complexity, num_players, descript, member_id FROM game.requestG';
             $stmt = $db->prepare($query);
             $stmt -> execute();
             $requestG = $stmt->fetchAll(PDO::FETCH_ASSOC);
