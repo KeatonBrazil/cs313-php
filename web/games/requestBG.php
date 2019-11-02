@@ -84,7 +84,7 @@ $result = $stmt -> execute();
 $query = 'SELECT lastval()';
 $stmt = $db->prepare($query);
 $g_id = $stmt -> execute();
-var_dump($g_id;) 
+var_dump($g_id;); 
 
 // if ($pub0 != "") {
 //     $query = 'INSERT INTO game.requestP (pub_name, member_id) VALUES (:pub0, :mem_id)';
