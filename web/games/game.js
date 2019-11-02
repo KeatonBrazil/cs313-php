@@ -46,7 +46,7 @@ function numPub() {
     }
 }
 
-function validateForm() {
+function validate() {
   var title = document.getElementById("tit");
   var time_length = document.getElementById("tlmin");
   var comp = document.getElementById("cmplx");

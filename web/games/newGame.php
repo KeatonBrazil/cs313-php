@@ -29,7 +29,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
     <link rel="stylesheet" href="games.css">
     <link rel="icon" href="shark.png" type="image/gif">
     <script src="game.js">
-    function validateForm() {
+    function validate() {
         var title = document.getElementById("tit");
         var time_length = document.getElementById("tlmin");
         var comp = document.getElementById("cmplx");
@@ -77,7 +77,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
     you may request to add a board game by filling in the information 
     below<br>Required Fields: <span class="red">*</span><br><br>
     
-        <form action="requestBG.php" onsubmit="return validateForm()" method="post">
+        <form action="requestBG.php" onsubmit="return validate()" method="post">
             Board Game Title: <span class="red">*</span><br>
             <input type="text" id="tit" name="title"><br>
             <p id="noTitle"><span class='red good' ></span><p>
