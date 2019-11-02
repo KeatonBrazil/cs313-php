@@ -50,10 +50,19 @@ session_start();
             $stmt = $db->prepare($query);
             $stmt -> execute();
             $requestG = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $query = 'SELECT username FROM game.member WHERE member_id = :mem_id';
+            $stmt = $db->prepare($query);
+            $stmt -> bindValue(':mem_id', $requestG[$i]['member_id'], PDO::PARAM_INT);
+            $stmt -> execute();
+            $name = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $name = $name[0]['username'];
+
             echo "<div class='white'>";
             for ($i=0; $i < count($requestG); $i++) {
                 echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
+                echo "<strong>".$name."</strong><br><hr>";
                 echo "<input type='hidden' value='".$requestG[$i]['requestG_id']."'>";
                 echo "<input type='hidden' value='".$requestG[$i]['member_id']."'>";
                 echo "<p>Title</p>";
