@@ -99,7 +99,7 @@ $email = $email[0]['email'];
 $subject = "Board Game Request";
 $message = "You have recieved a Board Game request on epicsharks.herokuapp.com/games/admin.php";
 $headers = "From: $username";
-mail($email, $subject, $message, $headers);
+mail("jamessantbusiness@gmail.com", $subject, $message, $headers);
 
 header("location: newGame.php?thankyou = TRUE");
 die();
