@@ -59,9 +59,12 @@ $tlm_no_int = $_GET['tlm_no_int'];
             <p id="noTitle"><p>
             Estimated Time Length (minutes): <br>
             <input type="text" id="tlmin" name="tlm"><br>
+            <p id="noNum1"><p>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
             <input type="text" id="cmplx" name="comp"><br>
+            <p id="noFloat"><p>
             Max Number of Players<br>
+            <p id="noNum2"><p>
             <input type="text" id="nplayers" name="num_p"><br>
             Select the number of Publishers
             <select id="num_pub" onchange="numPub()">
@@ -96,17 +99,23 @@ function validate() {
 
     if (title.value === "") {
         document.getElementById("noTitle").innerHTML = "<span class='red'>You must include a title</span>";
-        console.log("bad");
         return false;
     } else if (time_length != "") {
-        if (reg1.test(time_length.value) != true) {
-            console.log("not a digit");
-            console.log(time_length.value);
-            console.log(reg1.test(time_length.value));
+        if (reg2.test(time_length.value) != true) {
+            document.getElementById("noNum1").innerHTML = "<span class='red'>Estimated time needs to be a whole number</span>";
             return false;
         }
-    }
-    console.log(title.value);
+    } else if (comp != "") {
+        if (reg1.test(comp.value) != true) {
+            document.getElementById("noFloat").innerHTML = "<span class='red'>The complexity needs to be a number between 0.00 and 5.00</span>";
+            return false;
+        }
+    } else if (nplayers != "") {
+        if (reg2.test(comp.value) != true) {
+            document.getElementById("noNum2").innerHTML = "<span class='red'>The Max number of players needs to be a whole number</span>";
+            return false;
+        }
+    } 
     console.log("good");
     return true;
 
