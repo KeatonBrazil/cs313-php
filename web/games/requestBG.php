@@ -44,7 +44,7 @@ if ($num_players === "") {
 }
 
 
-// $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
+$query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
 // $stmt = $db->prepare($query);
 // $stmt->bindValue(':title', $title, PDO::PARAM_STR);
 // $stmt->bindValue(':tlm', $tlm, PDO::PARAM_INT);
