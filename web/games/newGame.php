@@ -99,7 +99,7 @@ function validate() {
         console.log("bad");
         return false;
     } else if (time_length != "") {
-        if (reg2.text(time_length.value) != true) {
+        if (reg2.test(time_length.value) != true) {
             console.log("not a digit");
             return false;
         }
