@@ -67,6 +67,7 @@ CREATE TABLE game.requestG
 , time_length_min INT      
 , complexity      NUMERIC      
 , num_players     INT 
+, descript        VARCHAR  
 , member_id       INT    NOT NULL REFERENCES game.member(member_id)     
 );
 
@@ -78,11 +79,8 @@ CREATE TABLE game.requestP
 
 CREATE TABLE game.requestBG
 ( requestBG_id SERIAL PRIMARY KEY
-, descript        VARCHAR  
-, stat            INT    NOT NULL
 , requestG_id     INT    NOT NULL REFERENCES game.requestG(requestG_id)
 , requestP_id     INT    NOT NULL REFERENCES game.requestP(requestP_id)
-, member_id       INT    NOT NULL REFERENCES game.member(member_id)
 );
 
 CREATE TABLE game.post

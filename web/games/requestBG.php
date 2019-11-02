@@ -47,37 +47,13 @@ if ($num_players === "") {
     $num_players = 0;
 }
 
-// var_dump($mem_id);
-// echo "<br><br>";
-// var_dump($title);
-// echo "<br><br>";
-// var_dump($tlm);
-// echo "<br><br>";
-// var_dump($comp);
-// echo "<br><br>";
-// var_dump($num_players);
-// echo "<br><br>";
-// var_dump($pub0);
-// echo "<br><br>";
-// var_dump($pub1);
-// echo "<br><br>";
-// var_dump($pub2);
-// echo "<br><br>";
-// var_dump($pub3);
-// echo "<br><br>";
-// var_dump($pub4);
-// echo "<br><br>";
-// var_dump($pub5);
-// echo "<br><br>";
-// var_dump($desc);
-// echo "<br><br>";
-
-$query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
+$query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, descript, member_id) VALUES (:title, :tlm, :comp, :num_p, :desk, :mem_id)';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':title', $title, PDO::PARAM_STR);
 $stmt->bindValue(':tlm', $tlm, PDO::PARAM_INT);
 $stmt->bindValue(':comp', $comp, PDO::PARAM_INT);
 $stmt->bindValue(':num_p', $num_players, PDO::PARAM_INT);
+$stmt->bindValue(':desk', $desc, PDO::PARAM_STR);
 $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
 $result = $stmt -> execute();
 
@@ -85,16 +61,33 @@ $query = 'SELECT lastval()';
 $stmt = $db->prepare($query);
 $stmt -> execute();
 $g_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-var_dump($g_id); 
+$g_id = $g_id[0]['lastval'];
 
-// if ($pub0 != "") {
-//     $query = 'INSERT INTO game.requestP (pub_name, member_id) VALUES (:pub0, :mem_id)';
-//     $stmt = $db->prepare($query);
-//     $stmt->bindValue(':pub0', $pub0, PDO::PARAM_STR);
-//     $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
-//     $result = $stmt -> execute();
-// }
+$purbs = array($pub0, $pub1, $pub2, $pub3, $pub4, $pub5);
+$count = count($purbs);
 
+for ($i=0; $i < $count; $i++){
+    if ($purbs[$i] != "") {
+        $query = 'INSERT INTO game.requestP (pub_name, member_id) VALUES (:pub, :mem_id)';
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(':pub', $purbs[$i], PDO::PARAM_STR);
+        $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
+        $result = $stmt -> execute();
+
+        $query = 'SELECT lastval()';
+        $stmt = $db->prepare($query);
+        $stmt -> execute();
+        $p_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+        $p_id = $p_id[0]['lastval'];
+
+        $query = 'INSERT INTO game.requestBG (requestG_id, requestP_id) VALUES (:g_id, :p_id)';
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(':g_id', $g_id, PDO::PARAM_INT);
+        $stmt->bindValue(':p_id', $p_id, PDO::PARAM_INT);
+        $result = $stmt->execute();
+
+    }
+}
 
 
 
