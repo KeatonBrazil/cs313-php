@@ -56,13 +56,12 @@ session_start();
             $stmt -> bindValue(':mem_id', $requestG[$i]['member_id'], PDO::PARAM_INT);
             $stmt -> execute();
             $name = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            $name = $name[0]['username'];
 
             echo "<div class='white'>";
             for ($i=0; $i < count($requestG); $i++) {
                 echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
-                echo "<strong>".$name."</strong><br><hr>";
+                echo "<strong>".$name[0]['username']."</strong><br><hr>";
                 echo "<input type='hidden' value='".$requestG[$i]['requestG_id']."'>";
                 echo "<input type='hidden' value='".$requestG[$i]['member_id']."'>";
                 echo "<p>Title</p>";
@@ -99,6 +98,7 @@ session_start();
                     echo "<input type='hidden' value='".$requestP[$i]['requestP_id']."'>";
                     echo "<input type='hidden' value='".$requestP[$i]['member_id']."'>";
                 }
+                echo "<input type='submit' class='delete' value='Confirm'>";
                 echo "</form>";
                 echo "</div>";
             }
