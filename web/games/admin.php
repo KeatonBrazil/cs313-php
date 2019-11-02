@@ -50,10 +50,11 @@ session_start();
             $stmt = $db->prepare($query);
             $stmt -> execute();
             $requestG = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+            echo "<div class='white'>";
             for ($i=0; $i < count($requestG); $i++) {
                 echo "<div>";
                 echo "<form action='insertGame.php' method='post'>";
+                echo "<input type='hidden' value='".$requestG[$i]['requestG_id']."'>";
                 echo "<input type='text' value='".$requestG[$i]['title']."'>"; 
                 echo "<input type='text' value='".$requestG[$i]['time_length_min']."'>"; 
                 echo "<input type='text' value='".$requestG[$i]['complexity']."'>";
@@ -62,6 +63,7 @@ session_start();
                 echo "</form>";
                 echo "</div>";
             }
+            echo "</div>";
         ?>
     </div>
 </body>
