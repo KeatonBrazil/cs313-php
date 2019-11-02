@@ -26,13 +26,13 @@ $tlm = htmlspecialchars($_POST['tlm']);
 $comp = htmlspecialchars($_POST['comp']);
 $num_players = htmlspecialchars($_POST['num_p']);
 $pub0 = htmlspecialchars($_POST['pub0']);
-$pub1 = $_POST['pub1'];
-$pub2 = $_POST['pub2'];
-$pub3 = $_POST['pub3'];
-$pub4 = $_POST['pub4'];
-$pub5 = $_POST['pub5'];
+$pub1 = htmlspecialchars($_POST['pub1']);
+$pub2 = htmlspecialchars($_POST['pub2']);
+$pub3 = htmlspecialchars($_POST['pub3']);
+$pub4 = htmlspecialchars($_POST['pub4']);
+$pub5 = htmlspecialchars($_POST['pub5']);
 $desc = htmlspecialchars($_POST['desc']);
-$tempLocation = "location: newGame.php";
+
 // if (is_null($title)) {
 // 	$location += "?no_title=TRUE";
 // } elseif (!is_null($pub0)) {
@@ -54,27 +54,6 @@ $tempLocation = "location: newGame.php";
 //     die();
 // } 
 
-
-// header($location);
-// die();
-// $regex1 = '';
-    
-// if (preg_match($regex1, $tlm) === 0) {
-//     header("location: newGame.php?tlm_no_int=TRUE");
-//     die();
-// }
-
-// $regex2 = '';
-
-// if (preg_match($regex2, $comp) === 0) {
-//     header("location: newGame.php?comp_no_int=TRUE");
-//     die();
-// }
-
-// if (preg_match($regex1, $num_players) === 0) {
-//     header("location: newGame.php?num_p_no_int=TRUE");
-//     die();
-// }
 
 // $query = 'INSERT INTO game.requestG (title, time_length_min, complexity, num_players, member_id) VALUES (:title, :tlm, :comp, :num_p, :mem_id)';
 // $stmt = $db->prepare($query);
