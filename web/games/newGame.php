@@ -56,7 +56,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
         <form action="requestBG.php" onsubmit="return validate()" method="post">
             Board Game Title: <span class="red">*</span><br>
             <input type="text" id="tit" name="title"><br>
-            <p id="noTitle"><span class='good'>You must include a title</span><p>
+            <p id="noTitle"><p>
             Estimated Time Length (minutes): <br>
             <input type="text" id="tlmin" name="tlm"><br>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
@@ -91,13 +91,19 @@ function validate() {
     var pub2 = document.getElementById("pub4");
     var pub2 = document.getElementById("pub5");
     var pub2 = document.getElementById("pub6");
+    var reg1 = new RegExp('/(5)\.[0][0]?|[0-4]\.[0-9][0-9]?/');
+    var reg2 = new RegExp('/\d+/');
 
     if (title.value === "") {
-       // document.getElementById("noTitle").style.display = "block";
-        console.log(title.value);
+        document.getElementById("noTitle").innerHTML = "<span class='red'>You must include a title</span>";
         console.log("bad");
         return false;
-    } 
+    } else if (time_length != "") {
+        if (reg2.text(time_length.value) != true) {
+            console.log("not a digit");
+            return false;
+        }
+    }
     console.log(title.value);
     console.log("good");
     return true;

@@ -57,14 +57,14 @@ $tempLocation = "location: newGame.php";
 
 // header($location);
 // die();
-// $regex1 = '/\d+/';
+// $regex1 = '';
     
 // if (preg_match($regex1, $tlm) === 0) {
 //     header("location: newGame.php?tlm_no_int=TRUE");
 //     die();
 // }
 
-// $regex2 = '/(5)\.[0][0]?|[0-4]\.[0-9][0-9]?/';
+// $regex2 = '';
 
 // if (preg_match($regex2, $comp) === 0) {
 //     header("location: newGame.php?comp_no_int=TRUE");
