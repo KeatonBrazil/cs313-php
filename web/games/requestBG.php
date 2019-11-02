@@ -98,10 +98,11 @@ $email = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $email = $email[0]['email'];
 $subject = "Board Game Request";
 $message = "You have recieved a Board Game request on epicsharks.herokuapp.com/games/admin.php";
+$message = wordwrap($message, 70);
 $headers = "From: $username";
 mail("jamessantbusiness@gmail.com", $subject, $message, $headers);
 
-header("location: newGame.php?thankyou = TRUE");
+header("location: newGame.php?thankyou=TRUE");
 die();
 
 ?>
