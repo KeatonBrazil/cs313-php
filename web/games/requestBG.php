@@ -33,6 +33,10 @@ $pub4 = htmlspecialchars($_POST['pub4']);
 $pub5 = htmlspecialchars($_POST['pub5']);
 $desc = htmlspecialchars($_POST['desc']);
 
+$tlm = intval($tlm);
+$comp = floatval($comp);
+$num_players = intval($num_players);
+
 if ($tlm === "") {
     $tlm = 0;
 }
@@ -75,7 +79,7 @@ $stmt->bindValue(':tlm', $tlm, PDO::PARAM_INT);
 $stmt->bindValue(':comp', $comp, PDO::PARAM_INT);
 $stmt->bindValue(':num_p', $num_players, PDO::PARAM_INT);
 $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);
-$stmt -> execute();
+$result = $stmt -> execute();
 
 // $query = 'SELECT lastval()';
 // $stmt = $db->prepare($query);
