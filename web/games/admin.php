@@ -90,6 +90,15 @@ session_start();
 
                 echo "<p>Description</p>";
                 echo "<textarea>".$requestG[$i]['descript']."</textarea>"; 
+                echo "<input type='submit' class='confirm' value='Confirm'>";
+                echo "</form>";
+                echo "<form action='deleteRequest' method='post'>";
+                echo "<input type='hidden' value='".$requestG[$i]['requestG_id']."'>";
+                echo "<input type='hidden' value='".$requestG[$i]['member_id']."'>";
+                for ($x=0; $x < count($requestP); $x++) {
+                    echo "<input type='hidden' value='".$requestP[$i]['requestP_id']."'>";
+                    echo "<input type='hidden' value='".$requestP[$i]['member_id']."'>";
+                }
                 echo "</form>";
                 echo "</div>";
             }
