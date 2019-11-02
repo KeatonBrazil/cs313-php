@@ -46,26 +46,3 @@ function numPub() {
     }
 }
 
-function validate() {
-    var title = document.getElementById("tit");
-    var time_length = document.getElementById("tlmin");
-    var comp = document.getElementById("cmplx");
-    var nplayers = document.getElementById("nplayers");
-    var pub1 = document.getElementById("pub1");
-    var pub2 = document.getElementById("pub2");
-    var pub2 = document.getElementById("pub3");
-    var pub2 = document.getElementById("pub4");
-    var pub2 = document.getElementById("pub5");
-    var pub2 = document.getElementById("pub6");
-
-    if (title.value === "" || title.value === null) {
-        document.getElementById("noTitle").innerHTML = "You must include a title";
-        console.log(title.value);
-        console.log("bad");
-        return false;
-    } 
-    console.log(title.value);
-    console.log("good");
-    return true;
-
-}

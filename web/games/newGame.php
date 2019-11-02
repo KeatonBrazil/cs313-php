@@ -55,7 +55,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
         <form action="requestBG.php" onsubmit="return validate()" method="post">
             Board Game Title: <span class="red">*</span><br>
             <input type="text" id="tit" name="title"><br>
-            <p id="noTitle"><span class='red good' ></span><p>
+            <p id="noTitle"><span class='red good' >You must include a title</span><p>
             Estimated Time Length (minutes): <br>
             <input type="text" id="tlmin" name="tlm"><br>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
@@ -78,7 +78,30 @@ $tlm_no_int = $_GET['tlm_no_int'];
         </form>
         <input class="delete" type="button" value="Reset" onclick="reset()">
     </div>
-    <script src="game.js"></script>
+<script src="game.js">
+function validate() {
+    var title = document.getElementById("tit");
+    var time_length = document.getElementById("tlmin");
+    var comp = document.getElementById("cmplx");
+    var nplayers = document.getElementById("nplayers");
+    var pub1 = document.getElementById("pub1");
+    var pub2 = document.getElementById("pub2");
+    var pub2 = document.getElementById("pub3");
+    var pub2 = document.getElementById("pub4");
+    var pub2 = document.getElementById("pub5");
+    var pub2 = document.getElementById("pub6");
 
+    if (title.value === "" || title.value === null) {
+        document.getElementById("noTitle").style.display = "block";
+        console.log(title.value);
+        console.log("bad");
+        return false;
+    } 
+    console.log(title.value);
+    console.log("good");
+    return true;
+
+}
+</script>
 </body>
 </html>
