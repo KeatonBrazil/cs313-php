@@ -121,5 +121,4 @@ $result = $stmt->execute();
 header("location: admin.php");
 die();
 
-
 ?>
