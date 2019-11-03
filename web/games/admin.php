@@ -85,7 +85,7 @@ session_start();
                     $newx = $x +1;
                     echo "<p>Publisher ".$newx."</p>"; 
                     echo "<input type='hidden' name='rp".$x."' value='".$requestP[$i]['requestp_id']."'>";
-                    echo "<input type='text' name='pub".$x."' id='pub".$newx."' value='".$requestP[0]['pub_name']."'>";
+                    echo "<input type='text' name='pub".$x."' id='pub".$newx."' value='".$requestP[$i]['pub_name']."'>";
                 }
 
                 echo "<p>Description</p>";
