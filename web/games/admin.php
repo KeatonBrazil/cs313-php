@@ -60,21 +60,19 @@ session_start();
                 $stmt -> execute();
                 $name = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                var_dump($requestG[$i]['requestg_id']);
-
                 echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
                 echo "<strong>".$name[0]['username']."</strong><br><hr>";
-                echo "<input type='hidden' value='".$requestG[$i]['requestG_id']."'>";
-                echo "<input type='hidden' value='".$requestG[$i]['member_id']."'>";
+                echo "<input type='hidden' name='requestg_id' value='".$requestG[$i]['requestG_id']."'>";
+                echo "<input type='hidden' name='member_id' value='".$requestG[$i]['member_id']."'>";
                 echo "<p>Title</p>";
-                echo "<input type='text' value='".$requestG[$i]['title']."'>"; 
+                echo "<input type='text' name='title' value='".$requestG[$i]['title']."'>"; 
                 echo "<p>Estimated Time (Minutes)</p>";
-                echo "<input type='text' value='".$requestG[$i]['time_length_min']."'>";
+                echo "<input type='text' name='time_len' value='".$requestG[$i]['time_length_min']."'>";
                 echo "<p>Complexity</p>"; 
-                echo "<input type='text' value='".$requestG[$i]['complexity']."'>";
+                echo "<input type='text' name='complex' value='".$requestG[$i]['complexity']."'>";
                 echo "<p>Number of Maximum Players</p>";
-                echo "<input type='text' value='".$requestG[$i]['num_players']."'>"; 
+                echo "<input type='text' name='num_play' value='".$requestG[$i]['num_players']."'>"; 
 
                 $query = 'SELECT pub_name FROM game.requestP p LEFT JOIN game.requestBG bg ON p.requestP_id = bg.requestP_id WHERE requestG_id = :rg_id';
                 $stmt = $db->prepare($query);
@@ -86,8 +84,7 @@ session_start();
                 for ($x=0; $x < count($requestP); $x++) {
                     $newx = $x +1;
                     echo "<p>Publisher ".$newx."</p>"; 
-                    echo "<input type='hidden' value='".$requestP[$i]['requestp_id']."'>";
-                    echo "<input type='hidden' value='".$requestP[$i]['member_id']."'>";
+                    echo "<input type='hidden' name='rp".$x."' value='".$requestP[$i]['requestp_id']."'>";
                     echo "<input type='text' name='pub".$x."' id='pub".$newx."' value='".$requestP[0]['pub_name']."'>";
                 }
 
@@ -96,11 +93,10 @@ session_start();
                 echo "<input type='submit' class='confirm' value='Confirm'>";
                 echo "</form>";
                 echo "<form action='deleteRequest' method='post'>";
-                echo "<input type='hidden' value='".$requestG[$i]['requestg_id']."'>";
-                echo "<input type='hidden' value='".$requestG[$i]['member_id']."'>";
+                echo "<input type='hidden' name='requestg_id' value='".$requestG[$i]['requestg_id']."'>";
+                echo "<input type='hidden' name='member_id' value='".$requestG[$i]['member_id']."'>";
                 for ($x=0; $x < count($requestP); $x++) {
-                    echo "<input type='hidden' value='".$requestP[$i]['requestp_id']."'>";
-                    echo "<input type='hidden' value='".$requestP[$i]['member_id']."'>";
+                    echo "<input type='hidden' name='rp".$x."' value='".$requestP[$i]['requestp_id']."'>";
                 }
                 echo "<input type='submit' class='delete' value='Delete'>";
                 echo "</form>";
