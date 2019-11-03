@@ -34,7 +34,7 @@ $stmt = $db->prepare($query);
 $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_STR);
 $stmt->execute();
 $shelf_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$shelf_id = $shelf_id[0]['shelf_id'];
+// $shelf_id = $shelf_id[0]['shelf_id'];
 
 var_dump($shelf_i);
 
