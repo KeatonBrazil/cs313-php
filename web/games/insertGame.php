@@ -52,24 +52,9 @@ for ($i=0; $i < $count; $i++){
         $stmt->bindValue('pub', $purbs[$i], PDO::PARAM_STR);
         $stmt->execute();
         $publishers = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-        if ($publishers === NULL) {
-            echo "TRUE NULL";
+        if (is_null($publishers)) {
+            echo "Yes, is null";
         }
-        if ($publishers === "") {
-            echo "TRUE EMPTY STRING";
-        }
-        if (!isset($publishers)) {
-            echo "TRUE NOT SET";
-        } 
-        // if ($publishers === array(0){}) {
-        //     echo "TRUE array(0){}";
-        // } 
-        if ($publishers[0]['pub_name'] === "") {
-            echo "TRUE publishers[0][pub_name]";
-        } 
-        // if ($publishers[0] === {}) {
-        //     echo "TRUE {}";
-        // }
                 // $query = 'INSERT INTO game.publisher';
                 // $stmt = $db->prepare($query);
             
