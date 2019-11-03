@@ -34,17 +34,19 @@ $stmt = $db->prepare($query);
 $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_STR);
 $stmt->execute();
 $shelf_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// $shelf_id = $shelf_id[0]['shelf_id'];
+$shelf_id = $shelf_id[0]['shelf_id'];
 
 var_dump($shelf_id);
 
-// $query = 'SELECT boardGame_id FROM game.boardGame WHERE game_id = :game_id AND publisher_id = :pub_id';
-// $stmt = $db->prepare($query);
-// $stmt->bindValue(':game_id', $g_id, PDO::PARAM_INT);
-// $stmt->bindValue(':pub_id', $p_id0, PDO::PARAM_INT);
-// $stmt->execute();
-// $bg_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// $bg_id = $bg_id[0]['boardgame_id'];
+$query = 'SELECT boardGame_id FROM game.boardGame WHERE game_id = :game_id AND publisher_id = :pub_id';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':game_id', $g_id, PDO::PARAM_INT);
+$stmt->bindValue(':pub_id', $p_id0, PDO::PARAM_INT);
+$stmt->execute();
+$bg_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$bg_id = $bg_id[0]['boardgame_id'];
+
+var_dump($bg_id);
 
 // $query = 'INSERT INTO game.collection (shelf_id, boardGame_id) VALUES (:shelf, :bg_id)';
 // $stmt = $db->prepare($query);
