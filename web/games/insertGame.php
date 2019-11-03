@@ -34,6 +34,8 @@ $pub4 = htmlspecialchars($_POST['pub4']);
 $pub5 = htmlspecialchars($_POST['pub5']);
 $desc = htmlspecialchars($_POST['desc']);
 
+
+
 $query = 'INSERT INTO game.game (title, time_length_min, complexity, num_players) VALUES (:title, :time_len, :complex, :num_play)';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':title', $title, PDO::PARAM_STR);
@@ -52,7 +54,10 @@ for ($i=0; $i < $count; $i++){
         $stmt->bindValue('pub', $purbs[$i], PDO::PARAM_STR);
         $stmt->execute();
         $publishers = $stmt -> fetch(PDO::FETCH_ASSOC);
-        var_dump($publishers);
+        
+        if ($publishers === false) {
+            echo "Yes I did it!";
+        }
                 // $query = 'INSERT INTO game.publisher';
                 // $stmt = $db->prepare($query);
             
