@@ -11,6 +11,8 @@ else
 	die();
 }
 
+$thankyou = $_GET['thankyou'];
+
 require_once("gamesDb.php");
 $db = get_db();
 
@@ -49,22 +51,23 @@ $tlm_no_int = $_GET['tlm_no_int'];
         </div>  
     </div>  
     <div class="white center">
+    <?php if ($thankyou === true) {echo "<h1>Thank you for your request!</h1><br><br>";} ?>
     If the board game you desire does not exist within the database<br> 
     you may request to add a board game by filling in the information 
     below<br>Required Fields: <span class="red">*</span><br><br>
     
         <form action="requestBG.php" onsubmit="return validate()" method="post">
             Board Game Title: <span class="red">*</span><br>
-            <input type="text" id="tit" name="title"><br>
+            <input type="text" id="tit" name="title" placeholder="eg. Terraforming Mars"><br>
             <p id="noTitle"><p>
             Estimated Time Length (minutes): <br>
-            <input type="text" id="tlmin" name="tlm"><br>
+            <input type="text" id="tlmin" name="tlm" placeholder="eg. 20"><br>
             <p id="noNum1"><p>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
-            <input type="text" id="cmplx" name="comp" placeholder="0.00-5.00"><br>
+            <input type="text" id="cmplx" name="comp" placeholder="eg. 0.00 - 5.00"><br>
             <p id="noFloat"><p>
             Max Number of Players<br>
-            <input type="text" id="nplayers" name="num_p"><br>
+            <input type="text" id="nplayers" name="num_p" placeholder="eg. 8"><br>
             <p id="noNum2"><p>
             Select the number of Publishers
             <select id="num_pub" onchange="numPub()">
@@ -75,7 +78,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
                 <option value="5">5</option>
                 <option value="6">6</option>
             </select>
-            <div id="show_pub">Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br></div>
+            <div id="show_pub">Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0' placeholder='eg. Rio Grande Games'><br></div>
             <p id="pubs"></p>
             <p>Please leave a description if you are not sure <br>if any of the information is correct.</p>
             <textarea name="desc" id='text' cols="30" rows="10"></textarea><br>

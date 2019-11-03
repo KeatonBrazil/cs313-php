@@ -23,7 +23,7 @@ function reset() {
 }
 
 function numPub() {
-    document.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0'><br>";
+    document.getElementById("show_pub").innerHTML = "Publisher 1:<span class='red'>*</span><br><input type='text' id='pub1' name='pub0' placeholder='eg. Rio Grande Games'><br>";
     var x = document.getElementById("num_pub");
     var count = 0;
     if (x.value == 1) {
