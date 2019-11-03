@@ -79,12 +79,12 @@ if (isset($_POST['title'])) {
             <?php 
                 if (isset($title) || $title != "") {
                     if (count($games) === 0) {echo "<span class='none'>No Results Found</span>";}
-                    echo "<form action='addGame.php#return' method='post'>";
+                    echo "<form action='addGame.php' method='post'>";
                     foreach ($games as $game) {
                         echo "<div class='check_game'>";
                         echo "<input type='radio' name='newGame' value='".$game['game_id']."'>" . $game['title'] . "<hr><br>";
                         echo "Publisher: ";
-                        $query = 'SELECT pub_name FROM game.boardGame bg LEFT JOIN game.publisher p ON bg.publisher_id = p.publisher_id WHERE game_id = :game_id';
+                        $query = 'SELECT p.publisher_id, pub_name FROM game.publisher p LEFT JOIN game.boardGame bg ON p.publisher_id = bg.publisher_id WHERE game_id = :game_id';
                         $stmt = $db->prepare($query);
                         $stmt->bindValue(':game_id', $game['game_id'], PDO::PARAM_INT);
                         $stmt->execute();
@@ -94,7 +94,8 @@ if (isset($_POST['title'])) {
                             if ($x > 0) {
                                 echo ', ';
                             }
-                            echo $pubname[$x]['pub_name'];                    
+                            echo $pubname[$x]['pub_name'];   
+                            echo "<input type='hidden' name='p_id".$x."' value='".$pubname[$x]['publisher_id']."'>";                 
                         }
                         echo "<br>Complexity: ".$game['complexity']."<br>";
                         echo "Time Length (minutes): ".$game['time_length_min']."<br>";

@@ -61,7 +61,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
             <input type="text" id="tlmin" name="tlm"><br>
             <p id="noNum1"><p>
             Complexity Rating (<a href="https://boardgamegeek.com/browse/boardgame">Board Game Geek</a>):<br>
-            <input type="text" id="cmplx" name="comp"><br>
+            <input type="text" id="cmplx" name="comp" placeholder="0.00-5.00"><br>
             <p id="noFloat"><p>
             Max Number of Players<br>
             <input type="text" id="nplayers" name="num_p"><br>
