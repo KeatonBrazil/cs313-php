@@ -51,7 +51,7 @@ $tlm_no_int = $_GET['tlm_no_int'];
         </div>  
     </div>  
     <div class="white center">
-    <?php if ($thankyou === true) {echo "<h1>Thank you for your request!</h1><br><br>";} ?>
+    <?php if (isset($thankyou)) {echo "<h1>Thank you for your request!</h1><br><br>";} ?>
     If the board game you desire does not exist within the database<br> 
     you may request to add a board game by filling in the information 
     below<br>Required Fields: <span class="red">*</span><br><br>
