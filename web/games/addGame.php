@@ -11,6 +11,12 @@ else
 	die();
 }
 
+require_once("gamesDb.php");
+$db = get_db();
+
+$g_id = $_POST['newGame'];
+$p_id0 = $_POST['p_id0'];
+
 $query = 'SELECT member_id FROM game.member WHERE username = :user';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':user', $username, PDO::PARAM_STR);
@@ -24,25 +30,6 @@ $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_STR);
 $stmt->execute();
 $shelf_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $shelf_id = $shelf_id[0]['shelf_id'];
-
-require_once("gamesDb.php");
-$db = get_db();
-
-$g_id = $_POST['newGame'];
-$p_id0 = $_POST['p_id0'];
-// $p_id1 = $_POST['p_id1'];
-// $p_id2 = $_POST['p_id2'];
-// $p_id3 = $_POST['p_id3'];
-// $p_id4 = $_POST['p_id4'];
-// $p_id5 = $_POST['p_id5'];
-
-// $pubs = array($p_id0, $p_id1, $p_id2, $p_id3, $p_id4, $p_id5);
-
-// for ($i=0; $i < count($pubs); $i++) {
-//     if () {
-
-//     }
-// }
 
 $query = 'SELECT boardGame_id FROM game.boardGame WHERE game_id = :game_id AND publisher_id = :pub_id';
 $stmt = $db->prepare($query);
