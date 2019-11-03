@@ -50,7 +50,7 @@ session_start();
             $stmt = $db->prepare($query);
             $stmt -> execute();
             $requestG = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            var_dump($requestG);
+            
 
             echo "<div class='white'>";
             for ($i=0; $i < count($requestG); $i++) {
@@ -59,6 +59,8 @@ session_start();
                 $stmt -> bindValue(':mem_id', $requestG[$i]['member_id'], PDO::PARAM_INT);
                 $stmt -> execute();
                 $name = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                var_dump($requestG[$i]['requestg_id']);
 
                 echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
