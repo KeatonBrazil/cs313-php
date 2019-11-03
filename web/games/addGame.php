@@ -36,7 +36,7 @@ $stmt->execute();
 $shelf_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // $shelf_id = $shelf_id[0]['shelf_id'];
 
-var_dump($shelf_i);
+var_dump($shelf_id);
 
 // $query = 'SELECT boardGame_id FROM game.boardGame WHERE game_id = :game_id AND publisher_id = :pub_id';
 // $stmt = $db->prepare($query);
