@@ -53,6 +53,16 @@ for ($i=0; $i < $count; $i++){
         $stmt->execute();
         $publishers = $stmt -> fetchAll(PDO::FETCH_ASSOC);
         var_dump($publishers);
+        echo $publishers;
+        if ($publishers === NULL) {
+            echo "TRUE NULL";
+        }
+        if ($publishers === "") {
+            echo "TRUE EMPTY STRING";
+        }
+        if (!isset($publishers)) {
+            echo "TRUE NOT SET";
+        }
                 // $query = 'INSERT INTO game.publisher';
                 // $stmt = $db->prepare($query);
             
