@@ -40,7 +40,7 @@ $stmt->bindValue(':title', $title, PDO::PARAM_STR);
 $stmt->bindValue(':time_len', $time_len, PDO::PARAM_INT);
 $stmt->bindValue(':complex', $complex, PDO::PARAM_INT);
 $stmt->bindValue(':num_play', $num_play, PDO::PARAM_INT);
-$result = $stmt->execute();
+// $result = $stmt->execute();
 
 $purbs = array($pub0, $pub1, $pub2, $pub3, $pub4, $pub5);
 $count = count($purbs);
@@ -52,8 +52,6 @@ for ($i=0; $i < $count; $i++){
         $stmt->bindValue('pub', $purbs[$i], PDO::PARAM_STR);
         $stmt->execute();
         $publishers = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-        var_dump($publishers);
-        echo $publishers;
         if ($publishers === NULL) {
             echo "TRUE NULL";
         }
@@ -62,6 +60,15 @@ for ($i=0; $i < $count; $i++){
         }
         if (!isset($publishers)) {
             echo "TRUE NOT SET";
+        } 
+        if ($publishers === array(0){}) {
+            echo "TRUE array(0){}";
+        } 
+        if ($publishers[0]['pub_name'] === "") {
+            echo "TRUE publishers[0][pub_name]";
+        } 
+        if ($publishers[0] === {}) {
+            echo "TRUE {}";
         }
                 // $query = 'INSERT INTO game.publisher';
                 // $stmt = $db->prepare($query);
