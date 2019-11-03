@@ -78,7 +78,7 @@ session_start();
 
                 $query = 'SELECT pub_name FROM game.requestP p LEFT JOIN game.requestBG bg ON p.requestP_id = bg.requestP_id WHERE requestG_id = :rg_id';
                 $stmt = $db->prepare($query);
-                $stmt -> bindValue(':rg_id', $requestG[$i]['requestG_id'], PDO::PARAM_INT);
+                $stmt -> bindValue(':rg_id', $requestG[$i]['requestg_id'], PDO::PARAM_INT);
                 $stmt -> execute();
                 $requestP = $stmt -> fetchAll(PDO::FETCH_ASSOC);
                 
@@ -86,7 +86,7 @@ session_start();
                 for ($x=0; $x < count($requestP); $x++) {
                     $newx = $x +1;
                     echo "<p>Publisher ".$newx."</p>"; 
-                    echo "<input type='hidden' value='".$requestP[$i]['requestP_id']."'>";
+                    echo "<input type='hidden' value='".$requestP[$i]['requestp_id']."'>";
                     echo "<input type='hidden' value='".$requestP[$i]['member_id']."'>";
                     echo "<input type='text' name='pub".$x."' id='pub".$newx."' value='".$requestP[0]['pub_name']."'>";
                 }
@@ -96,10 +96,10 @@ session_start();
                 echo "<input type='submit' class='confirm' value='Confirm'>";
                 echo "</form>";
                 echo "<form action='deleteRequest' method='post'>";
-                echo "<input type='hidden' value='".$requestG[$i]['requestG_id']."'>";
+                echo "<input type='hidden' value='".$requestG[$i]['requestg_id']."'>";
                 echo "<input type='hidden' value='".$requestG[$i]['member_id']."'>";
                 for ($x=0; $x < count($requestP); $x++) {
-                    echo "<input type='hidden' value='".$requestP[$i]['requestP_id']."'>";
+                    echo "<input type='hidden' value='".$requestP[$i]['requestp_id']."'>";
                     echo "<input type='hidden' value='".$requestP[$i]['member_id']."'>";
                 }
                 echo "<input type='submit' class='delete' value='Delete'>";
