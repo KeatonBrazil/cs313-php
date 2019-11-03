@@ -47,14 +47,12 @@ $count = count($purbs);
 
 for ($i=0; $i < $count; $i++){
     if ($purbs[$i] != "") {
-        $query = 'SELECT pub_name FROM game.publisher WHERE pub_name = :pub';
+        $query = 'SELECT publisher_id FROM game.publisher WHERE pub_name = :pub';
         $stmt = $db->prepare($query);
         $stmt->bindValue('pub', $purbs[$i], PDO::PARAM_STR);
         $stmt->execute();
-        $publishers = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-        if (is_null($publishers)) {
-            echo "Yes, is null";
-        }
+        $publishers = $stmt -> fetch(PDO::FETCH_ASSOC);
+        var_dump($publishers);
                 // $query = 'INSERT INTO game.publisher';
                 // $stmt = $db->prepare($query);
             
