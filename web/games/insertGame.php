@@ -32,9 +32,6 @@ $pub2 = htmlspecialchars($_POST['pub2']);
 $pub3 = htmlspecialchars($_POST['pub3']);
 $pub4 = htmlspecialchars($_POST['pub4']);
 $pub5 = htmlspecialchars($_POST['pub5']);
-$desc = htmlspecialchars($_POST['desc']);
-
-
 
 $query = 'INSERT INTO game.game (title, time_length_min, complexity, num_players) VALUES (:title, :time_len, :complex, :num_play)';
 $stmt = $db->prepare($query);
@@ -98,11 +95,31 @@ for ($i=0; $i < $count; $i++){
     }
 }
 
+$rps = array($rp0, $rp1, $rp2, $rp3, $rp4, $rp5);
 
+for ($i=0; $i < count($rps); $i++) {
+    if ($rps[$i] != "") {
+        $query = 'DELETE FROM game.requestBG WHERE requestG_id = :g_id AND requestP_id = :p_id';
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(':g_id', $rg_id, PDO::PARAM_INT);
+        $stmt->bindValue(':p_id', $rps[$i], PDO::PARAM_INT);
+        $result = $stmt->execute();
 
+        $query = 'DELETE FROM game.requestP WHERE requestP_id = :p_id';
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(':p_id', $rps[$i], PDO::PARAM_INT);
+        $result = $stmt->execute();
 
+    }
+}
 
+$query = 'DELETE FROM game.requestG WHERE requestG_id = :g_id';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':g_id', $rg_id, PDO::PARAM_INT);
+$result = $stmt->execute();
 
+header("location: admin.php");
+die();
 
 
 ?>
