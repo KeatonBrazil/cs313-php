@@ -29,7 +29,7 @@ $rg_id = htmlspecialchars($_POST['requestg_id']);
 // $rp6 = htmlspecialchars($_POST['rp6']);
 // $desc = htmlspecialchars($_POST['desc']);
 
-echo $rg_id;
+var_dump($rg_id);
 // echo "<br>";
 // echo $mem_id;
 // echo "<br>";
