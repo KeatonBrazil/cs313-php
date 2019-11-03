@@ -42,13 +42,13 @@ $stmt->bindValue(':title', $title, PDO::PARAM_STR);
 $stmt->bindValue(':time_len', $time_len, PDO::PARAM_INT);
 $stmt->bindValue(':complex', $complex, PDO::PARAM_INT);
 $stmt->bindValue(':num_play', $num_play, PDO::PARAM_INT);
-// $result = $stmt->execute();
+$result = $stmt->execute();
 
-// $query = 'SELECT lastval()';
-// $stmt = $db->prepare($query);
-// $stmt -> execute();
-// $game_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-// $game_id = $game_id[0]['lastval'];
+$query = 'SELECT lastval()';
+$stmt = $db->prepare($query);
+$stmt -> execute();
+$game_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+$game_id = $game_id[0]['lastval'];
 
 $purbs = array($pub0, $pub1, $pub2, $pub3, $pub4, $pub5);
 $count = count($purbs);
@@ -57,34 +57,44 @@ for ($i=0; $i < $count; $i++){
     if ($purbs[$i] != "") {
         $query = 'SELECT publisher_id FROM game.publisher WHERE pub_name = :pub';
         $stmt = $db->prepare($query);
-        $stmt->bindValue('pub', $purbs[$i], PDO::PARAM_STR);
+        $stmt->bindValue(':pub', $purbs[$i], PDO::PARAM_STR);
         $stmt->execute();
         $publishers = $stmt -> fetch(PDO::FETCH_ASSOC);
-        var_dump($publishers);
-        // if ($publishers === false) {
-        //     $query = 'INSERT INTO game.publisher (pub_name) VALUES (:pubname)';
-        //     $stmt = $db->prepare($query);
-        //     $stmt->bindValue(':pubname', $purbs[$i], PDO::PARAM_STR);
-        //     $result = $stmt -> execute();
 
-        //     $query = 'SELECT lastval()';
-        //     $stmt = $db->prepare($query);
-        //     $stmt -> execute();
-        //     $pub_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-        //     $pub_id = $pub_id[0]['lastval'];
+        if ($publishers === false) {
+            $query = 'INSERT INTO game.publisher (pub_name) VALUES (:pubname)';
+            $stmt = $db->prepare($query);
+            $stmt->bindValue(':pubname', $purbs[$i], PDO::PARAM_STR);
+            $result = $stmt -> execute();
 
-        //     $query = 'INSERT INTO game.boardGame (game_id, publisher_id) VALUES (:g_id, :p_id)';
-        //     $stmt = $db->prepare($query);
-        //     $stmt->bindValue(':g_id', $game_id, PDO::PARAM_INT);
-        //     $stmt->bindValue(':p_id', $pub_id, PDO::PARAM_INT);
-        //     $result = $stmt->execute();
+            $query = 'SELECT lastval()';
+            $stmt = $db->prepare($query);
+            $stmt -> execute();
+            $pub_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+            $pub_id = $pub_id[0]['lastval'];
 
-        // }
-                
+            $query = 'INSERT INTO game.boardGame (game_id, publisher_id) VALUES (:g_id, :p_id)';
+            $stmt = $db->prepare($query);
+            $stmt->bindValue(':g_id', $game_id, PDO::PARAM_INT);
+            $stmt->bindValue(':p_id', $pub_id, PDO::PARAM_INT);
+            $result = $stmt->execute();
             
-        
+        } else {
+            $query = 'SELECT boardGame_id FROM game.boardGame WHERE game_id = :game AND publisher_id = :pub';
+            $stmt = $db->prepare($query);
+            $stmt->bindValue(':game', $game_id, PDO::PARAM_INT);
+            $stmt->bindValue(':pub', $pub_id, PDO::PARAM_INT);
+            $stmt->execute();
+            $boardgames = $stmt -> fetch(PDO::FETCH_ASSOC);
 
-        
+            if ($boardgames === false) {
+                $query = 'INSERT INTO game.boardGame (game_id, publisher_id) VALUES (:g_id, :p_id)';
+                $stmt = $db->prepare($query);
+                $stmt->bindValue(':g_id', $game_id, PDO::PARAM_INT);
+                $stmt->bindValue(':p_id', $publishers['publisher_id'], PDO::PARAM_INT);
+                $result = $stmt->execute();
+            }
+        } 
     }
 }
 
