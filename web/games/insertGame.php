@@ -14,7 +14,7 @@ else
 require_once("gamesDb.php");
 $db = get_db();
 
-$rg_id = htmlspecialchars($_POST['requestg_id']));
+$rg_id = htmlspecialchars($_POST['requestg_id']);
 // $mem_id = htmlspecialchars($_POST['member_id']);
 // $title = htmlspecialchars($_POST['title']);
 // $time_len = htmlspecialchars($_POST['time_len']);
