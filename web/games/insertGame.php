@@ -44,11 +44,11 @@ $stmt->bindValue(':complex', $complex, PDO::PARAM_INT);
 $stmt->bindValue(':num_play', $num_play, PDO::PARAM_INT);
 // $result = $stmt->execute();
 
-$query = 'SELECT lastval()';
-$stmt = $db->prepare($query);
-$stmt -> execute();
-$game_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-$game_id = $game_id[0]['lastval'];
+// $query = 'SELECT lastval()';
+// $stmt = $db->prepare($query);
+// $stmt -> execute();
+// $game_id = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+// $game_id = $game_id[0]['lastval'];
 
 $purbs = array($pub0, $pub1, $pub2, $pub3, $pub4, $pub5);
 $count = count($purbs);
