@@ -39,6 +39,7 @@ session_start();
         <!--<li class="mylink"><a href="wish.php">Wish List</a></li>
         <li class="mylink"><a href="friends.php">Friends</a></li>-->
         <li class="mylink"><a href="viewGames.php">Browse Games</a></li>
+        <li class="mylink"><a href="newGame.php">Request New Game</a></li>
         <li class="floatright mylink"><a href="signOut.php">Sign Out</a></li>
         <li class="floatright user">Welcome <?php echo $username; ?></li>
         </div>
