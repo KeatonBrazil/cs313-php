@@ -134,7 +134,7 @@ if (isset($_POST['title'])) {
                 echo "Number of Max Players: ".$game_info[$i]['num_players'];
                 echo "<form action='removeGame.php' method='post'>";
                 echo "<input type='hidden' name='collection' value='".$game_info[$i]['collection_id']."'>";
-                echo "<input type='submit' class='delete right' value='Remove'>";
+                echo "<input type='submit' class='delete right' value='Remove'><br><br>";
                 echo "</form>";
                 echo "</div><br>";
             }
