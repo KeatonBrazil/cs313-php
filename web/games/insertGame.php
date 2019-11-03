@@ -61,15 +61,15 @@ for ($i=0; $i < $count; $i++){
         if (!isset($publishers)) {
             echo "TRUE NOT SET";
         } 
-        if ($publishers === array(0){}) {
-            echo "TRUE array(0){}";
-        } 
+        // if ($publishers === array(0){}) {
+        //     echo "TRUE array(0){}";
+        // } 
         if ($publishers[0]['pub_name'] === "") {
             echo "TRUE publishers[0][pub_name]";
         } 
-        if ($publishers[0] === {}) {
-            echo "TRUE {}";
-        }
+        // if ($publishers[0] === {}) {
+        //     echo "TRUE {}";
+        // }
                 // $query = 'INSERT INTO game.publisher';
                 // $stmt = $db->prepare($query);
             
