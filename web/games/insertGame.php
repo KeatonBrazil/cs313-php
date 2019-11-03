@@ -34,6 +34,45 @@ $pub4 = htmlspecialchars($_POST['pub4']);
 $pub5 = htmlspecialchars($_POST['pub5']);
 $desc = htmlspecialchars($_POST['desc']);
 
-
+var_dump($rg_id);
+echo "<br>";
+echo $mem_id;
+echo "<br>";
+echo $title;
+echo "<br>";
+echo $time_len;
+echo "<br>";
+echo $complex;
+echo "<br>";
+echo $num_play;
+echo "<br>";
+echo "pubs ids<br>";
+echo $rp0;
+echo "<br>";
+echo $rp1;
+echo "<br>";
+echo $rp2;
+echo "<br>";
+echo $rp3;
+echo "<br>";
+echo $rp4;
+echo "<br>";
+echo $rp5;
+echo "<br>";
+echo "pubs<br>";
+echo $pub0;
+echo "<br>";
+echo $pub1;
+echo "<br>";
+echo $pub2;
+echo "<br>";
+echo $pub3;
+echo "<br>";
+echo $pub4;
+echo "<br>";
+echo $pub5;
+echo "<br>";
+echo "description<br>";
+echo $desc;
 
 ?>
