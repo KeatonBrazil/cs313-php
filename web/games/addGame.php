@@ -48,11 +48,13 @@ $bg_id = $bg_id[0]['boardgame_id'];
 
 var_dump($bg_id);
 
-// $query = 'INSERT INTO game.collection (shelf_id, boardGame_id) VALUES (:shelf, :bg_id)';
-// $stmt = $db->prepare($query);
-// $stmt->bindValue(':shelf_id', $shelf_id, PDO::PARAM_INT);
-// $stmt->bindValue(':bg_id', $bg_id, PDO::PARAM_INT);
-// $result = $stmt->execute();
+$query = 'INSERT INTO game.collection (shelf_id, boardGame_id) VALUES (:shelf, :bg_id)';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':shelf_id', $shelf_id, PDO::PARAM_INT);
+$stmt->bindValue(':bg_id', $bg_id, PDO::PARAM_INT);
+$result = $stmt->execute();
+
+var_dump($result);
 
 // header("location: shelf.php#return");
 // die();
