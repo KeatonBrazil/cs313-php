@@ -96,7 +96,7 @@ session_start();
                 echo "<input type='hidden' name='requestg_id' value='".$requestG[$i]['requestg_id']."'>";
                 echo "<input type='hidden' name='member_id' value='".$requestG[$i]['member_id']."'>";
                 for ($x=0; $x < count($requestP); $x++) {
-                    echo "<input type='hidden' name='rp".$x."' value='".$requestP[$i]['requestp_id']."'>";
+                    echo "<input type='hidden' name='rp".$x."' value='".$requestP[$x]['requestp_id']."'>";
                 }
                 echo "<input type='submit' class='delete' value='Delete'>";
                 echo "</form>";
