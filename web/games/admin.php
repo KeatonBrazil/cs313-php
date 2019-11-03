@@ -63,7 +63,7 @@ session_start();
                 echo "<div class='admin'>";
                 echo "<form action='insertGame.php' method='post'>";
                 echo "<strong>".$name[0]['username']."</strong><br><hr>";
-                echo "<input type='hidden' name='requestg_id' value='".$requestG[$i]['requestG_id']."'>";
+                echo "<input type='hidden' name='requestg_id' value='".$requestG[$i]['requestg_id']."'>";
                 echo "<input type='hidden' name='member_id' value='".$requestG[$i]['member_id']."'>";
                 echo "<p>Title</p>";
                 echo "<input type='text' name='title' value='".$requestG[$i]['title']."'>"; 
