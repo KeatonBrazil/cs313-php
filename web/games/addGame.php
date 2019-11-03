@@ -45,4 +45,7 @@ $stmt->bindValue(':shelf_id', $shelf_id, PDO::PARAM_INT);
 $stmt->bindValue(':bg_id', $bg_id, PDO::PARAM_INT);
 $result = $stmt->execute();
 
+header("location: shelf.php#return");
+die();
+
 ?>
