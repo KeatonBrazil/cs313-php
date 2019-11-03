@@ -39,13 +39,10 @@ $stmt->execute();
 $bg_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $bg_id = $bg_id[0]['boardgame_id'];
 
-$query = 'INSERT INTO game.collection (shelf_id, boardGame_id) VALUES (:shelf, :bg_id)';
+$query = 'INSERT INTO game.collection (shelf_id, boardGame_id) VALUES (:shelf_id, :bg_id)';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':shelf_id', $shelf_id, PDO::PARAM_INT);
 $stmt->bindValue(':bg_id', $bg_id, PDO::PARAM_INT);
 $result = $stmt->execute();
-
-header("location: shelf.php");
-die();
 
 ?>
