@@ -89,7 +89,7 @@ session_start();
                 }
 
                 echo "<p>Description</p>";
-                echo "<textarea>".$requestG[$i]['descript']."</textarea><br>"; 
+                echo "<textarea name='desc'>".$requestG[$i]['descript']."</textarea><br>"; 
                 echo "<input type='submit' class='confirm' value='Confirm'>";
                 echo "</form>";
                 echo "<form action='deleteRequest' method='post'>";
