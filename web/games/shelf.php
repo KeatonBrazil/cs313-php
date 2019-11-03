@@ -79,8 +79,9 @@ if (isset($_POST['title'])) {
             <?php 
                 if (isset($title) || $title != "") {
                     if (count($games) === 0) {echo "<span class='none'>No Results Found</span>";}
-                    echo "<form action='addGame.php' method='post'>";
+                    
                     foreach ($games as $game) {
+                        echo "<form action='addGame.php' method='post'>";
                         echo "<div class='check_game'>";
                         echo "<input type='radio' name='newGame' value='".$game['game_id']."'>" . $game['title'] . "<hr><br>";
                         echo "Publisher: ";
@@ -102,9 +103,10 @@ if (isset($_POST['title'])) {
                         echo "Number of Max Players: ".$game['num_players'];
 
                         echo "</div><br>";
+                        if (count($games)>0) {echo "<input class='submit' type='submit' value='Add to shelf'>";}
+                        echo "</form><br>";
                     }
-                    if (count($games)>0) {echo "<input class='submit' type='submit' value='Add to shelf'>";}
-                    echo "</form><br>";
+                    
                 }
             ?>
         </div><br>
