@@ -34,45 +34,39 @@ $pub4 = htmlspecialchars($_POST['pub4']);
 $pub5 = htmlspecialchars($_POST['pub5']);
 $desc = htmlspecialchars($_POST['desc']);
 
-var_dump($rg_id);
-echo "<br>";
-echo $mem_id;
-echo "<br>";
-echo $title;
-echo "<br>";
-echo $time_len;
-echo "<br>";
-echo $complex;
-echo "<br>";
-echo $num_play;
-echo "<br>";
-echo "pubs ids<br>";
-echo $rp0;
-echo "<br>";
-echo $rp1;
-echo "<br>";
-echo $rp2;
-echo "<br>";
-echo $rp3;
-echo "<br>";
-echo $rp4;
-echo "<br>";
-echo $rp5;
-echo "<br>";
-echo "pubs<br>";
-echo $pub0;
-echo "<br>";
-echo $pub1;
-echo "<br>";
-echo $pub2;
-echo "<br>";
-echo $pub3;
-echo "<br>";
-echo $pub4;
-echo "<br>";
-echo $pub5;
-echo "<br>";
-echo "description<br>";
-echo $desc;
+$query = 'INSERT INTO game.game (title, time_length_min, complexity, num_players) VALUES (:title, :time_len, :complex, :num_play)';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':title', $title, PDO::PARAM_STR);
+$stmt->bindValue(':time_len', $time_len, PDO::PARAM_INT);
+$stmt->bindValue(':complex', $complex, PDO::PARAM_INT);
+$stmt->bindValue(':num_play', $num_play, PDO::PARAM_INT);
+$result = $stmt->execute();
+
+$purbs = array($pub0, $pub1, $pub2, $pub3, $pub4, $pub5);
+$count = count($purbs);
+
+for ($i=0; $i < $count; $i++){
+    if ($purbs[$i] != "") {
+        $query = 'SELECT pub_name FROM game.publisher WHERE pub_name = :pub';
+        $stmt = $db->prepare($query);
+        $stmt->bindValue('pub', $purbs[$i], PDO::PARAM_STR);
+        $stmt->execute();
+        $publishers = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+        var_dump($publishers);
+                // $query = 'INSERT INTO game.publisher';
+                // $stmt = $db->prepare($query);
+            
+        
+
+        
+    }
+}
+
+
+
+
+
+
+
 
 ?>
