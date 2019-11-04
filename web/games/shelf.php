@@ -83,7 +83,7 @@ if (isset($_POST['title'])) {
                     foreach ($games as $game) {
                         echo "<form action='addGame.php' method='post'>";
                         echo "<div class='check_game'>";
-                        echo "<input type='radio' name='newGame' value='".$game['game_id']."'>" . $game['title'] . "<hr><br>";
+                        echo "<input type='radio' name='newGame' value='".$game['game_id']."' checked>" . $game['title'] . "<hr><br>";
                         echo "Publisher: ";
                         $query = 'SELECT p.publisher_id, pub_name FROM game.publisher p LEFT JOIN game.boardGame bg ON p.publisher_id = bg.publisher_id WHERE game_id = :game_id';
                         $stmt = $db->prepare($query);
