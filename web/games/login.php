@@ -57,7 +57,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     <title>Shark Games | Login</title>
 </head>
 <body>
-    <header><h1>Login</h1></header>  
+    <header><h1>Shark Games</h1><p><h4>Build Your Shelf</h4></p></header>  
     <div class="sticky">
         <ul class="nav">
         <li class="active"><a href="login.php">Login</a></li>
